@@ -1,0 +1,44 @@
+{
+  "quota": [
+		{
+		  "id": "1",
+		  "code": "2013165",
+		  "unattendance_id": "CT",
+		  "quota": "165",
+		  "begin_date": "1990-10-26",
+		  "end_date": "2021-01-19"
+		},
+		{
+		  "id": "6",
+		  "code": "2013165",
+		  "unattendance_id": "CUTI SAKIT 1",
+		  "quota": "190",
+		  "begin_date": "1990-10-28",
+		  "end_date": "2021-01-30"
+		},
+		{
+		  "id": "2",
+		  "code": "1000022",
+		  "unattendance_id": "CUTI SAKIT 1", 
+		  "quota": "13",
+		  "begin_date": "1991-10-23",
+		  "end_date": "2022-01-31"
+		},
+		{
+		  "id": "4",
+		  "code": "1000022",
+		  "unattendance_id": "CT", 
+		  "quota": "14",
+		  "begin_date": "1991-10-23",
+		  "end_date": "2022-01-31"
+		},
+		{
+		  "id": "5",
+		  "code": "2013165",
+		  "unattendance_id": "CTB", 
+		  "quota": "14",
+		  "begin_date": "1991-10-23",
+		  "end_date": "2022-01-31"
+		}
+	]
+}
