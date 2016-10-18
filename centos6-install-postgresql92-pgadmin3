@@ -1,0 +1,47 @@
+Step-by-step Install PostgreSQL 9.2 dan Pgadmin3 di Centos 6.6
+
+1.  Download versi postgres PostgreSQL 9.2 untuk Centos6 : 
+    https://yum.postgresql.org/repopackages.php
+2.  -
+3.  Jalankan klik dan install file yang sudah download tadi
+4.  Cek postgresql sudah terinstall atau belum, Pastikan postgresql sudah tersedia
+    yum search postgres
+5.  Install komponent postgresql
+    yum install postgresql92 postgresql92-server
+--  Cek versi dari postgresql
+    psql --version
+6.  Membuat data/tabel default, berikan nama teserah kita
+    service postgresql-9.2 initdb
+7.  Menjalankan postgresql, pastikan terdapat status [OK], dan untuk merestart
+    service postgresql-9.2 start
+    service postgresql-9.2 restart
+8.  Setting auto start ketika centOS dimatikan ulang / restart
+    chkconfig postgresql-9.2 on
+9.  Melihat status postgresql 
+    service postgresql-9.2 status 
+11. Merubah configurasi postgresql.conf path : gedit /var/lib/pgsql/9.2/data/postgresql.conf
+    Sebelum
+    #listen_addresses = "localhost"
+    Sesudah
+    listen_addresses = "*"
+12. Merubah configurasi pg_hba.conf path : gedit /var/lib/pgsql/9.1/data/pg_hba.conf
+    # TYPE  DATABASE        USER            ADDRESS                 METHOD
+    # "local" is for Unix domain socket connections only
+    local   all             all                                     trust
+    # IPv4 local connections:
+    host    all             all             127.0.0.1/32            trust
+    # IPv6 local connections:
+    host    all             all             ::1/128                 trust
+13. Cek ketersediaan pgAdmin3
+    yum list pgAdmin*
+14. Install pgAdmin3, ketikan sesuai dengan versi yang tersedia
+    yum install pgadmin3_92
+15. Membuat user baru di PostgreSQL : 
+    http://tecadmin.net/fatal-ident-authentication-failed-for-user-postgres/
+    
+Selesai, berikutnya silahkan jalankan pgAdminnya dan test dengan database.
+
+Created: lani.asep@lawecon.com | Created for me
+
+
+   
