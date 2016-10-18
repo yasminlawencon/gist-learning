@@ -1,24 +1,25 @@
 Step-by-step Install PostgreSQL 9.2 dan Pgadmin3 di Centos 6.6
 
-1.  Running in command line : 
-    wget http://yum.pgrpms.org/9.2/redhat/rhel-6-x86_64/pgdg-centos92-9.2-6.noarch.rpm
-2.  Jika not found wget, jalankan perintah command line ini
-    yum install wget
-3.  Jalankan perintah ini di command line
-    rpm -ivh pgdg-centos92-9.2-6.noarch.rpm
-4.  Cek postgresql sudah terinstall atau belum
+1.  Download versi postgres PostgreSQL 9.2 untuk Centos6 : 
+    https://yum.postgresql.org/repopackages.php
+2.  -
+3.  Jalankan klik dan install file yang sudah download tadi
+4.  Cek postgresql sudah terinstall atau belum, Pastikan postgresql sudah tersedia
     yum search postgres
 5.  Install komponent postgresql
     yum install postgresql92 postgresql92-server
+--  Cek versi dari postgresql
+    psql --version
 6.  Membuat data/tabel default, berikan nama teserah kita
     service postgresql-9.2 initdb
-7.  Menjalankan postgresql, pastikan terdapat status [OK]
+7.  Menjalankan postgresql, pastikan terdapat status [OK], dan untuk merestart
     service postgresql-9.2 start
+    service postgresql-9.2 restart
 8.  Setting auto start ketika centOS dimatikan ulang / restart
     chkconfig postgresql-9.2 on
 9.  Melihat status postgresql 
     service postgresql-9.2 status 
-11. Merubah configurasi postgresql.conf path : gedit /var/lib/pgsql/9.1/data/postgresql.conf
+11. Merubah configurasi postgresql.conf path : gedit /var/lib/pgsql/9.2/data/postgresql.conf
     Sebelum
     #listen_addresses = "localhost"
     Sesudah
