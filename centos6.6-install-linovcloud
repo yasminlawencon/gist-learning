@@ -10,11 +10,15 @@ Disini penjelasan mengenai installing project LinovCloud di Cenots 6.6, silahkan
     # chgrp apache /var/www/html/LinovCloud/app/tmp/cache/
     # chmod g+w /var/www/html/LinovCloud/app/tmp/cache/
     Lalu refresh browser, seharusnya tidak error lagi.
-3.  Jika mucul error ini:
+3.  Jika muncul error ini:
     DboPostgres - Selected driver is not enabled
     Install pacakges ini :
     # yum install httpd mod_ssl
     # yum install php-mbstring
     # yum install php-pgsql
+4.  Jika muncul error ini:
+    Not Found
+    The requested URL /LinovCloud/users/login was not found on this server.
+    Solving Problem :
     
     
