@@ -49,7 +49,7 @@ Catatan Lanjutan:
 - Mengganti password user postgres
     # postgres=# \password postgres
     atau
-    # ALTER USER "user_name" WITH PASSWORD 'new_password';
+    # ALTER USER "nama_user" WITH PASSWORD 'new_password';
 - Menambahkan role pada user postgres
     # ALTER USER nama_user WITH [option];
     
