@@ -38,7 +38,16 @@ Step-by-step Install PostgreSQL 9.2 dan Pgadmin3 di Centos 6.6
     yum install pgadmin3_92
 15. Membuat user baru di PostgreSQL : 
     http://tecadmin.net/fatal-ident-authentication-failed-for-user-postgres/
-    
+
+
+Catatan :
+- Masuk bash postgres
+    # sudo -u postgres psql
+- Lihat semua user postgres:
+    # postgres=# \du 
+- Mengganti password user postgres
+    # postgres=# \password postgres
+
 Selesai, berikutnya silahkan jalankan pgAdminnya dan test dengan database.
 
 Created: lani.asep@lawecon.com | Created for me
