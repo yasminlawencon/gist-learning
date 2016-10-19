@@ -39,7 +39,6 @@ Step-by-step Install PostgreSQL 9.2 dan Pgadmin3 di Centos 6.6
 15. Membuat user baru di PostgreSQL : 
     http://tecadmin.net/fatal-ident-authentication-failed-for-user-postgres/
 
-
 Catatan :
 - Masuk bash postgres
     # sudo -u postgres psql
