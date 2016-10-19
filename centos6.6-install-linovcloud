@@ -1,0 +1,15 @@
+Disini penjelasan mengenai installing project LinovCloud di Cenots 6.6, silahkan ikuti step-by-stepnya.
+
+1.  Clone project LinovCloud dari github
+    # git clone -b LinovCloud https://github.com/laniasepsutisna/LinovCloud.git <Nama Folder>
+    Masukan username + password github
+2.  Jika muncul error "is not writable", lakukan perintah ini
+    #chgrp apache /path/to/mydir
+    #chmod g+w /path/to/mydir
+    
+    ex :
+    # chgrp apache /var/www/html/LinovCloud/app/tmp/cache/
+    # chmod g+w /var/www/html/LinovCloud/app/tmp/cache/
+    Lalu refresh browser, seharusnya tidak error lagi
+3. 
+    
