@@ -30,7 +30,28 @@ Step-by-step installing apache tomcat v7.0.72 di CentOS 6.6
       Tomcat started.
 9.  Akses tomcat tersebut dengan url ini, pastikan muncul halaman dashboard Apache tomcat tersebut.
     # http://localhost:8080/
-   
+10. Default port apache tomcat adalah 8080, jika akan kita ganti menjadi 8081 maka bisa menggunakan step dibawah ini
+    # Resfernsi tutorial dari : http://www.mkyong.com/tomcat/how-to-change-tomcat-default-port/
+11. Atau bisa menggunakan perintah dibawah ini
+    # cd /usr/local/tomcat7/
+12. Lalu edit file server.xml dengan cara sebagai berikut
+    # gedit conf/server.xml
+13. Edit port awal 8080 menjadi 8081
+    Awal
+    <Connector port="8080" protocol="HTTP/1.1"
+                   connectionTimeout="20000"
+                   redirectPort="8443" />
+    Akhir
+    <Connector port="8081" protocol="HTTP/1.1"
+               connectionTimeout="20000"
+               redirectPort="8443" />
+14. Lalu restart ulang apache tomcat tersebut, pastikan direktori berada di /usr/local/tomcat7
+    # ./bin/shutdown.sh
+    dan hidupkan kembali
+    # ./bin/startup.sh
+15. Sekarang akses localhost kita
+    # http://localhost:8081/
+    
 Selesai, silahkan berikan komentar jika ada pertanyaan.
 
 Created by: lani.asep@lawencon.com
