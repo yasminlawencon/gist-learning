@@ -1,0 +1,21 @@
+Step-by-step install php v5.3.3-48
+
+1.  Cek list version php di centos 6
+    # yum list php
+2.  Install php 
+    # yum install php
+3.  Install php for postgresql
+    # yum install php-pgsql
+4.  Cek version php
+    # php --version
+3.  Restart httpd
+    # service httpd restart
+4.  Cek version php melalui localhost, buat file baru
+    # nano /var/www/html/info.php
+    Isikan code php ini, lalu save  
+    <?php
+      phpinfo();
+    ?>
+    
+    
+
