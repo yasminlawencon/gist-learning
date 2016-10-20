@@ -25,7 +25,7 @@ Step-by-step Install PostgreSQL 9.2 dan Pgadmin3 di Centos 6.6
     #listen_addresses = "localhost"
     Sesudah
     listen_addresses = "*"
-12. Merubah configurasi pg_hba.conf path : gedit /var/lib/pgsql/9.1/data/pg_hba.conf
+12. Merubah configurasi pg_hba.conf path : gedit /var/lib/pgsql/9.2/data/pg_hba.conf
     # TYPE  DATABASE        USER            ADDRESS                 METHOD
     # "local" is for Unix domain socket connections only
     local   all             all                                     trust
