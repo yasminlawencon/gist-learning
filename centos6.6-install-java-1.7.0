@@ -1,0 +1,16 @@
+Disini tutorial untuk installing java version java-1.7.0 untuk centOS 6.6
+
+Bisa langsung ikuti tutorial ini,
+https://www.digitalocean.com/community/tutorials/how-to-install-java-on-centos-and-fedora
+
+Step-by-step install Java :
+
+1.  Install OpenJDK 7 JRE
+    # sudo yum install java-1.7.0-openjdk
+2.  Install OpenJDK 7 JDK
+    # sudo yum install java-1.7.0-openjdk-devel
+3.  Setelah selesai, cek versi java
+    # java -version
+4.  Lokasi direktori java
+    # sudo alternatives --config java
+    

@@ -1,0 +1,59 @@
+Disini adalah step-by-step untuk installing apache tomcat v7.0.72 di CentOS 6.6
+
+Referensi artikel : http://tecadmin.net/steps-to-install-tomcat-server-on-centos-rhel/
+
+Step-by-step installing apache tomcat v7.0.72 di CentOS 6.6
+
+1.  Cek versi java, jika sudah tersedia maka bisa dilanjutkan ke step berikutnya.
+    # java -version
+2.  Pindahkan direktori
+    # cd /tmp
+3.  Download apache tomcat melalui website officialnya
+    # wget http://mirror.wanxp.id/apache/tomcat/tomcat-7/v7.0.72/bin/apache-tomcat-7.0.72.tar.gz
+    atau
+    Download -> http://tomcat.apache.org/download-70.cgi
+             -> Core -> tar.gz (pgp, md5, sha1) 
+3.  Ekstrak file tersebut
+    # tar xzf apache-tomcat-7.0.72.tar.gz
+4.  Pindahkan file tersebut folder tomcat7
+    # mv apache-tomcat-7.0.68 /usr/local/tomcat7
+5.  Pindah direktori tomcat7
+    # cd /usr/local/tomcat7
+6.  Starting tomcat tersbut
+    # ./bin/startup.sh
+8.  Pastikan dapatkan status tersebut
+    # Using CATALINA_BASE:   /usr/local/tomcat7
+      Using CATALINA_HOME:   /usr/local/tomcat7
+      Using CATALINA_TMPDIR: /usr/local/tomcat7/temp
+      Using JRE_HOME:        /usr
+      Using CLASSPATH:       /usr/local/tomcat7/bin/bootstrap.jar:/usr/local/tomcat7/bin/tomcat-juli.jar
+      Tomcat started.
+9.  Akses tomcat tersebut dengan url ini, pastikan muncul halaman dashboard Apache tomcat tersebut.
+    # http://localhost:8080/
+10. Default port apache tomcat adalah 8080, jika akan kita ganti menjadi 8081 maka bisa menggunakan step dibawah ini
+    # Resfernsi tutorial dari : http://www.mkyong.com/tomcat/how-to-change-tomcat-default-port/
+11. Atau bisa menggunakan perintah dibawah ini
+    # cd /usr/local/tomcat7/
+12. Lalu edit file server.xml dengan cara sebagai berikut
+    # gedit conf/server.xml
+13. Edit port awal 8080 menjadi 8081
+    Awal
+    <Connector port="8080" protocol="HTTP/1.1"
+                   connectionTimeout="20000"
+                   redirectPort="8443" />
+    Akhir
+    <Connector port="8081" protocol="HTTP/1.1"
+               connectionTimeout="20000"
+               redirectPort="8443" />
+14. Lalu restart ulang apache tomcat tersebut, pastikan direktori berada di /usr/local/tomcat7
+    # ./bin/shutdown.sh
+    dan hidupkan kembali
+    # ./bin/startup.sh
+15. Sekarang akses localhost kita
+    # http://localhost:8081/
+    
+Selesai, silahkan berikan komentar jika ada pertanyaan.
+
+Created by: lani.asep@lawencon.com
+
+    
