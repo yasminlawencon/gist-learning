@@ -3,6 +3,7 @@ Disini penjelasan mengenai installing project LinovCloud di Cenots 6.6, silahkan
 1.  Clone project LinovCloud dari github
     # git clone -b LinovCloud https://github.com/laniasepsutisna/LinovCloud.git <Nama Folder>
     Masukan username + password github.
+    -----------------------------------
 2.  Jika muncul error "is not writable", lakukan perintah ini
     #chgrp apache /path/to/mydir
     #chmod g+w /path/to/mydir 
@@ -10,18 +11,41 @@ Disini penjelasan mengenai installing project LinovCloud di Cenots 6.6, silahkan
     # chgrp apache /var/www/html/LinovCloud/app/tmp/cache/
     # chmod g+w /var/www/html/LinovCloud/app/tmp/cache/
     Lalu refresh browser, seharusnya tidak error lagi.
+    -----------------------------------
 3.  Jika muncul error ini:
     DboPostgres - Selected driver is not enabled
     Solving Problem : 
     # yum install httpd mod_ssl
     # yum install php-mbstring
     # yum install php-pgsql
+    -----------------------------------
 4.  Jika muncul error ini:
     Not Found
     The requested URL /LinovCloud/users/login was not found on this server.
     Solving Problem:
-    Coba installing project baru menggunakan tutorial ini
-    --> tecadmin.net/install-cakephp-on-centos-redhat/
+    # referensi tutorial: https://www.rosehosting.com/blog/install-cakephp-3-0-on-a-centos-vps/
+    -----------------------------------
+    Jalankan Perintah:
+    # yum install php-mbstring php-intl
+    # cd /var/www/html/
+    # chown apache: -R LinovCloud/
+    # gedit /etc/httpd/conf/httpd.conf
+    # Tambahkan dibagian paling bawah httpd.conf
+     <VirtualHost *:80>
+ 	 ServerAdmin admin@yourdomain.com
+ 	 DocumentRoot /var/www/html/LinovCloud/
+ 	 ServerName yourdomain.com
+ 	 ServerAlias www.yourdomain.com
+ 	 <Directory /var/www/html/LinovCloud/>
+ 	 Options FollowSymLinks
+ 	 AllowOverride All
+ 	 </Directory>
+ 	 ErrorLog /var/log/httpd/yourdomain.com-error_log
+ 	 CustomLog /var/log/httpd/yourdomain.com-access_log common
+      </VirtualHost>
+      # Akses -> localhost
+      # Seharusnya sudah diakses project LinovCloud
+    -----------------------------------
 5.  Jika muncul error ini:
     pg_connect() [http://php.net/function.pg-connect]: Unable to connect to PostgreSQL server: could not connect to server: Permission denied
     Is the server running on host "localhost" (::1) and accepting
@@ -31,7 +55,4 @@ Disini penjelasan mengenai installing project LinovCloud di Cenots 6.6, silahkan
     TCP/IP connections on port 5432? [APP/models/datasources/dbo/dbo_postgres.php, line 119]
     Solving Problem:
     # setsebool -P httpd_can_network_connect_db on
-6.  Jika masih error, coba menggunakan tutorial ini
-    # https://www.rosehosting.com/blog/install-cakephp-3-0-on-a-centos-vps/
-    # https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-centos-6
     
