@@ -1,0 +1,14 @@
+Disini step-by-step untuk menginstall lampp 2.2.15-54
+
+1.  Install httpd / apache
+    # yum install httpd
+2.  Setting startup httpd agar selalu running ketika di restart
+    # chkconfig httpd on
+3.  Starting htppd / apache
+    # service httpd start
+4.  Chek status httpd / apache
+    # service httpd status
+    
+Selesai, silahkan cek kembali status httpd / apache
+
+Create by : lani.asep@lawencon.com
