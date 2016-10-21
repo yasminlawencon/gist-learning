@@ -84,6 +84,12 @@ Disini penjelasan mengenai installing project LinovCloud di Cenots 6.6 (rekomend
       # sudo firewall-cmd --permanent --zone=trusted --add-port=5432/tcp
       # sudo firewall-cmd --reload
     -----------------------------------
+
+Selesai. Silahkan akses url LinovCloud, jika ada pertanyaan silahkan sampaikan.
+
+
+Created by : lani.asep@lawencon.com
+   
       
       
     
