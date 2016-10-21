@@ -64,13 +64,17 @@ Disini penjelasan mengenai installing project LinovCloud di Cenots 6.6, silahkan
    -----------------------------------
    Solving Problem:
    1. Pastikan file pg_hba.conf setting seperti dibawah ini
-      # "local" is for Unix domain socket connections only
-        local     all     	  all				                    peer
-      # IPv4 local connections:
-        host      all         all           127.0.0.1/32            ident
-        host 	  all	  	  all	        0.0.0.0/0		        md5
-      # IPv6 local connections:
-        host      all         all           ::1/128                 md5
+        # TYPE  DATABASE        USER            ADDRESS                 METHOD
+
+        # "local" is for Unix domain socket connections only
+          local   all     	  all				          peer
+
+        # IPv4 local connections:
+          host    all             all             127.0.0.1/32            ident
+          host 	  all	  	  all	       	  0.0.0.0/0		  md5
+
+        # IPv6 local connections:
+          host    all             all             ::1/128                 md5 
    2. Pastikan file postgresql.conf seperti dibawah ini
       # listen_addresses = '*'
    3. Tambakan port 5432 di Firewall Configurations
