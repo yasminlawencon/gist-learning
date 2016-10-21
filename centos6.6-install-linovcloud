@@ -49,10 +49,17 @@ Disini penjelasan mengenai installing project LinovCloud di Cenots 6.6, silahkan
 5.  Jika muncul error ini:
     pg_connect() [http://php.net/function.pg-connect]: Unable to connect to PostgreSQL server: could not connect to server: Permission denied
     Is the server running on host "localhost" (::1) and accepting
-	TCP/IP connections on port 5432?
+    TCP/IP connections on port 5432?
     could not connect to server: Permission denied
-	Is the server running on host "localhost" (127.0.0.1) and accepting
+    Is the server running on host "localhost" (127.0.0.1) and accepting
     TCP/IP connections on port 5432? [APP/models/datasources/dbo/dbo_postgres.php, line 119]
     Solving Problem:
     # setsebool -P httpd_can_network_connect_db on
+    
+6. Jika muncul error ini:
+   pg_connect() [http://php.net/function.pg-connect]: Unable to connect to PostgreSQL server: could not connect to server: No route to host
+   Is the server running on host "IP Address" and accepting
+   TCP/IP connections on port 5432? [APP/models/datasources/dbo/dbo_postgres.php, line 119]
+   Solving Problem:
+   # 
     
