@@ -17,6 +17,7 @@ Step-by-step installing apache tomcat v7.0.72 di CentOS 6.6
     # tar xzf apache-tomcat-7.0.72.tar.gz
 4.  Pindahkan file tersebut folder tomcat7
     # mv apache-tomcat-7.0.72 /usr/local/tomcat7
+    # yum install tomcat* (instal full packages tomcat)
 5.  Pindah direktori tomcat7
     # cd /usr/local/tomcat7
 6.  Starting tomcat tersbut
@@ -59,7 +60,7 @@ Problem Solving
 1. Jika muncul error ketika akses http://localhost:8080/
    # Unable to connect. Browser can't establish a connection to the server at localhost:8080.
      Solving Problem: 
-     # 
+     # yum install tomcat*
 
 Created by: lani.asep@lawencon.com
 
