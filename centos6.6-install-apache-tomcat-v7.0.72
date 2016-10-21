@@ -54,6 +54,13 @@ Step-by-step installing apache tomcat v7.0.72 di CentOS 6.6
     
 Selesai, silahkan berikan komentar jika ada pertanyaan.
 
+----------------------------------
+Problem Solving
+1. Jika muncul error ketika akses http://localhost:8080/
+   # Unable to connect. Browser can't establish a connection to the server at localhost:8080.
+     Solving Problem: 
+     # 
+
 Created by: lani.asep@lawencon.com
 
     
