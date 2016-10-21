@@ -77,9 +77,12 @@ Disini penjelasan mengenai installing project LinovCloud di Cenots 6.6 (rekomend
           host    all             all             ::1/128                 md5 
    2. Pastikan file postgresql.conf seperti dibawah ini
       # listen_addresses = '*'
-   3. Tambakan port 5432 di Firewall Configurations
+   3. Tambakan port 5432 di Firewall Configurations GUI
       # System -> Administration -> Firewall -> Other Ports 
       # Add -> 5432 -> tcp -> Apply
+      atau melalui CMD
+      # sudo firewall-cmd --permanent --zone=trusted --add-port=5432/tcp
+      # sudo firewall-cmd --reload
     -----------------------------------
       
       
