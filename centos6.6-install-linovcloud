@@ -1,4 +1,4 @@
-Disini penjelasan mengenai installing project LinovCloud di Cenots 6.6, silahkan ikuti step-by-stepnya.
+Disini penjelasan mengenai installing project LinovCloud di Cenots 6.6 (rekomendasi 64bit), silahkan ikuti step-by-stepnya.
 
 1.  Clone project LinovCloud dari github
     # git clone -b LinovCloud https://github.com/laniasepsutisna/LinovCloud.git <Nama Folder>
