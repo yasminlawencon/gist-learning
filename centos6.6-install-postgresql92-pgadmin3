@@ -4,6 +4,7 @@ Step-by-step Install PostgreSQL 9.2 dan Pgadmin3 di Centos 6.6
     https://yum.postgresql.org/repopackages.php
 2.  -
 3.  Jalankan klik dan install file yang sudah download tadi
+    # yum install pgdg-centos92-9.2-8.noarch.rpm 
 4.  Cek postgresql sudah terinstall atau belum, Pastikan postgresql sudah tersedia
     yum search postgres
 5.  Install komponent postgresql
@@ -24,7 +25,7 @@ Step-by-step Install PostgreSQL 9.2 dan Pgadmin3 di Centos 6.6
     #listen_addresses = "localhost"
     Sesudah
     listen_addresses = "*"
-12. Merubah configurasi pg_hba.conf path : gedit /var/lib/pgsql/9.1/data/pg_hba.conf
+12. Merubah configurasi pg_hba.conf path : gedit /var/lib/pgsql/9.2/data/pg_hba.conf
     # TYPE  DATABASE        USER            ADDRESS                 METHOD
     # "local" is for Unix domain socket connections only
     local   all             all                                     trust
