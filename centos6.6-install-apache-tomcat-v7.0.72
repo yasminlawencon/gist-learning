@@ -16,7 +16,7 @@ Step-by-step installing apache tomcat v7.0.72 di CentOS 6.6
 3.  Ekstrak file tersebut
     # tar xzf apache-tomcat-7.0.72.tar.gz
 4.  Pindahkan file tersebut folder tomcat7
-    # mv apache-tomcat-7.0.68 /usr/local/tomcat7
+    # mv apache-tomcat-7.0.72 /usr/local/tomcat7
 5.  Pindah direktori tomcat7
     # cd /usr/local/tomcat7
 6.  Starting tomcat tersbut
