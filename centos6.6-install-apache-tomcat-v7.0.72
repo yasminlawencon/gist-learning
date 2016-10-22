@@ -52,7 +52,7 @@ Step-by-step installing apache tomcat v7.0.72 di CentOS 6.6
     # ./bin/startup.sh
 15. Sekarang akses localhost kita
     # http://localhost:8081/
-    
+16. Tutorial lengkap instalasi tomcat : http://www.davidghedini.com/pg/entry/install_tomcat_7_on_centos
 Selesai, silahkan berikan komentar jika ada pertanyaan.
 
 ----------------------------------
