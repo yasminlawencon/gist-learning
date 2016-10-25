@@ -16,7 +16,7 @@ Step-by-step setting jasper report
 
 
 Problem Solve :
-1. Jika masih error, required url allow: php.ini url_allow_ = on
+1. Jika masih error : required url allow: php.ini url_allow_ = on
    # edit file php.ini -> gedit /etc/php.ini
    # allow_url_include = off -> allow_url_include = on
    # restart httpd
@@ -24,4 +24,9 @@ Problem Solve :
    # link download : goo.gl/6B2gL7
    # copy file JavaBridge.war ke folder tomcat6 -> webapps (secara otomatis folder JavaBridge akan terbentuk berserta isinya)
    # cp /home/zinux/Downloads/JavaBridge.war /usr/share/tomcat6/webapps/
+3. Setting java_bridge.php
+   # JavaBridge -> driver
+   # JavaBridge -> jdbc
+   Datanya sesuai dengan setting database LinovCloud
+3. Jika masih error : require_once(http://localhost:8081/JavaBridge/java/Java.inc) [http://php.net/function.require-once]: failed to open stream: Permission denied
    # 
