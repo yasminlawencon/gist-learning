@@ -21,5 +21,7 @@ Problem Solve :
    # allow_url_include = off -> allow_url_include = on
    # restart httpd
 2. Download JavaBridge.war untuk centos 6.6
-   # goo.gl/6B2gL7
+   # link download : goo.gl/6B2gL7
+   # copy file JavaBridge.war ke folder tomcat6 -> webapps (secara otomatis folder JavaBridge akan terbentuk berserta isinya)
+   # cp /home/zinux/Downloads/JavaBridge.war /usr/share/tomcat6/webapps/
    # 
