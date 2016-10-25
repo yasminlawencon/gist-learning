@@ -1,0 +1,10 @@
+Step-by-step instalasi unrar di centos 6.6
+
+1. Download file unrar:
+   # wget ftp://rpmfind.net/linux/mageia/distrib/cauldron/armv5tl/media/nonfree/release/unrar-5.31-1.mga6.nonfree.armv5tl.rpm
+2. Jalankan script ini: 
+   # rpm -Uvh epel-release-6-8.noarch.rpm
+   
+Jika error:
+  # sudo yum install libstdc++.i686
+  # sudo yum install libstdc++-devel.i686
