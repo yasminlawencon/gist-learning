@@ -2,18 +2,22 @@ Disini step-by-setp untuk instalasi jasper report untuk LinovCloud di Centos 6.6
 
 1. Pastikan java-1.7.0-openjdk sudah terinstall
    # instalasi java -> goo.gl/vxruKf
-2. Pastikan apache tomcat v6 
+2. Pastikan apache tomcat sudah terinstall
    # instalasi tomcat -> https://goo.gl/dnL9LS <rekomendasi tomcat v6>
 
 Step-by-step setting jasper report
-1. Install terlebih dahulu Tomcat apache-tomcat-7.0.59
-   Port HTTP : 8081
-2. Install Java Versi 6 keatas, sebaiknya 7
-3. Copy file Javabridge.war ke webapps
-4. copy additional lib ke C:\Program Files\Apache Software Foundation\Tomcat 7.0\webapps\JavaBridge\WEB-INF\lib
+
+2. Copy file Javabridge.war ke webapps
+3. copy additional lib ke C:\Program Files\Apache Software Foundation\Tomcat 7.0\webapps\JavaBridge\WEB-INF\lib
    Setting environmentnya di Path-> System variables -> new "JAVA_HOME" variable value = "C:\Program Files\Java\jdk1.7.0_75"
    Setting environmentnya di Path-> System variables -> Edit -> Variable value = "C:\xampp\php" 
 	
-5. Pastikan di environment variable PATH sudah di setting untuk mengarahkan ke folder PHP
+4. Pastikan di environment variable PATH sudah di setting untuk mengarahkan ke folder PHP
 
-6. Jika masih error, required url allow: php.ini url_allow_ = on
+
+Problem Solve :
+1. Jika masih error, required url allow: php.ini url_allow_ = on
+   # edit file php.ini -> gedit /etc/php.ini
+   # allow_url_include = off -> allow_url_include = on
+   # restart httpd
+2. 
