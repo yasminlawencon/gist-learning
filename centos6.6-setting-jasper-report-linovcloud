@@ -20,4 +20,6 @@ Problem Solve :
    # edit file php.ini -> gedit /etc/php.ini
    # allow_url_include = off -> allow_url_include = on
    # restart httpd
-2. 
+2. Download JavaBridge.war untuk centos 6.6
+   # goo.gl/6B2gL7
+   # 
