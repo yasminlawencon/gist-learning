@@ -22,6 +22,10 @@ Problem Solve :
    # restart httpd
 2. Download JavaBridge.war untuk centos 6.6
    # link download : goo.gl/6B2gL7
+   # unzip php-java-bridge_6.2.1_documentation.zip
+   # cp JavaBridge.war /usr/share/tomcat6/webapps/ (maka secara otomatis akan membuat folder JavaBridge di dalam webapps)
+   # akses : http://localhost:8081/JavaBridge/ (mucul halaman PHP/Java Bridge examples)
+   # 
    # copy file JavaBridge.war ke folder tomcat6 -> webapps (secara otomatis folder JavaBridge akan terbentuk berserta isinya)
    # cp /home/zinux/Downloads/JavaBridge.war /usr/share/tomcat6/webapps/
 3. Setting java_bridge.php
