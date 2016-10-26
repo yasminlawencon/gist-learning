@@ -35,3 +35,5 @@ Problem Solve :
    # wget http://thelinuxbox.org/downloads/fonts/msttcorefonts.tar.gz
    # cp msttcorefonts/*.ttf  /usr/share/fonts/
    # fc-cache -fv 
+6. Jika masih blank .pdf nya didalam file file .jrxml:
+   # whenNoDataType="AllSectionsNoDetail" (setelah pageWidth="")
