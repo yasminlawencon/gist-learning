@@ -39,5 +39,5 @@ Problem Solve :
    # cp msttcorefonts/*.ttf  /usr/share/fonts/
    # fc-cache -fv 
    
-6. Jika masih blank .pdf nya didalam masukan script dibawah ini kedalam file.jrxml:
+8. Jika masih blank .pdf nya didalam masukan script dibawah ini kedalam file.jrxml:
    # whenNoDataType="AllSectionsNoDetail" (setelah pageWidth="")
