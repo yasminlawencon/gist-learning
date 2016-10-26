@@ -30,3 +30,6 @@ Problem Solve :
    Datanya sesuai dengan setting database LinovCloud
 3. Jika masih error : require_once(http://localhost:8081/JavaBridge/java/Java.inc) [http://php.net/function.require-once]: failed to open stream: Permission denied
    # setenforce 0
+4. Jika masih error : require_once(http://localhost:8081/JavaBridge/java/Java.inc) [http://php.net/function.require-once]: failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+   # folder JavaBridge belum tercopy ke webapps
+4. Copy folder additional_lib ke tomcat6/webapps/
