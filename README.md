@@ -1,6 +1,6 @@
 ## Gist-learning
 
-Repositori ini berisi kumpulan-kumpulan tutorial yang bisa membantu untuk pemecahan masalah seperti
+Repositori ini berisi kumpulan-kumpulan tutorial yang bisa membantu untuk pemecahan masalah pemrograman.
 
 ## Acknowledgments
 * install-apache-tomcat-v7.0.72
