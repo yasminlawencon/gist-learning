@@ -30,4 +30,6 @@ Problem Solve :
    
 5. Jika masih error : [[o:JRFontNotFoundException]:"net.sf.jasperreports.engine.util.JRFontNotFoundException: Font 'Arial' is not available to the JVM
    # harus install font
-   # 
+   # wget http://thelinuxbox.org/downloads/fonts/msttcorefonts.tar.gz
+   # cp msttcorefonts/*.ttf  /usr/share/fonts/
+   # fc-cache -fv 
