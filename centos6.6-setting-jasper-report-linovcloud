@@ -10,19 +10,24 @@ Problem Solve :
    # edit file php.ini -> gedit /etc/php.ini
    # allow_url_include = off -> allow_url_include = on
    # restart httpd
+   
 2. Download JavaBridge.war untuk centos 6.6
    # link download : goo.gl/6B2gL7
    # unzip php-java-bridge_6.2.1_documentation.zip
    # cp JavaBridge.war /usr/share/tomcat6/webapps/ (maka secara otomatis akan membuat folder JavaBridge di dalam webapps)
    # akses : http://localhost:8081/JavaBridge/ (mucul halaman PHP/Java Bridge examples)
    # cp additional_lib.rar /usr/share/tomcat6/webapps/JavaBridge/WEB-INF/lib/
-   # 
+
 3. Setting java_bridge.php
    # JavaBridge -> driver
    # JavaBridge -> jdbc
    Datanya sesuai dengan setting database LinovCloud
 3. Jika masih error : require_once(http://localhost:8081/JavaBridge/java/Java.inc) [http://php.net/function.require-once]: failed to open stream: Permission denied
    # setenforce 0
+   
 4. Jika masih error : require_once(http://localhost:8081/JavaBridge/java/Java.inc) [http://php.net/function.require-once]: failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
    # folder JavaBridge belum tercopy ke webapps
-4. Copy folder additional_lib ke tomcat6/webapps/
+   
+5. Jika masih error : [[o:JRFontNotFoundException]:"net.sf.jasperreports.engine.util.JRFontNotFoundException: Font 'Arial' is not available to the JVM
+   # harus install font
+   # 
