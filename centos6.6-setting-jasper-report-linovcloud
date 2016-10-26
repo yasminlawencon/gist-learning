@@ -1,5 +1,7 @@
 Disini step-by-setp untuk instalasi jasper report untuk LinovCloud di Centos 6.6
 
+Download iReport : https://sourceforge.net/projects/ireport/files/iReport/iReport-5.6.0/
+
 1. Pastikan java-1.7.0-openjdk sudah terinstall
    # instalasi java -> goo.gl/vxruKf
 2. Pastikan apache tomcat sudah terinstall
