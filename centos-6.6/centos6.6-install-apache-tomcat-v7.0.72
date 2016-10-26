@@ -1,9 +1,30 @@
+Disini adalah step-by-step untuk installing apache tomcat v6 di CentOS 6.6 <Rekomendari dari Centos 6.6>
+
+Step-by-step untuk instalasi apache tomcat v6 <default dari CentOS 6>
+1. Cek list tomcat yang tersedia
+   # yum list tomcat*
+2. Install tomcat v6
+   # yum install tomcat6
+3. Change port menjadi 8081
+    # cd /usr/share/tomcat6/
+4. Lalu edit file server.xml dengan cara sebagai berikut
+    # gedit conf/server.xml
+5. Edit port awal 8080 menjadi 8081
+    Awal
+    <Connector port="8080" protocol="HTTP/1.1"
+                   connectionTimeout="20000"
+                   redirectPort="8443" />
+    Akhir
+    <Connector port="8081" protocol="HTTP/1.1"
+               connectionTimeout="20000"
+               redirectPort="8443" />
+6. Restart tomcat
+    # service tomcat6 restart
+--------------------------------------------------------------------------------------
 Disini adalah step-by-step untuk installing apache tomcat v7.0.72 di CentOS 6.6
 
 Referensi artikel : http://tecadmin.net/steps-to-install-tomcat-server-on-centos-rhel/
-
 Step-by-step installing apache tomcat v7.0.72 di CentOS 6.6
-
 1.  Cek versi java, jika sudah tersedia maka bisa dilanjutkan ke step berikutnya.
     # java -version
 2.  Pindahkan direktori
@@ -60,7 +81,7 @@ Problem Solving
 1. Jika muncul error ketika akses http://localhost:8080/
    # Unable to connect. Browser can't establish a connection to the server at localhost:8080.
      Solving Problem: 
-     # yum install tomcat*
+     -----Belum Tersolving------
 
 Created by: lani.asep@lawencon.com
 

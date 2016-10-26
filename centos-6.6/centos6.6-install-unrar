@@ -1,0 +1,14 @@
+Instalasi unrar di centos 6.6
+
+https://blog.hostonnet.com/unrar
+
+1. Download file unrar
+   # cd /usr/local/src
+   # wget http://www.rarlab.com/rar/rarlinux-x64-5.2.1.tar.gz
+   # tar zxvf rarlinux-x64-5.2.1.tar.gz
+   # cp rar/unrar /usr/local/bin
+   # unrar x FILE_NAME.rar
+
+Selesai.
+
+Create by: lani.asep@lawencon.com
