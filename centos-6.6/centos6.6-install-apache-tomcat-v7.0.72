@@ -4,7 +4,7 @@ Step-by-step untuk instalasi apache tomcat v6 <default dari CentOS 6>
 1. Cek list tomcat yang tersedia
    # yum list tomcat*
 2. Install tomcat v6
-   # yum install tomcat6
+   # yum install tomcat*
 3. Change port menjadi 8081
     # cd /usr/share/tomcat6/
 4. Lalu edit file server.xml dengan cara sebagai berikut
