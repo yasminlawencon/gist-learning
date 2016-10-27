@@ -1,0 +1,6 @@
+Step-by-step setting curl di centos 6.6
+
+1. # yum install curl
+   # testing curl -> http://php.net/manual/en/curl.examples-basic.php
+2. Jika muncul error : Resource id #2
+   # 
