@@ -52,3 +52,7 @@ Step by step instalasi software di Kubuntu 16.04
   # sudo apt-get install 
   # apt-get install postgresql-9.2
   # sudo systemctl start postgresql.service
+
+6. Install pgadmin3
+  # sudo apt-get install pgadmin3*
+  # 
