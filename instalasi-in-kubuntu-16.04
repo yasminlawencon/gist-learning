@@ -5,4 +5,43 @@ Step by step instalasi software di Kubuntu 16.04
   # sudo systemctl start apache2.service
 2. Install php-5.3.8
   # download : https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/1.7.7/xampp-linux-1.7.7.tar.gz/download
-  # 
+  # tar xvfz xampp-linux-1.7.7.tar.gz -C /opt
+  # cd /opt/
+  # sudo chmod 777 -R /opt/lampp/htdocs/
+  # sudo apt-get install ia32-libs
+  # sudo apt-get install python-gtk2-dev
+  # gksudo python /opt/lampp/share/xampp-control-panel/xampp-control-panel.py
+  ----------
+  # membuat GUI aplikasi
+  # udo gedit ~/.local/share/applications/xampp-control-panel.desktop
+  # copy code dibawah ini :
+    [Desktop Entry]
+    Comment=Start and Stop XAMPP
+    Name=XAMPP Control Panel
+    Exec=gksudo python /opt/lampp/share/xampp-control-panel/xampp-control-panel.py
+    Icon=/usr/share/icons/Humanity/devices/24/network-wired.svg
+    Encoding=UTF-8
+    Terminal=false
+    Name=XAMPP Control Panel
+    Comment=Start and Stop XAMPP
+    Type=Application
+    Icon=/usr/share/icons/Humanity/devices/24/network-wired.svg
+
+3. Install Node.js
+  # sudo apt-get install build-essential
+  # sudo apt-get install screen
+  # cd /usr/src
+  # wget http://nodejs.org/dist/v0.10.4/node-v0.10.4.tar.gz
+  # tar zxf node-v0.10.4.tar.gz
+  # cd node-v0.10.4
+  # ./configure
+  # make
+  # sudo make install
+  # node --version
+  
+4. Install git version 2.7.4
+  # sudo apt-get install git
+  # git --version
+
+5. 
+
