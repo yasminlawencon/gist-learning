@@ -8,7 +8,7 @@ Step by step instalasi software di Kubuntu 16.04
   # tar xvfz xampp-linux-1.7.7.tar.gz -C /opt
   # cd /opt/
   # sudo chmod 777 -R /opt/lampp/htdocs/
-  # sudo apt-get install ia32-libs
+  # sudo apt-get install lib32ncurses5 lib32z1
   # sudo apt-get install python-gtk2-dev
   # gksudo python /opt/lampp/share/xampp-control-panel/xampp-control-panel.py
   ----------
