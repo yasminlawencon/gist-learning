@@ -1,0 +1,6 @@
+Step by step instalasi software di Kubuntu 16.04
+
+1. Install apache : https://help.ubuntu.com/lts/serverguide/httpd.html
+  # sudo apt install apache2
+  # sudo systemctl start apache2.service
+2. 
