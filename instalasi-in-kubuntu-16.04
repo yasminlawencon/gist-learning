@@ -55,4 +55,20 @@ Step by step instalasi software di Kubuntu 16.04
 
 6. Install pgadmin3
   # sudo apt-get install pgadmin3*
-  # 
+  Catatan Lanjutan:
+  - Masuk bash postgres
+    # sudo -u postgres psql
+  - Lihat semua user postgres:
+    # postgres=# \du 
+  - Mengganti user postgres
+    # ALTER USER name RENAME TO new_name
+  - Mengganti password user postgres
+    # postgres=# \password postgres
+    atau
+    # ALTER USER "nama_user" WITH PASSWORD 'new_password';
+  - Menambahkan role pada user postgres
+
+7. Install atom editor
+  # sudo add-apt-repository ppa:webupd8team/atom
+  # sudo apt-get update
+  # sudo apt-get install atom
