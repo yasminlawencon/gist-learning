@@ -26,6 +26,7 @@ Step by step instalasi software di Kubuntu 16.04
     Comment=Start and Stop XAMPP
     Type=Application
     Icon=/usr/share/icons/Humanity/devices/24/network-wired.svg
+  # edit : cd /usr/share/applications/
 
 3. Install Node.js
   # sudo apt-get install build-essential
