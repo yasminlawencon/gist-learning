@@ -127,3 +127,5 @@ Step by step instalasi software di Kubuntu 16.04
 11. Instalasi JaspeReprot
     # download JaspeReport : https://sourceforge.net/projects/ireport/files/iReport/iReport-5.6.0/
     # 
+12. Update dependensi broken Kubuntu
+    # sudo apt-get install --fix-broken && sudo apt-get autoremove && sudo apt-get update 
