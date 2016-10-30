@@ -1,20 +1,20 @@
 Step by step instalasi software di Kubuntu 16.04
 
 1. Install apache : https://help.ubuntu.com/lts/serverguide/httpd.html
-  # sudo apt install apache2
-  # sudo systemctl start apache2.service
+   # sudo apt install apache2
+   # sudo systemctl start apache2.service
 2. Install php-5.3.8
-  # download : https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/1.7.7/xampp-linux-1.7.7.tar.gz/download
-  # tar xvfz xampp-linux-1.7.7.tar.gz -C /opt
-  # cd /opt/
-  # sudo chmod 777 -R /opt/lampp/htdocs/
-  # sudo apt-get install lib32ncurses5 lib32z1
-  # sudo apt-get install python-gtk2-dev
-  # gksudo python /opt/lampp/share/xampp-control-panel/xampp-control-panel.py
-  ----------
-  # membuat GUI aplikasi
-  # udo gedit ~/.local/share/applications/xampp-control-panel.desktop
-  # copy code dibawah ini :
+   # download : https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/1.7.7/xampp-linux-1.7.7.tar.gz/download
+   # tar xvfz xampp-linux-1.7.7.tar.gz -C /opt
+   # cd /opt/
+   # sudo chmod 777 -R /opt/lampp/htdocs/
+   # sudo apt-get install lib32ncurses5 lib32z1
+   # sudo apt-get install python-gtk2-dev
+   # gksudo python /opt/lampp/share/xampp-control-panel/xampp-control-panel.py
+   ----------
+   # membuat GUI aplikasi
+   # udo gedit ~/.local/share/applications/xampp-control-panel.desktop
+   # copy code dibawah ini :
     [Desktop Entry]
     Comment=Start and Stop XAMPP
     Name=XAMPP Control Panel
@@ -26,33 +26,33 @@ Step by step instalasi software di Kubuntu 16.04
     Comment=Start and Stop XAMPP
     Type=Application
     Icon=/usr/share/icons/Humanity/devices/24/network-wired.svg
-  # edit : cd /usr/share/applications/
+   # edit : cd /usr/share/applications/
 
 3. Install Node.js
-  # sudo apt-get install build-essential
-  # sudo apt-get install screen
-  # cd /usr/src
-  # wget http://nodejs.org/dist/v0.10.4/node-v0.10.4.tar.gz
-  # tar zxf node-v0.10.4.tar.gz
-  # cd node-v0.10.4
-  # ./configure
-  # make
-  # sudo make install
-  # node --version
+   # sudo apt-get install build-essential
+   # sudo apt-get install screen
+   # cd /usr/src
+   # wget http://nodejs.org/dist/v0.10.4/node-v0.10.4.tar.gz
+   # tar zxf node-v0.10.4.tar.gz
+   # cd node-v0.10.4
+   # ./configure
+   # make
+   # sudo make install
+   # node --version
   
 4. Install git version 2.7.4
-  # sudo apt-get install git
-  # git --version
+   # sudo apt-get install git
+   # git --version
 
 5. Install postgres
-  # tambahkan : gedit  /etc/apt/sources.list.d/pgdg.list 
+   # tambahkan : gedit  /etc/apt/sources.list.d/pgdg.list 
     deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main
-  # wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | \
+   # wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | \
     sudo apt-key add -
-  # sudo apt-get update
-  # sudo apt-get install 
-  # apt-get install postgresql-9.2
-  # sudo systemctl start postgresql.service
+   # sudo apt-get update
+   # sudo apt-get install 
+   # apt-get install postgresql-9.2
+   # sudo systemctl start postgresql.service
 
 6. Install pgadmin3
   # sudo apt-get install pgadmin3*
@@ -70,11 +70,14 @@ Step by step instalasi software di Kubuntu 16.04
   - Menambahkan role pada user postgres
 
 7. Install atom editor
-  # sudo add-apt-repository ppa:webupd8team/atom
-  # sudo apt-get update
-  # sudo apt-get install atom
+   # sudo add-apt-repository ppa:webupd8team/atom
+   # sudo apt-get update
+   # sudo apt-get install atom
   
-8. Install apache-tomcat7
+8. Install virtual box
+   # sudo apt-get install virtualbox 
+  
+9. Install apache-tomcat7
    # sudo apt-cache search tomcat7*
    # sudo apt-get install tomcat7*
    # cd /var/lib/tomcat7/
@@ -94,6 +97,14 @@ Step by step instalasi software di Kubuntu 16.04
    # sudo chmod 500 /etc/authbind/byport/80
    # sudo chown tomcat7 /etc/authbind/byport/80
    # sudo /etc/init.d/tomcat7 restart
-  
-9. Install virtual box
-  # sudo apt-get install virtualbox 
+
+10. Instalasi JavaBridge untuk 
+    # link download : goo.gl/6B2gL7
+    # unzip php-java-bridge_6.2.1_documentation.zip
+    # cp JavaBridge.war /usr/share/tomcat6/webapps/ (maka secara otomatis akan membuat folder JavaBridge di dalam webapps)
+    # akses : http://localhost:8081/JavaBridge/ (mucul halaman PHP/Java Bridge examples)
+    # cp additional_lib.rar /usr/share/tomcat6/webapps/JavaBridge/WEB-INF/lib/ 
+    
+11. Instalasi JaspeReprot
+    # download JaspeReport : https://sourceforge.net/projects/ireport/files/iReport/iReport-5.6.0/
+    # 
