@@ -74,5 +74,21 @@ Step by step instalasi software di Kubuntu 16.04
   # sudo apt-get update
   # sudo apt-get install atom
   
+8. Install apache-tomcat7
+   # sudo apt-cache search tomcat7*
+   # sudo apt-get install tomcat7*
+   # cd /usr/share/tomcat7/
+   # gedit skel/conf/server.xml 
+   # sebelum
+     <Connector port="8080" protocol="HTTP/1.1"
+               connectionTimeout="20000"
+               URIEncoding="UTF-8"
+               redirectPort="8443" />
+   # sesudah ganti port
+     <Connector port="8081" protocol="HTTP/1.1"
+               connectionTimeout="20000"
+               URIEncoding="UTF-8"
+               redirectPort="8443" />
+  
 8. Install virtual box
   # sudo apt-get install virtualbox 
