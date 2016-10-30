@@ -86,7 +86,11 @@ Disini penjelasan mengenai installing project LinovCloud di Cenots 6.6 (rekomend
     -----------------------------------
    4. Jika muncul error ketika http://localhost/LinovCloud/
       # yum install mod_ssl
-      
+ 6. Jika masih error ini:
+    Warning (2): fopen(tax-salary.json) [function.fopen]: failed to open stream: Permission denied [APP/controllers/pages_controller.php, line 220]
+    -----------------------
+    Solving Problem:
+    # buat file di /app/webroot/tax-salary.json -> {"payroll":[60982966.68,61208661.7,66880170.88,0,0,0,0,0,0,0,0,0],"tax":[7537571,3882044,1046291,0,0,0,0,0,0,0,0,0]}
 Selesai. Silahkan akses url LinovCloud, jika ada pertanyaan silahkan sampaikan.
 
 
