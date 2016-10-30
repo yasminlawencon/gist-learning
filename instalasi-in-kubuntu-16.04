@@ -119,6 +119,10 @@ Step by step instalasi software di Kubuntu 16.04
       # tar zxvf msttcorefonts.tar.gz
       # cp msttcorefonts/*.ttf  /usr/share/fonts/
       # fc-cache -fv 
+      
+    Error :
+    # ERROR generating Report:
+      [[o:JRException]:"net.sf.jasperreports.engine.JRException: Error trying to export to file : 
     
 11. Instalasi JaspeReprot
     # download JaspeReport : https://sourceforge.net/projects/ireport/files/iReport/iReport-5.6.0/
