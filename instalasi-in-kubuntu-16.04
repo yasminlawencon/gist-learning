@@ -111,6 +111,14 @@ Step by step instalasi software di Kubuntu 16.04
     # gedit /etc/environment
     # tambakna pada baris terakhir -> /opt/lampp/bin (agar path php v5.3 bisa terbaca)
     
+    Error :
+    # ERROR generating Report:
+      [[o:JRFontNotFoundException]:"net.sf.jasperreports.engine.util.JRFontNotFoundException: Font 'Arial' is not available to the JVM. See the Javadoc for more details." at: #-27 
+    # Install font pada linux
+      # wget http://thelinuxbox.org/downloads/fonts/msttcorefonts.tar.gz
+      # tar zxvf msttcorefonts.tar.gz
+      # cp msttcorefonts/*.ttf  /usr/share/fonts/
+      # fc-cache -fv 
     
 11. Instalasi JaspeReprot
     # download JaspeReport : https://sourceforge.net/projects/ireport/files/iReport/iReport-5.6.0/
