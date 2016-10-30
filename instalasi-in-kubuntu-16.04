@@ -89,6 +89,7 @@ Step by step instalasi software di Kubuntu 16.04
                connectionTimeout="20000"
                URIEncoding="UTF-8"
                redirectPort="8443" />
+   # systemctl restart tomcat7
   
-8. Install virtual box
+9. Install virtual box
   # sudo apt-get install virtualbox 
