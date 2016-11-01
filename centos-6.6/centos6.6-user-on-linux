@@ -7,25 +7,25 @@ Macam-macam perintah terminal untuk masuk root di linux:
 4. gksu, 
 5. gksudo
 
-# su <user/null>-> untuk login sementara sebagai user lain. Bila user ID tidak disertakan maka komputer menganggap Anda ingin 
+# su <user/null>-> Untuk login sementara sebagai user lain. Bila user ID tidak disertakan maka komputer menganggap Anda ingin 
                    login sementara sebagai super user atau root. Bila Anda bukan root dan user lain itu memiliki password maka 
                    Anda harus memasukkan passwordnya dengan benar. Tapi bila Anda adalah root maka Anda dapat login sebagai user 
                    lain tanpa perlu mengetahui password user tersebut.
         
-# sudo su <user/null> ->  apabila memiliki akses root, maka sudo akan melakukan perintah sebagai superuser. Sudo su memberikan 
+# sudo su <user/null> ->  Apabila memiliki akses root, maka sudo akan melakukan perintah sebagai superuser. Sudo su memberikan 
                           kewenangan agar user biasa dapat bertingkah seperti super user (sudo --> super user do) sehingga 
                           user biasa pun dapat leluasa "menguasai sistem". Dan perintah ini berlaku sampai kita yang menutup 
                           terminal, tidak seperti perintah pada sudo dan perintah ini dikhusus untuk ubuntu dan perintah ini 
                           universal maksudnya perintah ini umum dalam mencakup perintah dalam terminal dan kita akan lihat 
                           perbedan kedua tampilan perintah tersebut.
 
-# sudo -s -> perintah terminal untuk masuk user root, biasanya digunakan di ubuntu namun bisa juga di distro linux yang lain.
+# sudo -s -> Perintah terminal untuk masuk user root, biasanya digunakan di ubuntu namun bisa juga di distro linux yang lain.
 
 # gksu -> Gksu adalah perpustakaan yang menyediakan Gtk + frontend untuk su dan sudo. Mendukung form login dan melestarikan 
           lingkungan ketika bertindak sebagai frontend su. Hal ini berguna untuk item menu atau program grafis lain yang 
           perlu untuk meminta password pengguna untuk menjalankan program lain sebagai user lain.
 
-# gksudo -> sudo singkatan super user do. Itu berarti memberikan hak istimewa dari root / pengguna utama melalui terminal. 
+# gksudo -> Sudo singkatan super user do. Itu berarti memberikan hak istimewa dari root / pengguna utama melalui terminal. 
             gksudo dan kdesudo keduanya juga hal sudo kecuali bahwa yang pertama adalah penggunaan untuk operasi sudo grafis 
             yang bekerja menggunakan GUI bukan terminal dan kedua adalah gksudo alternatif untuk Kubuntu.
 
