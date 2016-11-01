@@ -47,8 +47,14 @@ Pindah ke user lain
 Menggunakan printah sudo su
 # sudo su
 Muncul message : userame is not in the sudoers file.  This incident will be reported.
-Artinya user tersebut tidak terdaftar sebagai user root (sudoers -> super user)
+Artinya user tersebut tidak terdaftar sebagai user root (sudoers -> do super user)
 
+Fix solve:
+1. Tambahkan nameuser di file sudoers, seperti berikut
+   # nano /etc/sudoers
+   # User privilege specification
+     root    ALL=(ALL:ALL) ALL 
+     newuser ALL=(ALL:ALL) ALL
 -------------------------------------
 1. http://blog.codedb.co/linux-panduan-menggunakan-useradd-untuk-membuat-user-baru-di-linux-centos-ubuntu-dll/
 2. https://pemula.linux.or.id/pengguna/command.html
