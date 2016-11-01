@@ -45,6 +45,11 @@ Menghapus User
 Pindah ke user lain
 # sudo nameuser
 
+Menggunakan printah sudo su
+# sudo su
+Muncul message : userame is not in the sudoers file.  This incident will be reported.
+Artinya user tersebut tidak terdaftar sebagai user root (sudoers -> super user)
+
 -------------------------------------
 1. http://blog.codedb.co/linux-panduan-menggunakan-useradd-untuk-membuat-user-baru-di-linux-centos-ubuntu-dll/
 2. https://pemula.linux.or.id/pengguna/command.html
