@@ -1,4 +1,3 @@
-Referensi artikel untuk setting user
 
 Macam-macam perintah terminal untuk masuk root di linux:
 1. su, 
@@ -30,7 +29,7 @@ Macam-macam perintah terminal untuk masuk root di linux:
             yang bekerja menggunakan GUI bukan terminal dan kedua adalah gksudo alternatif untuk Kubuntu.
 
 -------------------------------------
-Membuat User Baru
+Membuat User Baru - sudoers
 # sudo adduser newuser
 # sudo passwd newuser
 # nano /etc/sudoers
