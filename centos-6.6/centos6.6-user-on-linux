@@ -56,6 +56,8 @@ Fix solve:
      root    ALL=(ALL:ALL) ALL 
      newuser ALL=(ALL:ALL) ALL
 -------------------------------------
+
+Referensi artikel :
 1. http://blog.codedb.co/linux-panduan-menggunakan-useradd-untuk-membuat-user-baru-di-linux-centos-ubuntu-dll/
 2. https://pemula.linux.or.id/pengguna/command.html
 
