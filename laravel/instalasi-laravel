@@ -1,0 +1,9 @@
+Instalasi laravel :
+
+1. Via LARAVEL Installer
+   # composer global require "laravel/installer"
+   # laravel new blog
+2. Via Komposer Buat-Project
+   # composer create-project --prefer-dist laravel/laravel blog
+3. Menjalankan Server Lokal
+   # php artisan serve
