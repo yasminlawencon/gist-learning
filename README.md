@@ -15,7 +15,6 @@ Repositori ini berisi kumpulan-kumpulan tutorial yang bisa membantu untuk pemeca
 * Install-sublime-atom-editor
 * Install-unrar
 * Setting-jasper-report-linovcloud
-* Dokumentasi Laravel
 
 
 Dan akan terus diupdate untuk keperluan pengembangan.
