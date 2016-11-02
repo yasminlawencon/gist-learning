@@ -1,5 +1,4 @@
 Instalasi laravel :
-
 1. Via LARAVEL Installer
    # composer global require "laravel/installer"
    # laravel new blog
@@ -7,3 +6,15 @@ Instalasi laravel :
    # composer create-project --prefer-dist laravel/laravel blog
 3. Menjalankan Server Lokal
    # php artisan serve
+   
+Konfigurasi :
+1. Direktori publik
+   Setelah menginstal LARAVEL, Diharuskan mengkonfigurasi root dokumen / web server kita untuk menjadi direktori public. 
+   Dalam direktori ini berfungsi sebagai fornt controller untuk semua permintaan HTTP yang masuk kedalam aplikasi kita. index.php
+2. File konfigurasi
+   Semua file konfigurasi untuk project LARAVEL disimpan dalam config direktori.
+..................
+Referensi artikel:
+https://laravel.com/docs/#installation
+
+Create by : lani.asep@lawencon.com
