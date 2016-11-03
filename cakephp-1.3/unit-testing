@@ -7,6 +7,8 @@ salah satu dari dua pilihan, refactor tes Anda untuk bekerja dengan SimpleTest a
 1. Instalasi SimpleTest
 Download SimpleTest untuk cakephp 1.3 : http://simpletest.sourceforge.net/
 
+# copy folder /simpletest ke nama-project/vendors/ (letakan satu folder simpletest disini)
+#
 
 Referensi artikel : 
 # http://book.cakephp.org/1.3/en/The-Manual/Common-Tasks-With-CakePHP/Testing.html
