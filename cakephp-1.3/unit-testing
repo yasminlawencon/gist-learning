@@ -1,6 +1,11 @@
 Dokumentasi unit testing di cakephp 1.3
 
-Bagian ini akan membahas bagaimana mempersiapkan untuk unit testing dan bagaimana membangun dan menjalankan unit tesing tersebut. CakePHP tidak dirancang untuk bekerja sama dengan PHPUnit. CakePHP telah beralih menggunakan SimpleTest dan Anda akan memiliki salah satu dari dua pilihan, refactor tes Anda untuk bekerja dengan SimpleTest atau memodifikasi inti untuk menggunakan PHPUnit.
+Bagian ini akan membahas bagaimana mempersiapkan untuk unit testing dan bagaimana membangun dan menjalankan unit tesing tersebut. 
+CakePHP tidak dirancang untuk bekerja sama dengan PHPUnit. CakePHP telah beralih menggunakan SimpleTest dan Anda akan memiliki 
+salah satu dari dua pilihan, refactor tes Anda untuk bekerja dengan SimpleTest atau memodifikasi inti untuk menggunakan PHPUnit.
+
+1. Instalasi SimpleTest
+Download SimpleTest untuk cakephp 1.3 : http://simpletest.sourceforge.net/
 
 
 Referensi artikel : 
