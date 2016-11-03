@@ -1,0 +1,18 @@
+Tutorial disini menjelaskan bagaimana mensetting aplikasi dengan environment react.js
+
+#Source react:
+<script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
+<script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+
+
+
+Referenesi artikel :
+- Introducing React
+  # https://www.kirupa.com/react/introducing_react.htm
+- Building Your First React App
+  # https://www.kirupa.com/react/building_your_first_react_app.htm
+- Setting Up Your React Dev Environment Easily
+  # https://www.kirupa.com/react/setting_up_react_environment.htm
+- ReactJS Tutorial
+  # https://www.tutorialspoint.com/reactjs/reactjs_environment_setup.htm
