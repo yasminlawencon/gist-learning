@@ -5,10 +5,20 @@ CakePHP tidak dirancang untuk bekerja sama dengan PHPUnit. CakePHP telah beralih
 salah satu dari dua pilihan, refactor tes Anda untuk bekerja dengan SimpleTest atau memodifikasi inti untuk menggunakan PHPUnit.
 
 1. Instalasi SimpleTest
-Download SimpleTest untuk cakephp 1.3 : http://simpletest.sourceforge.net/
+Download SimpleTest v1.0 
+Download SimpleTest untuk cakephp 1.3 : # https://sourceforge.net/projects/simpletest/files/simpletest/simpletest_1.0.1/
 
 # copy folder /simpletest ke nama-project/vendors/ (letakan satu folder simpletest disini)
-#
+# membuat koneksi database dengan frefix $test di /config/database.php:
+    var $test = array(
+        'driver' => 'postgres',
+        'persistent' => false,
+        'host' => 'dbhost',
+        'login' => 'username',
+        'password' => 'password',
+        'database' => 'nama_database',
+        'prefix' => 'lin_',
+    );
 
 Referensi artikel : 
 # http://book.cakephp.org/1.3/en/The-Manual/Common-Tasks-With-CakePHP/Testing.html
