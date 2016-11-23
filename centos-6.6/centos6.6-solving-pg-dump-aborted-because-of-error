@@ -1,4 +1,4 @@
-Step-by-step untuk solving masalah server version: 9.2.18; pg_dump version: 8.4.20
+Step-by-step untuk solving masalah beda versi : server version: 9.2.18; pg_dump version: 8.4.20
 
 /usr/bin/./pg_dump --host localhost --port 5432 --username "postgres" --no-password  --format plain --no-owner --inserts --column-inserts --no-privileges --verbose --file "/root/Documents/pmt.sql" "dev.hr.pmt.co.id"
 pg_dump: server version: 9.2.18; pg_dump version: 8.4.20
@@ -6,6 +6,8 @@ pg_dump: aborting because of server version mismatch
 pg_dump: *** aborted because of error
 
 Process returned exit code 1.
+
+
 
 
 
