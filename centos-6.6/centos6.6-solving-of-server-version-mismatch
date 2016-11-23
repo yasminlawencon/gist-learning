@@ -7,6 +7,8 @@ pg_dump: *** aborted because of error
 
 Process returned exit code 1.
 
+- psql -V : psql (PostgreSQL) 8.4.20
+
 
 
 
