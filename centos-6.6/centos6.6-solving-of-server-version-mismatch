@@ -7,11 +7,10 @@ pg_dump: *** aborted because of error
 
 Process returned exit code 1.
 
-- psql -V : psql (PostgreSQL) 8.4.20
-
-
-
-
+# psql -V : psql (PostgreSQL) 8.4.20
+# yum remove postgresql*
+# yum install postgresql92*
+# yum install pgadmin3_*
 
 
 Created by : lani.asep@lawencon.com
