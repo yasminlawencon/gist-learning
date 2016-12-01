@@ -1,0 +1,14 @@
+Disini adalah step-by-step untuk installasi php-mcrypt
+1. Get the Repos from
+   # wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+   # wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
+   # sudo rpm -Uvh remi-release-6*.rpm epel-release-6*.rpm
+2. Install it via:
+   # sudo yum update
+   # sudo yum install php-mcrypt*
+3. Edit the mcrypt.ini
+   # sudo nano /etc/php.d/mcrypt.ini
+   add this
+   # extension=/usr/lib64/php/modules/mcrypt.so
+4. Restart your webserver:
+   # sudo service httpd restart
