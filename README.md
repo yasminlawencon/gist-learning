@@ -3,6 +3,7 @@
 Repositori ini berisi kumpulan-kumpulan tutorial yang bisa membantu untuk pemecahan masalah pemrograman.
 
 ## Acknowledgments
+* [Dokumentasi PHPUnit](https://www.gitbook.com/book/laniasepsutisna/manual-phpunit)
 * [Dokumentasi Laravel](https://laniasepsutisna.gitbooks.io/laravel/content/)
 * Install-apache-tomcat-v7.0.72
 * Install-git-v2.0.5
