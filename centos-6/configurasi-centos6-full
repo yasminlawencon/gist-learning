@@ -1,0 +1,41 @@
+Install new centos 6
+Update apps : yum update
+Install wget : yum install wget
+Install httpd & php : yum install httpd, https://support.rackspace.com/how-to/centos-6-apache-and-php-install/
+Add modul : yum install php-mbstring
+Config /etc/php.ini allow_url_include=On
+Config httpd.conf : AllowOverride All, pastikan .htaccess, .bowerrc, dll ada
+Install pgsql driver for php : yum install php-pgsql
+Set SELinux :
+	- setsebool -P httpd_can_network_connect_db on
+	- turn on/of selinux : setenforce 1/0
+	- http://stackoverflow.com/questions/30617357/unable-to-connect-to-postgres-via-php-but-can-connect-from-command-line-and-pgad
+Set firewall : https://www.digitalocean.com/community/tutorials/how-to-set-up-a-basic-iptables-firewall-on-centos-6
+Install gcc 4.8 (untuk compile node.js) :
+	- https://gist.github.com/stephenturner/e3bc5cfacc2dc67eca8b
+	- scl enable devtoolset-2 bash(untuk pindah bash)
+Install Node.js :
+	- https://www.digitalocean.com/community/tutorials/how-to-install-and-run-a-node-js-app-on-centos-6-4-64bit
+	- pake ganti versi node nya
+	- kalau npm ga jalan sehabis set secure_path, restart aja
+Konfigurasi git:
+	- git config --global user.name "testuser"
+	- git config --global user.email "testuser@example.com"
+Install bower : npm install -g bower
+Update java & install apache tomcat : http://tecadmin.net/steps-to-install-tomcat-server-on-centos-rhel/
+	- Install Java Bridge
+	- Install Fonts : http://www.itzgeek.com/how-tos/linux/centos-how-tos/how-to-install-microsoft-truetype-fonts-in-centos-6-rhel-6.html
+
+	
+OPTIONAL
+Install postgres
+http://www.liquidweb.com/kb/how-to-install-and-connect-to-postgresql-on-centos-6/	
+	
+	
+	
+========================================================================================================================
+PR :
+cari tau settingan selinux (nge block javabridge dari apache kalau setenforce 1)	
+;Setting security SELinux untuk JavaBridge : Restorecon -R -v [folder tomcat]
+
+vi /etc/httpd/conf/httpd.conf
