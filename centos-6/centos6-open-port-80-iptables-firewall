@@ -29,9 +29,19 @@ POP3 & IMAP mail
 $ iptables -A INPUT -p tcp -m tcp --dport 143 -j ACCEPT
 $ iptables -A INPUT -p tcp -m tcp --dport 993 -j ACCEPT
 
+Save the configuration
+$ iptables -L -n
+$ iptables-save | sudo tee /etc/sysconfig/iptables
+$ service iptables restart
+
+----------------------------------------------------------------
 $ sudo iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
 $ sudo /etc/init.d/iptables save
 $ service iptables restart
+
+Created by : lani.asep@lawencon.com
+
+
 
 How To Set Up a Basic Iptables Firewall on Centos 6
 # https://www.digitalocean.com/community/tutorials/how-to-set-up-a-basic-iptables-firewall-on-centos-6
