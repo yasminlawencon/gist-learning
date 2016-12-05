@@ -1,5 +1,9 @@
-http://unix.stackexchange.com/questions/109443/open-port-80-in-centos-6-5
+Open Port 80
+# http://unix.stackexchange.com/questions/109443/open-port-80-in-centos-6-5
 
 $ sudo iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
 $ sudo /etc/init.d/iptables save
 $ service iptables restart
+
+How To Set Up a Basic Iptables Firewall on Centos 6
+# https://www.digitalocean.com/community/tutorials/how-to-set-up-a-basic-iptables-firewall-on-centos-6
