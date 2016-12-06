@@ -39,4 +39,14 @@ Solving:
 # npm install browser-sync
 ---------------------------------------
 
+[04:12:35] gulp-notify: [Error in notifier] Error in plugin 'gulp-notify'
+Message:
+    not found: notify-send
+
+Solving:
+# npm install -g gulp-notify
+
+
+
+
 
