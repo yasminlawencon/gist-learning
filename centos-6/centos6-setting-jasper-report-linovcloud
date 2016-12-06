@@ -24,6 +24,7 @@ Problem Solve :
    # akses : http://localhost:8081/JavaBridge/ (mucul halaman PHP/Java Bridge examples)
    # download additional_lib.rar : http://download1817.mediafire.com/vj67qeliwvgg/qr05u86ry2lqb2r/additional_lib.rar
    # cp additional_lib.rar /usr/share/tomcat6/webapps/JavaBridge/WEB-INF/lib/
+   # unrar additional_lib.rar
 
 4. Setting java_bridge.php
    # JavaBridge -> driver
