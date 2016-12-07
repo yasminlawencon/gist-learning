@@ -18,6 +18,16 @@ Download XAMPP in url : https://www.apachefriends.org/download.html <for Linux>
  # Listen 443 -> Listen 8086
  # ./lampp stop 
  # ./lampp start
+
+Error: 
+  Stopping XAMPP for Linux 5.6.28-0...
+  XAMPP: Stopping Apache...fail.
+  apachectl returned 1.
+  XAMPP: Stopping MySQL...not running.
+  XAMPP: Stopping ProFTPD...not running.
  
+ # sudo rm -f /opt/lampp/logs/httpd.pid
+ # ./lampp stop 
+ # ./lampp start
  
 Created by: lani.asep@lawencon.com
