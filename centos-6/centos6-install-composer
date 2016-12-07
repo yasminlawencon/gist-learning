@@ -1,3 +1,16 @@
 Step-by-step instalasi composer:
 
 https://situsali.com/menginstal-composer-di-xampp-linux/
+
+
+# nano ~/.bashrc
+# Tambahkan kode berikut:
+  PATH=$PATH:/opt/lampp/bin
+  set $PATH=PATH
+# curl -sS -k https://getcomposer.org/installer | php
+# sudo ln -s /opt/lampp/bin/php /bin
+# sudo mv composer.phar /bin/composer
+# composer 
+
+
+Created by : Lani.asep@lawencon.com
