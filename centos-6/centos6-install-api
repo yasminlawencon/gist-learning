@@ -2,7 +2,7 @@ Install API
 
 	1. clone api from github
 	2. setting database.php (config/database.php)
-	3. 
+	3. setting database
 
           'pgsql' => [
              'driver'   => 'pgsql',
