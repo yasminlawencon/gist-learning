@@ -55,4 +55,7 @@ Install API
 
 5. composer install
 6. composer update
-7. 
+7. Setting site-enabled : DocumentRoot "/opt/lampp/htdocs/testing.api.linovhr.com/public"
+
+
+Create by: lani.asep@lawencon.com
