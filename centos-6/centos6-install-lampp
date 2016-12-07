@@ -31,4 +31,16 @@ Error:
  # ./lampp stop 
  # ./lampp start
  
+-----------------------------------------
+Error:
+(98)Address already in use: AH00072: make_sock: could not bind to address [::]:8086
+(98)Address already in use: AH00072: make_sock: could not bind to address 0.0.0.0:8086
+no listening sockets available, shutting down
+AH00015: Unable to open logs
+
+ # nano /opt/lampp/etc/extra/httpd-ssl.conf
+ # ubah port sebelumnya, ganti dengan 445
+ 
+ 
+ 
 Created by: lani.asep@lawencon.com
