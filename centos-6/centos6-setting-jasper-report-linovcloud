@@ -18,10 +18,15 @@ Problem Solve :
    
 3. Download JavaBridge.war untuk centos 6.6
    # link download : goo.gl/6B2gL7
+   # link download : goo.gl/XIpZWz
    # unzip php-java-bridge_6.2.1_documentation.zip
    # cp JavaBridge.war /usr/share/tomcat6/webapps/ (maka secara otomatis akan membuat folder JavaBridge di dalam webapps)
    # akses : http://localhost:8081/JavaBridge/ (mucul halaman PHP/Java Bridge examples)
-   # cp additional_lib.rar /usr/share/tomcat6/webapps/JavaBridge/WEB-INF/lib/
+   # download additional_lib.tar : http://download1599.mediafire.com/r4clbloauj9g/229028x56jxijd3/additional_lib.tar.gz
+   # cp additional_lib.tar.gz /usr/share/tomcat6/webapps/JavaBridge/WEB-INF/lib/
+   # tar -xvf additional_lib.tar.gz
+   # cd additional_lib
+   # cp * ../
 
 4. Setting java_bridge.php
    # JavaBridge -> driver

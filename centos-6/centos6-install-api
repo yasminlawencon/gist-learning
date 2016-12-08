@@ -1,0 +1,61 @@
+Install API
+
+1. clone api from github
+2. setting database.php (config/database.php)
+3. setting database
+	'pgsql' => [
+	'driver'   => 'pgsql',
+	'host'     => env('DB_HOST', ''),
+	'port'     => env('DB_PORT', 5432),
+	'database' => env('DB_DATABASE', 'linov_api'),
+	'username' => env('DB_USERNAME', 'postgres'),
+	'password' => env('DB_PASSWORD', '1234'),
+	'charset'  => env('DB_CHARSET', 'utf8'),
+	'prefix'   => env('DB_PREFIX', ''),
+	'schema'   => env('DB_SCHEMA', 'public'),
+	],
+
+	'linAdmin' => [
+	'driver'   => 'pgsql',
+	'host'     => 'localhost',
+	'port'     => 5432,
+	'database' => 'linov_demo',
+	'username' => 'postgres',
+	'password' => '1234',
+	'charset'  => env('DB_CHARSET', 'utf8'),
+	'prefix'   => env('DB_PREFIX', 'lin_'),
+	'schema'   => env('DB_SCHEMA', 'public'),
+	],
+
+	'linRecruitment' => [
+	'driver'   => 'pgsql',
+	'host'     => 'localhost',
+	'port'     => 5432,
+	'database' => 'linov_rec2',
+	'username' => 'postgres',
+	'password' => '1234',
+	'charset'  => env('DB_CHARSET', 'utf8'),
+	// 'prefix'   => env('DB_PREFIX', 'lin_'),
+	'schema'   => env('DB_SCHEMA', 'public'),
+	],
+	
+4. ubah / setting up file .env (sesuai dengan database 'pgsql default')
+	APP_ENV=local
+	APP_DEBUG=true
+	APP_KEY=base64:XrltaiCr2fjXIddRCJFe6uJlpQScCrjfRu9AfeqkA6Q=
+	DB_CONNECTION=pgsql
+	DB_HOST=localhost
+	DB_PORT=5432
+	DB_DATABASE=linov_api
+	DB_USERNAME=postgres
+	DB_PASSWORD=1234
+
+	CACHE_DRIVER=memcached
+	QUEUE_DRIVER=sync
+
+5. composer install
+6. composer update
+7. Setting site-enabled : DocumentRoot "/opt/lampp/htdocs/testing.api.linovhr.com/public"
+
+
+Create by: lani.asep@lawencon.com

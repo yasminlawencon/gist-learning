@@ -1,0 +1,99 @@
+Open Port 80
+# http://unix.stackexchange.com/questions/109443/open-port-80-in-centos-6-5
+
+Protect full-scale DDOS
+$ iptables -A INPUT -p tcp --tcp-flags ALL NONE -j DROP
+
+Reject is a syn-flood attack
+$ iptables -A INPUT -p tcp ! --syn -m state --state NEW -j DROP
+
+Syn-flood attack means that the attackers open a new connection We won't accept such packages
+$ iptables -A INPUT -p tcp --tcp-flags ALL ALL -j DROP
+
+Open up ports for selected services
+$ iptables -A INPUT -i lo -j ACCEPT
+
+Http port 80, and https port 443
+$ iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
+$ iptables -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
+
+Now we can allow web server traffic
+$ iptables -A INPUT -p tcp -m tcp --dport 25 -j ACCEPT
+$ iptables -A INPUT -p tcp -m tcp --dport 465 -j ACCEPT
+
+Users read email on their server
+$ iptables -A INPUT -p tcp -m tcp --dport 110 -j ACCEPT
+$ iptables -A INPUT -p tcp -m tcp --dport 995 -j ACCEPT
+
+POP3 & IMAP mail 
+$ iptables -A INPUT -p tcp -m tcp --dport 143 -j ACCEPT
+$ iptables -A INPUT -p tcp -m tcp --dport 993 -j ACCEPT
+
+Save the configuration
+$ iptables -L -n
+$ iptables-save | sudo tee /etc/sysconfig/iptables
+$ service iptables restart
+
+How To Set Up a Basic Iptables Firewall on Centos 6
+# https://www.digitalocean.com/community/tutorials/how-to-set-up-a-basic-iptables-firewall-on-centos-6
+
+Cek Port Yang Terbuka
+# netstat -tuplen
+-------------------------Di Server AWS---------------------------------------
+Proto Recv-Q Send-Q Local Address               Foreign Address             State       User       Inode      PID/Program name
+tcp        0      0 0.0.0.0:22                  0.0.0.0:*                   LISTEN      0          32996      5980/sshd
+tcp        0      0 127.0.0.1:25                0.0.0.0:*                   LISTEN      0          10967      1121/master
+tcp        0      0 :::3306                     :::*                        LISTEN      498        2037031    19646/mysqld
+tcp        0      0 :::80                       :::*                        LISTEN      0          2102475    9822/httpd
+tcp        0      0 :::8085                     :::*                        LISTEN      0          2037426    19818/httpd
+tcp        0      0 :::21                       :::*                        LISTEN      2          2036919    19502/proftpd
+tcp        0      0 :::8086                     :::*                        LISTEN      0          2037434    19818/httpd
+tcp        0      0 :::22                       :::*                        LISTEN      0          32998      5980/sshd
+tcp        0      0 ::1:25                      :::*                        LISTEN      0          10970      1121/master
+tcp        0      0 :::443                      :::*                        LISTEN      0          2102479    9822/httpd
+udp        0      0 0.0.0.0:68                  0.0.0.0:*                               0          9916       791/dhclient
+
+-------------------------Di Server 34---------------------------------------
+Proto Recv-Q Send-Q Local Address               Foreign Address             State       User       Inode      PID/Program name
+tcp        0      0 127.0.0.1:25                0.0.0.0:*                   LISTEN      0          22094      -
+tcp        0      0 0.0.0.0:9668                0.0.0.0:*                   LISTEN      91         29494      -
+tcp        0      0 0.0.0.0:9669                0.0.0.0:*                   LISTEN      91         29898      -
+tcp        0      0 0.0.0.0:46149               0.0.0.0:*                   LISTEN      29         17925      -
+tcp        0      0 0.0.0.0:3690                0.0.0.0:*                   LISTEN      0          22298      -
+tcp        0      0 103.30.180.34:3306          0.0.0.0:*                   LISTEN      27         21960      -
+tcp        0      0 0.0.0.0:111                 0.0.0.0:*                   LISTEN      0          17871      -
+tcp        0      0 127.0.0.1:5939              0.0.0.0:*                   LISTEN      0          21985      -
+tcp        0      0 0.0.0.0:21                  0.0.0.0:*                   LISTEN      0          12099      -
+tcp        0      0 0.0.0.0:22                  0.0.0.0:*                   LISTEN      0          12095      -
+tcp        0      0 127.0.0.1:631               0.0.0.0:*                   LISTEN      0          17979      -
+tcp        0      0 0.0.0.0:5432                0.0.0.0:*                   LISTEN      26         1058391    -
+tcp        0      0 ::1:25                      :::*                        LISTEN      0          22096      -
+tcp        0      0 :::443                      :::*                        LISTEN      0          16693983   -
+tcp        0      0 ::ffff:127.0.0.1:8005       :::*                        LISTEN      91         26736      -
+tcp        0      0 :::8009                     :::*                        LISTEN      91         22476      -
+tcp        0      0 :::111                      :::*                        LISTEN      0          17876      -
+tcp        0      0 :::80                       :::*                        LISTEN      0          16693979   -
+tcp        0      0 :::8081                     :::*                        LISTEN      91         22475      -
+tcp        0      0 :::9267                     :::*                        LISTEN      91         146532     -
+tcp        0      0 :::39699                    :::*                        LISTEN      29         17931      -
+tcp        0      0 :::22                       :::*                        LISTEN      0          12097      -
+tcp        0      0 ::1:631                     :::*                        LISTEN      0          17978      -
+tcp        0      0 :::5432                     :::*                        LISTEN      26         1058392    -
+udp        0      0 0.0.0.0:631                 0.0.0.0:*                               0          17981      -
+udp        0      0 0.0.0.0:634                 0.0.0.0:*                               0          17870      -
+udp        0      0 127.0.0.1:766               0.0.0.0:*                               0          11966      -
+udp        0      0 0.0.0.0:33838               0.0.0.0:*                               29         17922      -
+udp        0      0 0.0.0.0:111                 0.0.0.0:*                               0          17868      -
+udp        0      0 :::634                      :::*                                    0          17875      -
+udp        0      0 :::53527                    :::*                                    29         17928      -
+udp        0      0 :::111                      :::*                                    0          17873      -
+
+$ sudo iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
+$ sudo /etc/init.d/iptables save
+$ service iptables restart
+
+Created by : lani.asep@lawencon.com
+
+
+
+
