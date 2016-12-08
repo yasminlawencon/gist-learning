@@ -30,3 +30,8 @@ Step-by-step install E-Recruitment:
             'log' => false,
 9. composer require cakephp\Migrations "@stable"
 10. bin\cake plugin load Migrations
+
+
+
+Create by : lani.asep@lawencon.com
+
