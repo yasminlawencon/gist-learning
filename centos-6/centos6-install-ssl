@@ -1,0 +1,8 @@
+Step-by-step installasi SSL untuk centos6
+
+# yum install mod_ssl openssl
+# download ssl file untuk linovhr.com : # http://download1338.mediafire.com/36900b86dizg/w83fkg4fd9n338f/ssl.tar.gz
+# 
+Referensi tutorial : https://wiki.centos.org/HowTos/Https
+
+Create by : lani.asep@lawencon.com
