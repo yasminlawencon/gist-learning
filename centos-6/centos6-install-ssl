@@ -55,6 +55,12 @@ Listen 443
 
 Jika Listen 443 -> silahkan comment Listen 433 tersebut
 ------------------------------------------------------------------------
+Cara Redirect ke HTTP atau HTTPS
+
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+------------------------------------------------------------------------
 
 Referensi tutorial : https://wiki.centos.org/HowTos/Https
 
