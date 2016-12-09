@@ -1,5 +1,5 @@
 Step-by-step instal ESS di Centos6
 
 1. Clone Linov ESS with this git https://github.com/linovsoftware/LinovESS.git
-2. Composer install
+2. composer install
 3. 
