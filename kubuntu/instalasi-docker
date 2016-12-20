@@ -15,6 +15,7 @@ Referensi artikel : https://www.linuxbabe.com/docker/install-docker-ubuntu-16-10
 # docker -v
 # sudo docker info
 # sudo docker run hello-world
+# docker run -it ubuntu bash
 
 
 Create by : lani.asep@lawencon.com
