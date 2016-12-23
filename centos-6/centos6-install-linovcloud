@@ -104,6 +104,10 @@ Disini penjelasan mengenai installing project LinovCloud di Cenots 6.6 (rekomend
     # service httpd restart
     # service tomcat6 restart
 
+ 9. Jika masih error ini:
+    500 Internal Server Error
+    
+    
 Selesai. Silahkan akses url LinovCloud, jika ada pertanyaan silahkan sampaikan.
 
 
