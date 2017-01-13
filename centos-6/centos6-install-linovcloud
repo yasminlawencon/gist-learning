@@ -97,7 +97,12 @@ Disini penjelasan mengenai installing project LinovCloud di Cenots 6.6 (rekomend
     ERROR generating Report:
     [[o:JRFontNotFoundException]:"net.sf.jasperreports.engine.util.JRFontNotFoundException: Font 'Arial' is not available to the JVM. See the Javadoc for more details." at: #-27 
     # install font di linux
-
+ 
+ 8. Jika masih error ini:
+    Mixed Content: The page at '[url]' was loaded over HTTPS, but requested an insecure script '[url]/browser-sync/browser-sync-client.2.12.8.js'. This request has been blocked; the content must be served over HTTPS.
+    
+    # 
+    
 Selesai. Silahkan akses url LinovCloud, jika ada pertanyaan silahkan sampaikan.
 
 
