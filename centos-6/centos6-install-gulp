@@ -44,6 +44,7 @@ Message:
     not found: notify-send
 
 Solving:
+# sudo yum install libnotify
 # npm install -g gulp-notify
 # npm install gulp-notify --save-dev
 # npm install notify-send
