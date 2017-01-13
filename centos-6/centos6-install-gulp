@@ -45,6 +45,7 @@ Message:
 
 Solving:
 # npm install -g gulp-notify
+# npm install gulp-notify --save-dev
 
 
 
