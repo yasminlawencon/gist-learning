@@ -46,7 +46,7 @@ Message:
 Solving:
 # npm install -g gulp-notify
 # npm install gulp-notify --save-dev
-# edit gulpfile.js -> process.env.DISABLE_NOTIFIER = true;
+# npm install notify-send
 
 
 
