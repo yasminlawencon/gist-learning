@@ -1,0 +1,4 @@
+service network-manager restart
+sudo apt-get purge bcmwl-kernel-source
+sudo apt-get update
+sudo apt-get install bcmwl-kernel-source
