@@ -1,3 +1,6 @@
+
+sudo rfkill unblock all
+sudo ifconfig wlan0 up
 service network-manager restart
 sudo apt-get purge bcmwl-kernel-source
 sudo apt-get update
