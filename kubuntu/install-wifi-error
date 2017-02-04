@@ -2,3 +2,8 @@ service network-manager restart
 sudo apt-get purge bcmwl-kernel-source
 sudo apt-get update
 sudo apt-get install bcmwl-kernel-source
+
+
+Referensi : 
+http://askubuntu.com/questions/517977/how-to-connect-to-wireless-with-kubuntu-14-04-on-my-asus-desktop
+http://askubuntu.com/questions/154507/error-message-e-unable-to-locate-package-firmware-b43-installer
