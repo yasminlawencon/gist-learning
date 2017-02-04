@@ -6,8 +6,12 @@ sudo apt-get purge bcmwl-kernel-source
 sudo apt-get update
 sudo apt-get install bcmwl-kernel-source
 
+Restart your computer and,just after restart press F2 to enter boot menu press F10 BIOS Setup
+Reset BIOS default
+Save changes and exit
 
 Referensi : 
+http://askubuntu.com/questions/98702/how-to-unblock-something-listed-in-rfkill
 http://askubuntu.com/questions/517977/how-to-connect-to-wireless-with-kubuntu-14-04-on-my-asus-desktop
 http://askubuntu.com/questions/154507/error-message-e-unable-to-locate-package-firmware-b43-installer
 http://askubuntu.com/questions/55868/installing-broadcom-wireless-drivers
