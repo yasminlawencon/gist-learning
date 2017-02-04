@@ -6,7 +6,7 @@ Step by step instalasi software di Kubuntu 16.04
    # systemctl start apache2
    # systemctl stop apache2
    
-2. Install php-5.3.8
+2. Install php-5.3.8 (XAMPP)
    # download : https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/1.7.7/xampp-linux-1.7.7.tar.gz/download
    # tar xvfz xampp-linux-1.7.7.tar.gz -C /opt
    # cd /opt/
@@ -16,7 +16,7 @@ Step by step instalasi software di Kubuntu 16.04
    # gksudo python /opt/lampp/share/xampp-control-panel/xampp-control-panel.py
    ----------
    # membuat GUI aplikasi
-   # udo gedit ~/.local/share/applications/xampp-control-panel.desktop
+   # sudo gedit ~/.local/share/applications/xampp-control-panel.desktop
    # copy code dibawah ini :
     [Desktop Entry]
     Comment=Start and Stop XAMPP
