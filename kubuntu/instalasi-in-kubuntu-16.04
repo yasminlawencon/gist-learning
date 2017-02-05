@@ -55,6 +55,11 @@ Step by step instalasi software di Kubuntu 16.04
    # sudo apt-get update
    # sudo apt-get install 
    # apt-get install postgresql-9.5
+   # nano /etc/postgresql/9.5/main/pg_hba.conf 
+   # Database administrative login by Unix domain socket
+     local     all      postgres        peer
+     [edit menjadi]
+     local     all      postgres        trust
    # systemctl start postgresql
    # systemctl status postgresql
    # systemctl stop postgresql
