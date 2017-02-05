@@ -117,10 +117,11 @@ Step by step instalasi software di Kubuntu 16.04
     # akses : http://localhost:8081/JavaBridge/ (mucul halaman PHP/Java Bridge examples)
     # cp additional_lib.rar /var/lib/tomcat7/webapps/JavaBridge/WEB-INF/lib/
     # unrar e additional_lib.rar
+    # systemctl restart tomcat7
     
     Error :
     # php.java.bridge.http.FCGIConnectException: Could not connect to server
-    # gedit /etc/environment
+    # nano /etc/environment
     # tambakna pada baris terakhir -> /opt/lampp/bin (agar path php v5.3 bisa terbaca)
     
     Error :
