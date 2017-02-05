@@ -35,7 +35,7 @@ Step by step instalasi software di Kubuntu 16.04
 3. Install Node.js
    # sudo apt-get install build-essential
    # sudo apt-get install screen
-   # cd /opt
+   # cd /opt/
    # wget http://nodejs.org/dist/v0.10.4/node-v0.10.4.tar.gz
    # tar zxf node-v0.10.4.tar.gz
    # cd node-v0.10.4
