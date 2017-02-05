@@ -115,8 +115,11 @@ Step by step instalasi software di Kubuntu 16.04
     # unzip php-java-bridge_6.2.1_documentation.zip
     # cp JavaBridge.war /var/lib/tomcat7/webapps/ (maka secara otomatis akan membuat folder JavaBridge di dalam webapps)
     # link download additional_lib : https://goo.gl/YOgMIO
-    # cp additional_lib.rar /var/lib/tomcat7/webapps/JavaBridge/WEB-INF/lib/
-    # unrar e additional_lib.rar
+    # unzip additional_lib.zip
+    # cd /lib/
+    # cp * /var/lib/tomcat7/webapps/JavaBridge/WEB-INF/lib/
+    # cd /var/lib/tomcat7/webapps/JavaBridge/WEB-INF/lib/
+    # chown -R root:root *
     # systemctl restart tomcat7
     # akses : http://localhost:8081/JavaBridge/ (mucul halaman PHP/Java Bridge examples)
     
