@@ -49,7 +49,7 @@ Step by step instalasi software di Kubuntu 16.04
    # git --version
 
 5. Install postgres
-   # tambahkan : gedit  /etc/apt/sources.list.d/pgdg.list 
+   # tambahkan : nano /etc/apt/sources.list.d/pgdg.list 
     deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main
    # wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc
    # sudo apt-key add
