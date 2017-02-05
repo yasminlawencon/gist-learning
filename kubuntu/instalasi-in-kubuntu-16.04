@@ -13,6 +13,7 @@ Step by step instalasi software di Kubuntu 16.04
    # sudo chmod 777 -R /opt/lampp/htdocs/
    # sudo apt-get install lib32ncurses5 lib32z1
    # sudo apt-get install python-gtk2-dev
+   # apt install gksu
    # gksudo python /opt/lampp/share/xampp-control-panel/xampp-control-panel.py
    ----------
    # membuat GUI aplikasi
