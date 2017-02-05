@@ -17,6 +17,7 @@ Step by step instalasi software di Kubuntu 16.04
    # gksudo python /opt/lampp/share/xampp-control-panel/xampp-control-panel.py
    ----------
    # membuat GUI aplikasi
+   # apt install gedit
    # sudo gedit ~/.local/share/applications/xampp-control-panel.desktop
    # copy code dibawah ini :
     [Desktop Entry]
