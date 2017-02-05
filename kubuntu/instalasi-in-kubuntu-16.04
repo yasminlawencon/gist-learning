@@ -108,7 +108,7 @@ Step by step instalasi software di Kubuntu 16.04
    # sudo touch /etc/authbind/byport/80
    # sudo chmod 500 /etc/authbind/byport/80
    # sudo chown tomcat7 /etc/authbind/byport/80
-   # sudo /etc/init.d/tomcat7 restart
+   # systemctl restart tomcat7
 
 10. Instalasi JavaBridge untuk 
     # link download : goo.gl/6B2gL7
