@@ -7,6 +7,9 @@ Step by step instalasi software di Kubuntu 16.04
    # systemctl status apache2
    # systemctl start apache2
    # systemctl stop apache2
+   # apt-cache search php- | less
+   # apt-cache show php-cli
+   # sudo apt-get install php-cli
    
 2. Install php-5.3.8 (XAMPP)
    # download : https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/1.7.7/xampp-linux-1.7.7.tar.gz/download
