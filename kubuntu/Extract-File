@@ -1,0 +1,5 @@
+For ZIP
+--------------
+
+sudo apt-get install unzip            ---> install unzip
+unzip file.zip -d destination_folder  ---> unzip process
