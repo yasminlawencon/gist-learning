@@ -1,0 +1,3 @@
+sudo dpkg --configure -a                      ---> clean configure
+dpkg --list                                   ---> untuk melihat list aplikasi yang ter-install
+sudo apt-get --purge remove nama-application  ---> uninstall application (sudo apt-get --purge remove tortoisehg)
