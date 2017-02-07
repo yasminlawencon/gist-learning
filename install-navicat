@@ -1,0 +1,38 @@
+PROSES INSTALASI LIBRE :
+   sudo apt-get update
+   sudo apt-get install libfreetype6:i386
+   sudo apt-get install libsm6:i386
+   sudo apt-get install libxext6:i386
+
+MEMBUAT FILE navicat.desktop:
+1. Masuk ke applications:
+   cd /usr/share/applications/
+2. buat file navicat.desktop :
+   nano navicat.desktop
+   lalu masukan code :
+   
+   [Desktop Entry]
+      Name=Navicat 10
+      Type=Application
+      Exec=/opt/navicat/start_navicat
+      Terminal=false
+      Icon=/opt/navicat/navicat.ico
+      Comment=Administrator Database
+      NoDisplay=false
+      Categories=Development;
+      Name[en]=Navicat
+
+PROESS INSTALASI APLIKASI DEKSTOP :
+1. Download file di https://mega.nz/#!IldmTCpa
+   Isi decrypt dengan : !UeQ4G6F4ckfvCVDXvcBIsClQHtdR-fPudeH6V70xfHI
+2. Masuk ke folder dimana file tersebut berada lalu extract file tersebut dengan syntax :
+   tar -xvzf navicat101_premium_en.tar.gz
+3. Pidahkan folder navicat101_premium_en ke opt/navicat:
+   sudo mv navicat101_premium_en /opt/navicat
+4. Jika sudah selesai jalankan navicat di start menu, akan muncul popup download wine dan harus didownload.
+5. Selesai download wine jalankan navicat kembali dan pilih registration. 
+   Isikan serial dengan : NAVF-CB5O-7JPO-SHCO
+6. Install Navicat Selesai
+
+REFERENCE : https://joselian.wordpress.com/2015/11/12/instalar-navicat-premium-en-ubuntu/
+   
