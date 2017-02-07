@@ -1,4 +1,4 @@
-Setting Production LinovHR Cloud Admin
+LinovHR Cloud Admin
 npm install
 npm install -g bower
 bower install
@@ -20,6 +20,8 @@ php artisan key:generate
 php artisan laroute:generate
 php artisan config:cache
 php artisan cache:clear
+
+php artisan serve
 ---------------------------------------
 Recruitment Installation
 chmod -R 777 *
