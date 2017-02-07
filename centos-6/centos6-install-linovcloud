@@ -99,18 +99,7 @@ Disini penjelasan mengenai installing project LinovCloud di Cenots 6.6 (rekomend
     # install font di linux
  
  8. Jika masih error ini:
-    Error - Failed to open stream: Permission denied jasperreport
-    # setenforce 0
-    # service httpd restart
-    # service tomcat6 restart
 
- 9. Jika masih error ini:
-    500 Internal Server Error
-    Cek di lognya :  
-    # PHP Fatal error:  require_once(): Failed opening required 'http://localhost:8081/JavaBridge/java/Java.inc' (include_path='/var/www/html/dev.hr.pmt:/var/www/html/dev.hr.pmt/app/:.:/usr/share/pear:/usr/share/php') in /var/www/html/dev.hr.pmt/app/controllers/components/jasperreport.php on line 157,
-    # setenforce 0
-    
-    
 Selesai. Silahkan akses url LinovCloud, jika ada pertanyaan silahkan sampaikan.
 
 

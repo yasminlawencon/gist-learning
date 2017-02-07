@@ -1,0 +1,24 @@
+Docker untuk Ubutnu 16.10 Yakkety Yak 
+
+Referensi artikel : https://www.linuxbabe.com/docker/install-docker-ubuntu-16-10-yakkety-yak
+
+# sudo apt install docker.io
+# sudo nano /etc/apt/sources.list
+# copy paste paling bawah : deb https://apt.dockerproject.org/repo ubuntu-xenial main
+# sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+# sudo apt install apt-transport-https ca-certificates
+# sudo apt update
+# sudo apt install docker-engine
+# systemctl status docker
+# sudo systemctl start docker
+# sudo systemctl enable docker
+# docker -v
+# sudo docker info
+# sudo docker run hello-world
+# docker run -it ubuntu bash
+
+
+Create by : lani.asep@lawencon.com
+
+
+

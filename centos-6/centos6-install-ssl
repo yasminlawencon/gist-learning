@@ -1,0 +1,71 @@
+Step-by-step installasi SSL untuk centos6
+
+Pakai tutorial ini dulu : 
+-> https://wiki.centos.org/HowTos/Https
+------------------------------------------
+
+# yum install mod_ssl openssl
+# download ssl file untuk linovhr.com : # http://download1338.mediafire.com/36900b86dizg/w83fkg4fd9n338f/ssl.tar.gz
+# tar -zxvf ssl.tar.gz
+# copy the files to the correct locations
+  cp ca.crt /etc/pki/tls/ssl.crt
+  cp ca.key /etc/pki/tls/private/ssl.key
+  cp ca.csr /etc/pki/tls/private/ssl.csr
+# lakukan perintah ini jika gagal mencopy file ssl
+  restorecon -RvF /etc/pki
+# ganti source code awal dengan yang baru
+  nano +/SSLCertificateFile /etc/httpd/conf.d/ssl.conf
+# ganti pathnya:
+  SSLCertificateFile /etc/pki/tls/ssl.crt/STAR_linovhr_com.crt
+  SSLCertificateKeyFile /etc/pki/tls/private/ssl.key/linovhr.key
+# restart
+  /etc/init.d/httpd restart
+# ubah NameVirtualHost
+  Listen:80 -> (Silahkan dicomment)
+  NameVirtualHost *:443
+# setting virtual host
+  <VirtualHost *:443>
+    SSLEngine on
+    SSLCertificateFile /etc/pki/tls/ssl.crt/STAR_linovhr_com.crt
+    SSLCertificateKeyFile /etc/pki/tls/private/ssl.key/linovhr.key
+    SSLCertificateChainFile /etc/pki/tls/ssl.crt/STAR_linovhr_com.ca-bundle
+    SSLCipherSuite RC4-SHA:AES256-SHA:AES128-SHA:HIGH:!aNULL:!MD5
+    <Directory /var/www/html/testing.linovhr.com>
+       AllowOverride All
+    </Directory>
+    DocumentRoot /var/www/html/testing.linovhr.com
+    ServerName testing.linovhr.com
+    ErrorLog /etc/httpd/logs/testing.linovhr.com-error_log
+    CustomLog /etc/httpd/logs/testing.linovhr.com-access_log common
+</VirtualHost>
+
+# /etc/init.d/httpd restart
+
+Konfigurasi Firewall
+# iptables -A INPUT -p tcp --dport 443 -j ACCEPT
+# /sbin/service iptables save
+# iptables -L -v
+-----------------------------------------------------------------------
+Error:
+make sock could not bind to address 443 when restarting
+# grep '443' /etc/httpd/conf.d/*
+
+/etc/httpd/conf.d/ssl.conf:Listen 443 https
+/etc/httpd/conf.d/ssl.conf:<VirtualHost _default_:443>
+/etc/httpd/conf.d/ssl.conf:#ServerName www.example.com:443
+
+# grep '443' /etc/httpd/conf/httpd.conf 
+Listen 443
+
+Jika Listen 443 -> silahkan comment Listen 433 tersebut
+------------------------------------------------------------------------
+Cara Redirect ke HTTP atau HTTPS
+
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+------------------------------------------------------------------------
+
+Referensi tutorial : https://wiki.centos.org/HowTos/Https
+
+Create by : lani.asep@lawencon.com
