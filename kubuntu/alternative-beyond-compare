@@ -1,0 +1,8 @@
+Meld Application
+----------------
+INSTAlASI
+sudo apt-get install meld
+sudo apt-get install intltool itstool gir1.2-gtksource-3.0 libxml2-utils
+git clone https://git.gnome.org/browse/meld
+cd meld
+sudo python setup.py install
