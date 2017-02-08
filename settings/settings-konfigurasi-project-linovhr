@@ -1,11 +1,11 @@
-Setting Production LinovHR Cloud Admin
+LinovHR Cloud Admin
 npm install
 npm install -g bower
 bower install
 bower update
 npm install -g gulp
 gulp --production
-
+---------------------------------------
 ESS Installation
 chmod -R 777 *
 composer install
@@ -21,6 +21,8 @@ php artisan laroute:generate
 php artisan config:cache
 php artisan cache:clear
 
+php artisan serve
+---------------------------------------
 Recruitment Installation
 chmod -R 777 *
 composer install
@@ -30,7 +32,7 @@ npm install -g bower
 bower install
 setting database
 composer require guzzlehttp/guzzle:~6.0
-
+---------------------------------------
 API Installation
 chmod -R 777 *
 setting database : config/database.php
@@ -40,18 +42,18 @@ setting database : .env
   APP_URL= | DB_CONNECTION = pgsql | DB_HOST= | DB_PORT=5432 | DB_DATABASE= | DB_USERNAME= | DB_PASSWORD
 composer install
 composer update
-
+---------------------------------------
 API Payroll Engine
 chmod -R 777 *
 setting database : config/database.php
-
+---------------------------------------
 Git
 git describe --tags
 git checkout tags/<tags number>
 
 [ ECMDERR Failed to execute "git ls-remote --tags --heads ]
 git config --global url."https://".insteadOf git://
-
+---------------------------------------
 Restart Centos Terminal
 setenforce 0 (menonaktifkan SELinux)
 /opt/lampp/lampp/start
