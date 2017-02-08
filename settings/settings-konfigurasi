@@ -1,0 +1,73 @@
+LinovHR Cloud Admin
+npm install
+npm install -g bower
+bower install
+bower update
+npm install -g gulp
+gulp --production
+---------------------------------------
+ESS Installation
+chmod -R 777 *
+composer install
+npm install
+bower install
+bower update
+php -r "copy('.env.example', '.env');"
+setting file .env :
+APP_URL= | DB_CONNECTION = pgsql | DB_HOST= | DB_PORT=5432 | DB_DATABASE= | DB_USERNAME= | DB_PASSWORD
+
+php artisan key:generate
+php artisan laroute:generate
+php artisan config:cache
+php artisan cache:clear
+
+php artisan serve
+---------------------------------------
+Recruitment Installation
+chmod -R 777 *
+composer install
+composer update
+npm install
+npm install -g bower
+bower install
+setting database
+composer require guzzlehttp/guzzle:~6.0
+---------------------------------------
+API Installation
+chmod -R 777 *
+setting database : config/database.php
+  linAdmin : Database LinovHR Adminnya
+  linRecruitment : Database LinovHR Recruitment
+setting database : .env
+  APP_URL= | DB_CONNECTION = pgsql | DB_HOST= | DB_PORT=5432 | DB_DATABASE= | DB_USERNAME= | DB_PASSWORD
+composer install
+composer update
+---------------------------------------
+API Payroll Engine
+chmod -R 777 *
+setting database : config/database.php
+---------------------------------------
+Git
+git describe --tags
+git checkout tags/<tags number>
+
+[ ECMDERR Failed to execute "git ls-remote --tags --heads ]
+git config --global url."https://".insteadOf git://
+---------------------------------------
+Restart Centos Terminal
+setenforce 0 (menonaktifkan SELinux)
+/opt/lampp/lampp/start
+service httpd start
+service tomcat6 start
+
+reboot -h now
+
+Open Port :
+iptables -A INPUT -m state --state NEW -p tcp --dport 8080 -j ACCEPT
+/sbin/service iptables save
+
+Eksport database :
+psql -H localhost -d nama_database -U postgres -f nama_file_database
+
+Eksport database SQL Server:
+sqlcmd -S Sec-Indo03,1433\MSSQLSERVER -U fandeka -P fande ka123 -d hris_timas -i C:\Users\Administrator\Downloads\scriptJan2017.sql

@@ -1,17 +1,18 @@
 Step by step instalasi software di Kubuntu 16.04
 
-1. Install apache : https://help.ubuntu.com/lts/serverguide/httpd.html
+1. Install apache (PHP v5.6)
    # sudo apt-get install php libapache2-mod-php php-cgi apache2
    # sudo nano /etc/apache2/mods-enabled/dir.conf
    # index.php [pindahkan ke yang paling depan]
-   # systemctl status apache2
    # systemctl start apache2
+   # systemctl status apache2
    # systemctl stop apache2
+   
    # apt-cache search php- | less
    # apt-cache show php-cli
    # sudo apt-get install php-cli
    
-2. Install php-5.3.8 (XAMPP)
+2. Install lampp (PHP v5.3.8)
    # download : https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/1.7.7/xampp-linux-1.7.7.tar.gz/download
    # tar xvfz xampp-linux-1.7.7.tar.gz -C /opt
    # cd /opt/
@@ -21,21 +22,27 @@ Step by step instalasi software di Kubuntu 16.04
    # apt install gksu
    # gksudo python /opt/lampp/share/xampp-control-panel/xampp-control-panel.py
    ----------
-   # membuat GUI aplikasi
-   # sudo nano ~/.local/share/applications/xampp-control-panel.desktop
+   # membuat GUI start Lampp
+   # cd /usr/share/applications/
+   # nano xampp-control-panel.desktop
    # copy code dibawah ini :
-    [Desktop Entry]
-    Comment=Start and Stop XAMPP
-    Name=XAMPP Control Panel
-    Exec=gksudo python /opt/lampp/share/xampp-control-panel/xampp-control-panel.py
-    Icon=/usr/share/icons/Humanity/devices/24/network-wired.svg
-    Encoding=UTF-8
-    Terminal=false
-    Name=XAMPP Control Panel
-    Comment=Start and Stop XAMPP
-    Type=Application
-    Icon=/usr/share/icons/Humanity/devices/24/network-wired.svg
-   # edit : cd /usr/share/applications/
+     [Desktop Entry]
+     Comment=Start and Stop XAMPP
+     Name=XAMPP Control Panel
+     Exec=gksudo python /opt/lampp/share/xampp-control-panel/xampp-control-panel.py
+     Icon=/usr/share/icons/Humanity/devices/24/network-wired.svg
+     Encoding=UTF-8
+     Terminal=false
+     Name=XAMPP Control Panel
+     Comment=Start and Stop XAMPP
+     Type=Application
+     Icon=/usr/share/icons/Humanity/devices/24/network-wired.svg
+   ----------
+   # Starting Lampp on Terminal
+   # /opt/lampp/lampp start 
+   # /opt/lampp/lampp status 
+   # /opt/lampp/lampp stop 
+   # /opt/lampp/lampp restart
 
 3. Install Node.js
    # sudo apt-get install build-essential
@@ -75,15 +82,12 @@ Step by step instalasi software di Kubuntu 16.04
   Catatan Lanjutan:
   - Masuk bash postgres
     # sudo -u postgres psql
-  - Lihat semua user postgres:
-    # postgres=# \du 
-  - Mengganti user postgres
-    # ALTER USER name RENAME TO new_name
   - Mengganti password user postgres
     # postgres=# \password postgres
     atau
     # ALTER USER "nama_user" WITH PASSWORD 'new_password';
-  - Menambahkan role pada user postgres
+  - Lihat semua user postgres:
+    # postgres=# \du   
 
 7. Install atom editor
    # sudo add-apt-repository ppa:webupd8team/atom
@@ -150,6 +154,7 @@ Step by step instalasi software di Kubuntu 16.04
 11. Instalasi JaspeReprot
     # download JaspeReport : https://sourceforge.net/projects/ireport/files/iReport/iReport-5.6.0/
     # 
+    
 12. Update dependensi broken Kubuntu
     # sudo apt-get install --fix-broken && sudo apt-get autoremove && sudo apt-get update 
     # sudo apt-get clean
