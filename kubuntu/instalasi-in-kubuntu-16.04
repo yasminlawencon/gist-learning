@@ -88,6 +88,9 @@ Step by step instalasi software di Kubuntu 16.04
     # ALTER USER "nama_user" WITH PASSWORD 'new_password';
   - Lihat semua user postgres:
     # postgres=# \du   
+    
+    NOTE : 
+    Install pgsql for php : apt-get install php-pgsql
 
 7. Install atom editor
    # sudo add-apt-repository ppa:webupd8team/atom
