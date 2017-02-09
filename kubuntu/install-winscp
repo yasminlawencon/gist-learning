@@ -1,0 +1,20 @@
+1. apt install wine icoutils imagemagick # ubuntu 16
+
+2. wget http://sourceforge.net/projects/winscp/files/WinSCP/5.9.2/WinSCP-5.9.2-Portable.zip/download -O winscp.zip
+3. mkdir /opt/WinSCP
+4. unzip winscp.zip -d /opt/WinSCP
+5. chmod +x /opt/WinSCP/WinSCP.exe
+6. chmod +x /opt/WinSCP/WinSCP.com 
+
+7. nano /usr/share/applications/WinSCP.desktop
+   Isi dengan code : 
+      [Desktop Entry]
+      Name=WinSCP
+      Exec=WinSCP
+      Icon=WinSCP
+      Type=Application
+      Categories=GTK;GNOME;Utility;
+      Icon=/usr/share/icons/Humanity/devices/24/monitor.svg
+
+8. ln -s /opt/WinSCP/WinSCP.exe /bin/WinSCP
+9. Instalasi selesai
