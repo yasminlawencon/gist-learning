@@ -1,7 +1,7 @@
 Step by step instalasi software di Kubuntu 16.04
 
 1. Install apache (PHP v7)
-   # sudo apt-get install php libapache2-mod-php php-cgi apache2 php-pgsql php-dev
+   # sudo apt-get install php libapache2-mod-php php-cgi apache2 php-pgsql php-dev php-intl
    # sudo nano /etc/apache2/mods-enabled/dir.conf
    # index.php [pindahkan ke yang paling depan]
    # systemctl start apache2
