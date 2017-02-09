@@ -7,3 +7,9 @@ Step-by-step installasi composer di Kubuntu
 # apt install composer jsonlint php-cli-prompt php-composer-semver php-composer-spdx-licenses php-json-schema php-symfony-console php-symfony-filesystem php-symfony-finder php-symfony-process
 # sudo apt-get install libapache2-mod-php
 # sudo apt-get install php-mbstring
+
+
+
+
+
+
