@@ -11,6 +11,7 @@ chmod -R 777 *
 composer install
 npm install
 bower install
+npm install -g bower
 bower update
 php -r "copy('.env.example', '.env');"
 setting file .env :
