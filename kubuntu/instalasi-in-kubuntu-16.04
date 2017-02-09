@@ -7,10 +7,7 @@ Step by step instalasi software di Kubuntu 16.04
    # systemctl start apache2
    # systemctl status apache2
    # systemctl stop apache2
-   # nano /etc/php/7.0/cli/php.ini 
-   # uncomment library
-     extension=php_pdo_pgsql.dll
-     extension=php_pgsql.dll
+   
    # apt-cache search php- | less
    # apt-cache show php-cli
    # sudo apt-get install php-cli
