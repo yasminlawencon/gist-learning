@@ -1,0 +1,9 @@
+APPLICATION Y PPA Manager
+
+INSTALASI :
+sudo add-apt-repository ppa:webupd8team/y-ppa-manager
+sudo apt-get update
+sudo apt-get install y-ppa-manager
+
+NOTE:
+Works on Ubuntu 14.04 Trusty, Ubuntu 13.10, Ubuntu 13.04, Ubuntu 12.10, Ubuntu 12.04, Linux Mint 13/14/15/16.

@@ -1,0 +1,6 @@
+api.lawencon.com/api/v1/admin/count-vacant/?access_token=XedPeZLiiciGyofeA2jJbSbBZZi7gKuoQ6Yo0GtA
+api.lawencon.com/oauth/access_token
+
+grant_type    : client_credentials 
+client_id     : linov-admin
+client_secret : linovadmin

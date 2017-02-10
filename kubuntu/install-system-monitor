@@ -1,0 +1,9 @@
+Yes, there is a gui. If installed, you can start it with
+
+# gnome-system-monitor
+
+If not installed, you can either search in the Software Center for System monitor or type in the terminal:
+
+# sudo apt-get install gnome-system-monitor
+
+Hope this helps.
