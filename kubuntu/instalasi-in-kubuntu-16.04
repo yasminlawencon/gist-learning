@@ -44,6 +44,13 @@ Step by step instalasi software di Kubuntu 16.04
    # /opt/lampp/lampp stop 
    # /opt/lampp/lampp restart
 
+   -----------
+   mengganti php-version ke php di lampp
+   # nano /root/.bashrc
+   # paste dibagian akhir : PATH=/opt/lampp/bin:$PATH
+   # source .bashrc
+   # php -v
+
 3. Install Node.js
    # sudo apt-get install build-essential
    # sudo apt-get install screen
