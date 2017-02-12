@@ -1,7 +1,7 @@
 Step by step instalasi software di Kubuntu 16.04
 
 1. Install apache (PHP v7)
-   # sudo apt-get install php libapache2-mod-php php-cgi apache2 php-pgsql php-dev pdo_pgsql pdo
+   # sudo apt-get install php libapache2-mod-php php-cgi apache2 php-pgsql php-dev php-intl
    # sudo nano /etc/apache2/mods-enabled/dir.conf
    # index.php [pindahkan ke yang paling depan]
    # systemctl start apache2
@@ -43,6 +43,13 @@ Step by step instalasi software di Kubuntu 16.04
    # /opt/lampp/lampp status 
    # /opt/lampp/lampp stop 
    # /opt/lampp/lampp restart
+
+   -----------
+   mengganti php-version ke php di lampp
+   # nano /etc/bash.bashrc
+   # paste dibagian akhir : PATH=/opt/lampp/bin:$PATH
+   # source .bashrc
+   # php -v
 
 3. Install Node.js
    # sudo apt-get install build-essential
@@ -129,8 +136,9 @@ Step by step instalasi software di Kubuntu 16.04
     # link download additional_lib : https://goo.gl/YOgMIO
     # unzip additional_lib.zip
     # cd /lib/
-    # cp * /var/lib/tomcat7/webapps/JavaBridge/WEB-INF/lib/
+    # cp -rf * /var/lib/tomcat7/webapps/JavaBridge/WEB-INF/lib/
     # cd /var/lib/tomcat7/webapps/JavaBridge/WEB-INF/lib/
+    # chmod -R 777 *
     # chown -R root:root *
     # systemctl restart tomcat7
     # akses : http://localhost:8081/JavaBridge/ (mucul halaman PHP/Java Bridge examples)
@@ -171,3 +179,14 @@ Step by step instalasi software di Kubuntu 16.04
     # sudo add-apt-repository ppa:webupd8team/sublime-text-3
     # sudo apt-get update
     # sudo apt-get install sublime-text-installer
+
+
+ 14. Error php_pdo_pgsql.dll & php_pgsql.dll di Lampp
+    # Warning: PHP Startup: Unable to load dynamic library '/opt/lampp/lib/php/extensions/no-debug-non-zts-20090626/php_pdo_pgsql.dll'
+    # Warning: PHP Startup: Unable to load dynamic library '/opt/lampp/lib/php/extensions/no-debug-non-zts-20090626/php_pgsql.dll'
+      Edit file :
+    # nano /opt/lampp/etc/php.ini
+    # diberi comment
+      ;extension=php_pdo_pgsql.dll
+      ;extension=php_pgsql.dll
+    
