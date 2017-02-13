@@ -1,5 +1,10 @@
+Step-by-step installasi java 7 Kubuntu
+
+# sudo add-apt-repository ppa:webupd8team/java
+# sudo apt-get update
+# sudo apt-get install oracle-java7-installer
+# java -version
 
 Referensi :
-
 http://askubuntu.com/questions/433668/how-can-i-uninstall-oracle-java-8-and-install-oracle-java-7-instead-with-webupd8
 
