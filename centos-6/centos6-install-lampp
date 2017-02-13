@@ -1,6 +1,8 @@
 Download XAMPP in url : https://www.apachefriends.org/download.html <for Linux>
 
 # yum install wget
+# download lampp (ops 1) : http://www.mediafire.com/file/me7q99pqa8lm6b5/xampp-linux-x64-5.6.28-0-installer.zip
+# download lampp (ops 2) : http://download1486.mediafire.com/lo140x81rylg/juhhe1f63ui8s53/xampp-linux-x64-5.6.28-0-installer.run
 # wget http://download1770.mediafire.com/3wkk4f3hdrlg/me7q99pqa8lm6b5/xampp-linux-x64-5.6.28-0-installer.zip
 # chmod +x xampp-linux-x64-5.6.28-0-installer.run
 # ./xampp-linux-x64-5.6.28-0-installer.run
