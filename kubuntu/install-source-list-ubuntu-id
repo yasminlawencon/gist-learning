@@ -1,0 +1,10 @@
+Step-by-step mengubah source list package repositori ubuntu ke repo di server Indonesia
+
+# nano /etc/apt/source.lsit
+# ubuntu sources list generator : https://repogen.simplylinux.ch/
+# select your country : Indonesia
+# select your release : (rilis yang dipakai
+# Ubuntu Branches
+
+
+Cretate by : lani.asep@lawencon.com
