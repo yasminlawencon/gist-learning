@@ -1,0 +1,132 @@
+LinovESS
+
+1. Clone source LinovESS
+
+2. install composer
+///////////////////////////////////////////////////////
+////////			instal composer           /////////
+////////			instal composer           /////////
+////////			instal composer           /////////
+///////////////////////////////////////////////////////
+Below are the steps to be followed to install composer globally: 1. Before installing Composer, make sure our server has all dependencies installed.
+
+1st, update the package manager cache by running:
+
+$ sudo apt-get update
+
+2. Now, let's install the dependencies. We'll need
+
+    curl => to download Composer
+    php5-cli => installing and running it
+    git => used by Composer for downloading project dependencies
+
+Everything can be installed with the following command:
+
+$ sudo apt-get install curl php5-cli git (jika sudah ada step ini bisa dilewati)
+
+3. Composer installation with a single command:
+
+curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+
+4. This will download and install Composer as a system-wide command named composer, under /usr/local/bin. The output should look like this:
+
+Output:
+
+\#!/usr/bin/env php
+All settings correct for using Composer
+Downloading...
+
+Composer successfully installed to: /usr/local/bin/composer
+
+Use it: php /usr/local/bin/composer
+
+5. To test your installation, run:
+
+$ composer -V
+
+Output:
+
+Composer version 1.1.3 2016-06-26 15:42:08
+
+    Installation Successful
+///////////////////////////////////////////////////////
+////////						              /////////
+////////		    	end	composer          /////////
+////////						              /////////
+///////////////////////////////////////////////////////
+
+3. open terminal and direct the path in directory of ESS
+4. run composer install
+///////////////////////////////////////////////////////
+////////		   		NOTE	              /////////
+///////////////////////////////////////////////////////
+- dont run with sudo su
+- if you find problem like cannot install
+try this :
+composer clear-cache
+composer clearcache
+composer self-update --update-keys
+input dev key:
+-----BEGIN PUBLIC KEY-----
+MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAnBDHjZS6e0ZMoK3xTD7f
+FNCzlXjX/Aie2dit8QXA03pSrOTbaMnxON3hUL47Lz3g1SC6YJEMVHr0zYq4elWi
+i3ecFEgzLcj+pZM5X6qWu2Ozz4vWx3JYo1/a/HYdOuW9e3lwS8VtS0AVJA+U8X0A
+hZnBmGpltHhO8hPKHgkJtkTUxCheTcbqn4wGHl8Z2SediDcPTLwqezWKUfrYzu1f
+o/j3WFwFs6GtK4wdYtiXr+yspBZHO3y1udf8eFFGcb2V3EaLOrtfur6XQVizjOuk
+8lw5zzse1Qp/klHqbDRsjSzJ6iL6F4aynBc6Euqt/8ccNAIz0rLjLhOraeyj4eNn
+8iokwMKiXpcrQLTKH+RH1JCuOVxQ436bJwbSsp1VwiqftPQieN+tzqy+EiHJJmGf
+TBAbWcncicCk9q2md+AmhNbvHO4PWbbz9TzC7HJb460jyWeuMEvw3gNIpEo2jYa9
+pMV6cVqnSa+wOc0D7pC9a6bne0bvLcm3S+w6I5iDB3lZsb3A9UtRiSP7aGSo7D72
+8tC8+cIgZcI7k9vjvOqH+d7sdOU2yPCnRY6wFh62/g8bDnUpr56nZN1G89GwM4d4
+r/TU7BQQIzsZgAiqOGXvVklIgAMiV0iucgf3rNBLjjeNEwNSTTG9F0CtQ+7JLwaE
+wSEuAuRm+pRqi8BRnQ/GKUcCAwEAAQ==
+-----END PUBLIC KEY-----
+input public key:
+-----BEGIN PUBLIC KEY-----
+MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA0Vi/2K6apCVj76nCnCl2
+MQUPdK+A9eqkYBacXo2wQBYmyVlXm2/n/ZsX6pCLYPQTHyr5jXbkQzBw8SKqPdlh
+vA7NpbMeNCz7wP/AobvUXM8xQuXKbMDTY2uZ4O7sM+PfGbptKPBGLe8Z8d2sUnTO
+bXtX6Lrj13wkRto7st/w/Yp33RHe9SlqkiiS4MsH1jBkcIkEHsRaveZzedUaxY0M
+mba0uPhGUInpPzEHwrYqBBEtWvP97t2vtfx8I5qv28kh0Y6t+jnjL1Urid2iuQZf
+noCMFIOu4vksK5HxJxxrN0GOmGmwVQjOOtxkwikNiotZGPR4KsVj8NnBrLX7oGuM
+nQvGciiu+KoC2r3HDBrpDeBVdOWxDzT5R4iI0KoLzFh2pKqwbY+obNPS2bj+2dgJ
+rV3V5Jjry42QOCBN3c88wU1PKftOLj2ECpewY6vnE478IipiEu7EAdK8Zwj2LmTr
+RKQUSa9k7ggBkYZWAeO/2Ag0ey3g2bg7eqk+sHEq5ynIXd5lhv6tC5PBdHlWipDK
+tl2IxiEnejnOmAzGVivE1YGduYBjN+mjxDVy8KGBrjnz1JPgAvgdwJ2dYw4Rsc/e
+TzCFWGk/HM6a4f0IzBWbJ5ot0PIi4amk07IotBXDWwqDiQTwyuGCym5EqWQ2BD95
+RGv89BPD+2DLnJysngsvVaUCAwEAAQ==
+-----END PUBLIC KEY-----
+try composer install again
+if find error like To enable extensions, verify that they are enabled in your .ini files:
+    - /etc/php/7.0/cli/php.ini
+    - /etc/php/7.0/cli/conf.d/10-opcache.ini
+    - /etc/php/7.0/cli/conf.d/10-pdo.ini
+    - /etc/php/7.0/cli/conf.d/20-calendar.ini
+    - /etc/php/7.0/cli/conf.d/20-ctype.ini
+    - /etc/php/7.0/cli/conf.d/20-exif.ini
+    - /etc/php/7.0/cli/conf.d/20-fileinfo.ini
+    - /etc/php/7.0/cli/conf.d/20-ftp.ini
+    - /etc/php/7.0/cli/conf.d/20-gettext.ini
+    - /etc/php/7.0/cli/conf.d/20-iconv.ini
+    - /etc/php/7.0/cli/conf.d/20-json.ini
+    - /etc/php/7.0/cli/conf.d/20-mbstring.ini
+    - /etc/php/7.0/cli/conf.d/20-phar.ini
+    - /etc/php/7.0/cli/conf.d/20-posix.ini
+    - /etc/php/7.0/cli/conf.d/20-readline.ini
+    - /etc/php/7.0/cli/conf.d/20-shmop.ini
+    - /etc/php/7.0/cli/conf.d/20-sockets.ini
+    - /etc/php/7.0/cli/conf.d/20-sysvmsg.ini
+    - /etc/php/7.0/cli/conf.d/20-sysvsem.ini
+    - /etc/php/7.0/cli/conf.d/20-sysvshm.ini
+    - /etc/php/7.0/cli/conf.d/20-tokenizer.ini
+try this :
+sudo apt-get update
+sudo apt-get install mcrypt php7.0-mcrypt
+sudo apt-get upgrade
+sudo apt-get install php-mbstring
+sudo apt-get install phpunit
+///////////////////////////////////////////////////////
+////////		   		NOTE	              /////////
+///////////////////////////////////////////////////////
+
+
