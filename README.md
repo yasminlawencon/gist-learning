@@ -1,6 +1,6 @@
 ## Gist-learning
 
-Repositori ini berisi kumpulan-kumpulan tutorial yang bisa membantu untuk pemecahan masalah pemrograman.
+Gist learning is a collection of code snippets to solve your programming problems.
 
 ## Acknowledgments
 * [Dokumentasi PHPUnit](https://www.gitbook.com/book/laniasepsutisna/manual-phpunit)
@@ -24,9 +24,7 @@ Repositori ini berisi kumpulan-kumpulan tutorial yang bisa membantu untuk pemeca
 * User-on-linux
 
 
-
-
-Dan akan terus diupdate untuk keperluan pengembangan.
+And will continue to be updated for the purposes of development.
 
 ## Publish By
 Created by : lani.asep@laewncon.com
