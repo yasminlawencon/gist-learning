@@ -1,3 +1,11 @@
-host    all             all             127.0.0.1/32            md5
-host    all             all             0.0.0.0/0               md5
-host	  all		      		all				      192.168.70.253/32		    md5
+
+Centos : 
+# cd /var/lib/pgsql/(version postgres)/data/pg_ident.conf
+Tambahkan :
+host	  all		      		all				      (IP Remote/33)		     md5
+
+
+Kubuntu :
+/var/lib/pgsql/(version postgres)/data/pg_ident.conf
+Tambahkan :
+host	  all		      		all				      (IP Remote/33)		     md5
