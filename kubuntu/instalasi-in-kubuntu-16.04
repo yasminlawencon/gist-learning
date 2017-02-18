@@ -147,6 +147,10 @@ Step by step instalasi software di Kubuntu 16.04
     # akses : http://localhost:8081/JavaBridge/ (mucul halaman PHP/Java Bridge examples)
     
     Error :
+    # 404 Not found
+    # 
+    
+    Error :
     # php.java.bridge.http.FCGIConnectException: Could not connect to server
     # nano /etc/environment
     # tambakna pada baris terakhir -> /etc/php/bin (agar path php v5.6 atau v7 bisa terbaca dan agar fast_cgi 
