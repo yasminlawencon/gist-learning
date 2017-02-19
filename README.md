@@ -9,7 +9,7 @@ Gist learning is a collection of code snippets to solve your programming problem
 * <b>centos-6</b> : koleksi cara installasi & konfigurasi server berbasis linux centos 6 
 * <b>git</b> : code snippets yang berhubungan dengan masalah masalah git
 * <b>kali-linux</b> : code snippets & kumpulan tahap installasi & konfigurasi kali linux
-* <b>kubuntu</b> : code snippets untuk installasi & konfigurasi aplikasi di kubuntu atau ubuntu
+* <b>kubuntu</b> : code snippets untuk installasi & konfigurasi aplikasi di kubuntu atau ubuntu terutama untuk menjalankan project Linov Software
 * <b>laravel</b> : kumpulan code snippets untuk belajar mengenai laravel framework
 * <b>reactjs</b> : konfigurasi environment reactjs di local
 * <b>settings</b> : konfigurasi & installasi project linovsorftware (LinovCloud, LinovESS, E-Recruitment, API, dll)
