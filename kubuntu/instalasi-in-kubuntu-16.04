@@ -4,6 +4,7 @@ Step by step instalasi software di Kubuntu 16.04
    # sudo apt-get install php apache2 libapache2-mod-php php-cgi php-pgsql php-dev php-intl
    # sudo apt-get install php-mbstring
    # sudo apt-get apt install curl
+   # sudo apt-get install php-curl
    # sudo nano /etc/apache2/mods-enabled/dir.conf
    # index.php [pindahkan ke yang paling depan]
    # systemctl start apache2
