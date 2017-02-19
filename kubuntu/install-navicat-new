@@ -6,7 +6,9 @@ Step-by-step Install Navicat Version 11.1.13 Full
 # apt install unrar
 # apt install wine
 # wine --version
-# 
+# buka folder : Navicat.11.1.13 Full/
+# klik kanan setup_x86.exe -> Open with Windows Program Loader
+# install seperti biasa, next & next. . .
 
 
 Create by : lani.asep@lawencon.com
