@@ -1,0 +1,14 @@
+Step-by-step install aqua data studio
+
+# download file from : http://www.aquafold.com/aquadatastudio_downloads.html
+# cd /Downloads
+# tar zxf ads-linux-x64-17.0.12.tar.gz
+# mv datastudio/ /opt/
+# cd /opt/datastudio/
+# sh datastudio.sh (running file)
+# company name : Lawencon
+# (belum dapet license cracknya)
+
+
+Create by : lani.asep@lawencon.com
+
