@@ -3,8 +3,8 @@
 Gist learning is a collection of code snippets to solve your programming problems.
 
 ## Acknowledgments
-* [Dokumentasi PHPUnit](https://www.gitbook.com/book/laniasepsutisna/manual-phpunit)
-* [Dokumentasi Laravel](https://laniasepsutisna.gitbooks.io/laravel/content/)
+* [Dokumentasi PHPUnit](https://www.gitbook.com/book/laniasepsutisna/manual-phpunit) (beta)
+* [Dokumentasi Laravel](https://laniasepsutisna.gitbooks.io/laravel/content/) (beta)
 * <b>cakephp-1.3</b> : code snippets untuk permasalah cakephp 1.3 tetapi masih dalam pengembangan
 * <b>centos-6</b> : koleksi cara installasi & konfigurasi server berbasis linux centos 6 
 * <b>git</b> : code snippets yang berhubungan dengan masalah masalah git
