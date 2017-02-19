@@ -171,8 +171,29 @@ Step by step instalasi software di Kubuntu 16.04
       [[o:JRException]:"net.sf.jasperreports.engine.JRException: Error trying to export to file : 
     
 11. Instalasi JaspeReprot
-    # download JaspeReport : https://sourceforge.net/projects/ireport/files/iReport/iReport-5.6.0/
-    # 
+    # download JaspeReport : https://sourceforge.net/projects/ireport/files/iReport/iReport-5.6.0/iReport-5.6.0.tar.gz/download
+    # cd /Downloads
+    # tar zxf iReport-5.6.0.tar.gz
+    # mv iReport-5.6.0/ /opt/
+    # mv iReport-5.6.0/ ireport/
+    
+    # create shortcut :
+    # cd /usr/share/applications/
+    # nano ireport-panel.desktop
+    --Ubah Menjadi--
+       [Desktop Entry]
+       Comment=iReport Application
+       Name=iReport Application
+       Exec=/opt/ireport/bin/ireport
+       Icon=/opt/ireport/bin/document.ico
+       Encoding=UTF-8
+       Terminal=false
+       Name=iReport Application
+       Comment=iReport Application
+       Categories=GTK;Development;
+       Type=Application
+       Icon=/opt/ireport/bin/document.ico
+
     
 12. Update dependensi broken Kubuntu
     # sudo apt-get install --fix-broken && sudo apt-get autoremove && sudo apt-get update 
