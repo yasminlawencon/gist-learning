@@ -27,3 +27,4 @@ Contributor :
 - [Fandeka Aghfirlana](https://github.com/dekalawencon)
 - [Rizka Nurul Anis](https://github.com/rizkanis)
 - [Azanul Khairi](https://github.com/azanulkhairi)
+- [Yasmin Ghassani Panharesi](https://github.com/yasminlawencon)
