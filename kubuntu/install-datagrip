@@ -1,0 +1,20 @@
+Step-by-step install datagrip Kubuntu
+
+# Download Datagrip From : https://www.jetbrains.com/datagrip/download/download-thanks.html
+# cd /Downloads
+# tar zxf datagrip-2016.3.3.tar.gz
+# mv DataGrip-2016.3.3 datagrip
+# cp –R datagrip /opt/
+# cd /opt/
+# chown –R root.root datagrip
+# cd datagrip/bin/
+# sh datagrip.sh (running file)
+# pilih -> I do not have a previous version of DataGrip. . . .
+# pilih -> Accept
+# activated -> Copy kode aktivasi dari -> http://us.idea.lanyus.com/
+# copy paste di -> activation code
+# ok
+
+
+Create by : lani.asep@lawencon.com
+
