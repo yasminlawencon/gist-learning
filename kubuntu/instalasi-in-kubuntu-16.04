@@ -46,7 +46,18 @@ Step by step instalasi software di Kubuntu 16.04
    # /opt/lampp/lampp status 
    # /opt/lampp/lampp stop 
    # /opt/lampp/lampp restart
-
+   
+   -----------
+   setting automatically start
+   # sudo nano /etc/init.d/lampp
+   # paste code:
+     #!/bin/bash
+     /opt/lampp/lampp start
+   # sudo chmod +x /etc/init.d/lampp
+   # sudo update-rc.d lampp defaults
+   # restart the system
+   # check : sudo /opt/lampp/lampp status
+   
    -----------
    mengganti php-version ke php di lampp
    # cd /etc/
