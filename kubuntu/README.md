@@ -38,6 +38,13 @@ And will continue to be updated for the purposes of development.
 ## Publish By
 Created by : lani.asep@laewncon.com
 
-
+Contributor : 
+- [Lani Asep Sutisna](https://github.com/laniasepsutisna)
+- [Dwiki Saputra](https://github.com/dwikisaputraLawencon)
+- [Laras Setyawidi](https://github.com/laraslawencon)
+- [Fandeka Aghfirlana](https://github.com/dekalawencon)
+- [Rizka Nurul Anis](https://github.com/rizkanis)
+- [Azanul Khairi](https://github.com/azanulkhairi)
+- [Yasmin Ghassani Panharesi](https://github.com/yasminlawencon)
 
 
