@@ -76,7 +76,7 @@ Install Oracle 11g
     export LD_LIBRARY_PATH=$ORACLE_HOME/lib:$LD_LIBRARY_PATH
     export PATH=$ORACLE_HOME/bin:$PATH
 -----------------------------------------------------------
-
+# . ~/.profile (mengeksekusi prubahan)
 
 Referensi : 
 - http://askubuntu.com/questions/566734/how-to-install-oracle-11gr2-on-ubuntu-14-04
