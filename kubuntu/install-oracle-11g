@@ -1,0 +1,15 @@
+Step-by-step install oracle 11g in Ubuntu
+
+# Download oracle 11g : https://goo.gl/eo3SQh
+# cd /Downloads
+# unzip oracle-xe-11.2.0-1.0.x86_64.rpm.zip 
+# sudo apt-get install alien libaio1 unixodbc
+# cd Disk1/
+# sudo alien --scripts -d oracle-xe-11.2.0-1.0.x86_64.rpm
+# 
+
+
+Referensi : 
+- http://askubuntu.com/questions/566734/how-to-install-oracle-11gr2-on-ubuntu-14-04
+
+Created by : lani.asep@lawencon.com
