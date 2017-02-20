@@ -1,0 +1,10 @@
+Step-by-step Install i-Nex CPU Z for linux
+
+# sudo add-apt-repository ppa:i-nex-development-team/daily
+# sudo add-apt-repository ppa:gambas-team/gambas3 --(optional)
+# sudo apt update
+# sudo apt install i-nex
+
+
+Created by : lani.asep@lawencon.com
+
