@@ -23,6 +23,10 @@ php artisan config:cache
 php artisan cache:clear
 
 php artisan serve
+
+ERROR :
+The requested package xethron/migrations-generator could not be found in any version
+#
 ---------------------------------------
 Recruitment Installation
 chmod -R 777 *
