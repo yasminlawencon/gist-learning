@@ -64,8 +64,18 @@ Step-by-step install oracle 11g in Ubuntu
 Install Oracle 11g
 # sudo dpkg --install oracle-xe_11.2.0-2_amd64.deb
 # /etc/init.d/oracle-xe configure (konfigurasi database)
-
- 
+# sampe muncul tulisan "Installation completed successfully."
+# pico ~/.bashrc
+# copy paste, sisipkan diakhir line :
+-----------------------------------------------------------
+    #For Oracle Installation
+    export ORACLE_HOME=/u01/app/oracle/product/11.2.0/xe
+    export ORACLE_SID=XE
+    export NLS_LANG='$ORACLE_HOME/bin/nls_lang.sh'
+    export ORACLE_BASE=/u01/app/oracle
+    export LD_LIBRARY_PATH=$ORACLE_HOME/lib:$LD_LIBRARY_PATH
+    export PATH=$ORACLE_HOME/bin:$PATH
+-----------------------------------------------------------
 
 
 Referensi : 
