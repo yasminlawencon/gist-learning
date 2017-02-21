@@ -74,9 +74,6 @@ Install Oracle 11g
     Login : SYS atau SYSTEM
     Pass  : oracle
   - Do you want Oracle Database 11g Express Edition to be started on boot (y/n) [y] : y
-  - 
-  
-  
 # sampe muncul tulisan "Installation completed successfully."
 # pico ~/.bashrc
 # copy paste, sisipkan diakhir line :
