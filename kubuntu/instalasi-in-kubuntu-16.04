@@ -74,12 +74,11 @@ Step by step instalasi software di Kubuntu 16.04
    # sudo apt-get install build-essential
    # sudo apt-get install screen
    # cd /opt/
-   # last version : https://nodejs.org/en/download/
-   # wget http://nodejs.org/dist/v0.10.4/node-v0.10.4.tar.gz
-   # tar xf node-v6.9.5-linux-x64.tar.xz
-   # mv node-v6.9.5-linux-x64 nodejs/
+   # last version (source code) : https://nodejs.org/en/download/ atau http://nodejs.org/dist/v0.10.4/node-v0.10.4.tar.gz
+   # tar xf node-v6.9.5.tar.gz (last version)
+   # mv node-v6.9.5/ nodejs/
    # mv nodejs/ /opt/
-   # cd nodejs
+   # cd /opt/nodejs/
    # ./configure
    # make
    # sudo make install
