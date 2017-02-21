@@ -87,6 +87,12 @@ Install Oracle 11g
     export PATH=$ORACLE_HOME/bin:$PATH
 -----------------------------------------------------------
 # . ~/.profile (mengeksekusi prubahan)
+# sudo usermod -a -G dba <username laptop> 
+# sudo service oracle-xe start (start oracle)
+# sqlplus sys as sysdba
+#
+
+
 
 Referensi : 
 - http://askubuntu.com/questions/566734/how-to-install-oracle-11gr2-on-ubuntu-14-04
