@@ -1,22 +1,20 @@
 Step by step instalasi software di Kubuntu 16.04
 
 1. Install apache (PHP v7)
-   # sudo apt-get install php apache2 libapache2-mod-php php-cgi php-pgsql php-dev php-intl
-   # sudo apt-get install php-mbstring
+   # sudo apt-get install php apache2 libapache2-mod-php php-cgi php-pgsql php-dev php-intl php-cli php-mbstring php-curl
    # sudo apt-get install curl
-   # sudo apt-get install php-curl
    # sudo nano /etc/apache2/mods-enabled/dir.conf
    # index.php [pindahkan ke yang paling depan]
+   
    # systemctl start apache2
    # systemctl status apache2
    # systemctl stop apache2
-  
-   # sudo apt-get install php-cli
    
    Mengubah port 80 -> 85
    # /etc/apache2/
    # nano ports.conf
    # ubah :
+   -------------------------------
       Listen 85
       <IfModule ssl_module>
           Listen 86
@@ -24,11 +22,9 @@ Step by step instalasi software di Kubuntu 16.04
       <IfModule mod_gnutls.c>
           Listen 86
       </IfModule>
-
-     
-   
+   -------------------------------
 2. Install lampp (PHP v5.3.8)
-   # download : https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/1.7.7/xampp-linux-1.7.7.tar.gz/download
+   # download : wget https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/1.7.7/xampp-linux-1.7.7.tar.gz/download
    # tar xvfz xampp-linux-1.7.7.tar.gz -C /opt
    # cd /opt/
    # sudo chmod 777 -R /opt/lampp/htdocs/
