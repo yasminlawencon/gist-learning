@@ -23,6 +23,17 @@ php artisan config:cache
 php artisan cache:clear
 
 php artisan serve
+
+ERROR :
+The requested package xethron/migrations-generator could not be found in any version
+# pastikan composer terinstall dengan versi terbaru :
+# sudo apt-get install curl php-cli
+# curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+# composer
+# jika masih error composernya, ganti direktori menjadi '=/usr/bin/'
+# composer require xethron/migrations-generator
+# 
+
 ---------------------------------------
 Recruitment Installation
 chmod -R 777 *
