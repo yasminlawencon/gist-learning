@@ -24,7 +24,7 @@ Step by step instalasi software di Kubuntu 16.04
       </IfModule>
    -------------------------------
 2. Install lampp (PHP v5.3.8)
-   # download : wget https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/1.7.7/xampp-linux-1.7.7.tar.gz/download
+   # download : https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/1.7.7/xampp-linux-1.7.7.tar.gz/download
    # tar xvfz xampp-linux-1.7.7.tar.gz -C /opt
    # cd /opt/
    # sudo chmod 777 -R /opt/lampp/htdocs/
