@@ -98,6 +98,8 @@ ORA-12705: Cannot access NLS data files or invalid environment
 # masukan password oracle
 
 -------------------------------------------------------------
+Konfigurasi OCI8
+# pecl install oci8
 # 
 
 Referensi : 
