@@ -156,7 +156,7 @@ Step by step instalasi software di Kubuntu 16.04
     # cp JavaBridge.war /var/lib/tomcat7/webapps/ (maka secara otomatis akan membuat folder JavaBridge di dalam webapps)
     # download additional_lib : http://www.mediafire.com/file/erl7f4226ofu52r/additional_lib.zip
     # unzip additional_lib.zip
-    # cd /lib/
+    # cd lib/
     # cp -rf * /var/lib/tomcat7/webapps/JavaBridge/WEB-INF/lib/
     # cd /var/lib/tomcat7/webapps/JavaBridge/WEB-INF/lib/
     # chmod -R 777 *
