@@ -10,10 +10,22 @@ Step by step instalasi software di Kubuntu 16.04
    # systemctl start apache2
    # systemctl status apache2
    # systemctl stop apache2
-   
-   # apt-cache search php- | less
-   # apt-cache show php-cli
+  
    # sudo apt-get install php-cli
+   
+   Mengubah port 80 -> 85
+   # /etc/apache2/
+   # nano ports.conf
+   # ubah :
+      Listen 85
+      <IfModule ssl_module>
+          Listen 86
+      </IfModule>
+      <IfModule mod_gnutls.c>
+          Listen 86
+      </IfModule>
+
+     
    
 2. Install lampp (PHP v5.3.8)
    # download : https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/1.7.7/xampp-linux-1.7.7.tar.gz/download
