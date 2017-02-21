@@ -1,8 +1,7 @@
 Step by step instalasi software di Kubuntu 16.04
 
 1. Install apache (PHP v7)
-   # sudo apt-get install php apache2 libapache2-mod-php php-cgi php-pgsql php-dev php-intl php-cli php-mbstring php-curl
-   # sudo apt-get install curl
+   # sudo apt-get install php apache2 libapache2-mod-php php-cgi php-pgsql php-dev php-intl php-cli php-mbstring php-curl curl
    # sudo nano /etc/apache2/mods-enabled/dir.conf
    # index.php [pindahkan ke yang paling depan]
    
@@ -28,10 +27,7 @@ Step by step instalasi software di Kubuntu 16.04
    # tar xvfz xampp-linux-1.7.7.tar.gz -C /opt
    # cd /opt/
    # sudo chmod 777 -R /opt/lampp/htdocs/
-   # sudo apt-get install lib32ncurses5 lib32z1
-   # sudo apt-get install python-gtk2-dev
-   # apt install gksu
-   # gksudo python /opt/lampp/share/xampp-control-panel/xampp-control-panel.py
+   # sudo apt-get install lib32ncurses5 lib32z1 python-gtk2-dev gksu
    ----------
    # membuat GUI start Lampp
    # cd /usr/share/applications/
@@ -80,8 +76,10 @@ Step by step instalasi software di Kubuntu 16.04
    # cd /opt/
    # last version : https://nodejs.org/en/download/
    # wget http://nodejs.org/dist/v0.10.4/node-v0.10.4.tar.gz
-   # tar zxf node-v0.10.4.tar.gz
-   # cd node-v0.10.4
+   # tar xf node-v6.9.5-linux-x64.tar.xz
+   # mv node-v6.9.5-linux-x64 nodejs/
+   # mv nodejs/ /opt/
+   # cd nodejs
    # ./configure
    # make
    # sudo make install
