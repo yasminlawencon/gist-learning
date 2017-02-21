@@ -15,6 +15,20 @@ Step-by-step install datagrip Kubuntu
 # copy paste di -> activation code
 # ok
 
+Membuat shortcut desktop
+# cd /usr/share/applications/
+# nano datagrip.desktop
+# copy paste
+  [Desktop Entry]
+  Comment=DataGrip GUI Aplication
+  Name=DataGrip
+  Exec=/opt/datagrip/bin/datagrip.sh
+  Icon=/opt/datagrip/bin/datagrip.png
+  Encoding=UTF-8
+  Terminal=false
+  Categories=Development
+  Type=Application
+
 
 Create by : lani.asep@lawencon.com
 
