@@ -70,6 +70,11 @@ Step by step instalasi software di Kubuntu 16.04
    # paste dibagian akhir : PATH=/opt/lampp/bin:$PATH
    # source bash.bashrc
    # php -v
+     atau 
+   # pico ~/.bashrc
+   # paste dibagian akhis : PATH=/opt/lampp/bin:$PATH
+   # . ~/.profile (saving)
+   
 
 3. Install Node.js
    # sudo apt-get install build-essential
