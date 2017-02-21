@@ -90,7 +90,12 @@ Install Oracle 11g
 # sudo usermod -a -G dba <username laptop> 
 # sudo service oracle-xe start (start oracle)
 # sqlplus sys as sysdba
-#
+
+ERROR : 
+ORA-12705: Cannot access NLS data files or invalid environment
+# unset NLS_LANG
+# sqlplus sys as sysdba
+# masukan password oracle
 
 
 
