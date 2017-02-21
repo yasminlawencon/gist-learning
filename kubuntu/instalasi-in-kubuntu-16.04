@@ -72,7 +72,11 @@ Step by step instalasi software di Kubuntu 16.04
    # php -v
      atau 
    # pico ~/.bashrc
-   # paste dibagian akhis : PATH=/opt/lampp/bin:$PATH
+   # paste dibagian akhir :
+     ----------------------------------
+     #For change php version path
+      export PATH=/opt/lampp/bin:$PATH
+     ----------------------------------
    # . ~/.profile (saving)
    
 
