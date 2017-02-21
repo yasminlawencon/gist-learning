@@ -4,7 +4,7 @@ Step-by-step install datagrip Kubuntu
 # cd /Downloads
 # tar zxf datagrip-2016.3.3.tar.gz
 # mv DataGrip-2016.3.3 datagrip
-# cp –R datagrip /opt/
+# mv datagrip/ /opt/
 # cd /opt/
 # chown –R root.root datagrip
 # cd datagrip/bin/
