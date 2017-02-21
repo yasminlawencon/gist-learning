@@ -133,7 +133,7 @@ Step by step instalasi software di Kubuntu 16.04
    # sudo apt-get install tomcat7*
    # systemctl start tomcat7
    # cd /var/lib/tomcat7/
-   # gedit conf/server.xml 
+   # nano conf/server.xml 
    # sebelum
      <Connector port="8080" protocol="HTTP/1.1"
                connectionTimeout="20000"
