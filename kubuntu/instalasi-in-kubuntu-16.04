@@ -65,12 +65,6 @@ Step by step instalasi software di Kubuntu 16.04
    
    -----------
    mengganti php-version ke php di lampp
-   # cd /etc/
-   # nano bash.bashrc
-   # paste dibagian akhir : PATH=/opt/lampp/bin:$PATH
-   # source bash.bashrc
-   # php -v
-     atau 
    # pico ~/.bashrc
    # paste dibagian akhir :
      ----------------------------------
@@ -78,7 +72,7 @@ Step by step instalasi software di Kubuntu 16.04
       export PATH=/opt/lampp/bin:$PATH
      ----------------------------------
    # . ~/.profile (saving)
-   
+   # php -v
 
 3. Install Node.js
    # sudo apt-get install build-essential
