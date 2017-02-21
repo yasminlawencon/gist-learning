@@ -228,16 +228,11 @@ Step by step instalasi software di Kubuntu 16.04
     # sudo apt-get install sublime-text-installer
 
 
- 14. Error php_pdo_pgsql.dll & php_pgsql.dll di Lampp
-    # Warning: PHP Startup: Unable to load dynamic library '/opt/lampp/lib/php/extensions/no-debug-non-zts-20090626/php_pdo_pgsql.dll'
-    # Warning: PHP Startup: Unable to load dynamic library '/opt/lampp/lib/php/extensions/no-debug-non-zts-20090626/php_pgsql.dll'
-      Edit file :
-    # nano /opt/lampp/etc/php.ini
-    # diberi comment
-      ;extension=php_pdo_pgsql.dll
-      ;extension=php_pgsql.dll
+ 14. Install composer
+    # curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+    # composer
     
-    
+  
     
     
     
