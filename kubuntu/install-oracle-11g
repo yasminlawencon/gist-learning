@@ -97,9 +97,11 @@ ORA-12705: Cannot access NLS data files or invalid environment
 # sqlplus sys as sysdba
 # masukan password oracle
 
-
+-------------------------------------------------------------
+# 
 
 Referensi : 
 - http://askubuntu.com/questions/566734/how-to-install-oracle-11gr2-on-ubuntu-14-04
+- http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html
 
 Created by : lani.asep@lawencon.com
