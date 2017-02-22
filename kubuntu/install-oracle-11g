@@ -99,11 +99,12 @@ ORA-12705: Cannot access NLS data files or invalid environment
 
 -------------------------------------------------------------
 Konfigurasi OCI8
-# pecl install oci8
+# pecl install oci8-2.0.12 (for php v5.3)
 # 
 
 Referensi : 
 - http://askubuntu.com/questions/566734/how-to-install-oracle-11gr2-on-ubuntu-14-04
 - http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html
+- https://vufind.org/wiki/installation:php_oci
 
 Created by : lani.asep@lawencon.com
