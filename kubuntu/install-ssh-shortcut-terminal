@@ -1,0 +1,8 @@
+Step-by-step konfigurasi shortcut terminal
+# nano ~/.ssh/config
+# copy paste:
+  Host server-34   
+  HostName IPAddress                       
+  User Username
+  Port PortSSH
+# ssh shortcutName
