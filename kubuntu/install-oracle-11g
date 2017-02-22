@@ -108,7 +108,7 @@ Konfigurasi OCI8
 # setsebool -P httpd_execmem 1
 # echo /opt/oracle/instantclient > /etc/ld.so.conf.d/oracle-instantclient
 # apt install yum
-# yum install gcc
+# apt install gcc
 
 
 Referensi : 
