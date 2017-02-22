@@ -1,29 +1,33 @@
 Step by step instalasi software di Kubuntu 16.04
 
 1. Install apache (PHP v7)
-   # sudo apt-get install php apache2 libapache2-mod-php php-cgi php-pgsql php-dev php-intl
-   # sudo apt-get install php-mbstring
-   # sudo apt-get apt install curl
-   # sudo apt-get install php-curl
+   # sudo apt-get install php apache2 libapache2-mod-php php-cgi php-pgsql php-dev php-intl php-cli php-mbstring php-curl curl
    # sudo nano /etc/apache2/mods-enabled/dir.conf
    # index.php [pindahkan ke yang paling depan]
+   
    # systemctl start apache2
    # systemctl status apache2
    # systemctl stop apache2
    
-   # apt-cache search php- | less
-   # apt-cache show php-cli
-   # sudo apt-get install php-cli
-   
+   Mengubah port 80 -> 85
+   # /etc/apache2/
+   # nano ports.conf
+   # ubah :
+   -------------------------------
+      Listen 85
+      <IfModule ssl_module>
+          Listen 86
+      </IfModule>
+      <IfModule mod_gnutls.c>
+          Listen 86
+      </IfModule>
+   -------------------------------
 2. Install lampp (PHP v5.3.8)
    # download : https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/1.7.7/xampp-linux-1.7.7.tar.gz/download
    # tar xvfz xampp-linux-1.7.7.tar.gz -C /opt
    # cd /opt/
    # sudo chmod 777 -R /opt/lampp/htdocs/
-   # sudo apt-get install lib32ncurses5 lib32z1
-   # sudo apt-get install python-gtk2-dev
-   # apt install gksu
-   # gksudo python /opt/lampp/share/xampp-control-panel/xampp-control-panel.py
+   # sudo apt-get install lib32ncurses5 lib32z1 python-gtk2-dev gksu
    ----------
    # membuat GUI start Lampp
    # cd /usr/share/applications/
@@ -38,6 +42,7 @@ Step by step instalasi software di Kubuntu 16.04
      Terminal=false
      Name=XAMPP Control Panel
      Comment=Start and Stop XAMPP
+     Categories=Development
      Type=Application
      Icon=/usr/share/icons/Humanity/devices/24/network-wired.svg
    ----------
@@ -60,20 +65,24 @@ Step by step instalasi software di Kubuntu 16.04
    
    -----------
    mengganti php-version ke php di lampp
-   # cd /etc/
-   # nano bash.bashrc
-   # paste dibagian akhir : PATH=/opt/lampp/bin:$PATH
-   # source bash.bashrc
+   # pico ~/.bashrc
+   # paste dibagian akhir :
+     ----------------------------------
+     #For change php version path
+      export PATH=/opt/lampp/bin:$PATH
+     ----------------------------------
+   # . ~/.profile (saving)
    # php -v
 
 3. Install Node.js
    # sudo apt-get install build-essential
    # sudo apt-get install screen
    # cd /opt/
-   # last version : https://nodejs.org/en/download/
-   # wget http://nodejs.org/dist/v0.10.4/node-v0.10.4.tar.gz
-   # tar zxf node-v0.10.4.tar.gz
-   # cd node-v0.10.4
+   # last version (source code) : https://nodejs.org/en/download/ atau http://nodejs.org/dist/v0.10.4/node-v0.10.4.tar.gz
+   # tar xf node-v6.9.5.tar.gz (last version)
+   # mv node-v6.9.5/ nodejs/
+   # mv nodejs/ /opt/
+   # cd /opt/nodejs/
    # ./configure
    # make
    # sudo make install
@@ -84,11 +93,10 @@ Step by step instalasi software di Kubuntu 16.04
    # git --version
 
 5. Install postgres
-   # tambahkan : nano /etc/apt/sources.list.d/pgdg.list 
-    deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main
+   # nano /etc/apt/sources.list.d/pgdg.list 
+     copy paste : deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main
    # wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
    # sudo apt-get update
-   # sudo apt-get install 
    # apt-get install postgresql-9.5
    # nano /etc/postgresql/9.5/main/pg_hba.conf 
    # Database administrative login by Unix domain socket
@@ -128,7 +136,7 @@ Step by step instalasi software di Kubuntu 16.04
    # sudo apt-get install tomcat7*
    # systemctl start tomcat7
    # cd /var/lib/tomcat7/
-   # gedit conf/server.xml 
+   # nano conf/server.xml 
    # sebelum
      <Connector port="8080" protocol="HTTP/1.1"
                connectionTimeout="20000"
@@ -151,7 +159,7 @@ Step by step instalasi software di Kubuntu 16.04
     # cp JavaBridge.war /var/lib/tomcat7/webapps/ (maka secara otomatis akan membuat folder JavaBridge di dalam webapps)
     # download additional_lib : http://www.mediafire.com/file/erl7f4226ofu52r/additional_lib.zip
     # unzip additional_lib.zip
-    # cd /lib/
+    # cd lib/
     # cp -rf * /var/lib/tomcat7/webapps/JavaBridge/WEB-INF/lib/
     # cd /var/lib/tomcat7/webapps/JavaBridge/WEB-INF/lib/
     # chmod -R 777 *
@@ -223,16 +231,11 @@ Step by step instalasi software di Kubuntu 16.04
     # sudo apt-get install sublime-text-installer
 
 
- 14. Error php_pdo_pgsql.dll & php_pgsql.dll di Lampp
-    # Warning: PHP Startup: Unable to load dynamic library '/opt/lampp/lib/php/extensions/no-debug-non-zts-20090626/php_pdo_pgsql.dll'
-    # Warning: PHP Startup: Unable to load dynamic library '/opt/lampp/lib/php/extensions/no-debug-non-zts-20090626/php_pgsql.dll'
-      Edit file :
-    # nano /opt/lampp/etc/php.ini
-    # diberi comment
-      ;extension=php_pdo_pgsql.dll
-      ;extension=php_pgsql.dll
+ 14. Install composer
+    # curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+    # composer
     
-    
+  
     
     
     
