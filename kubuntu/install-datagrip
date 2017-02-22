@@ -20,15 +20,19 @@ Membuat shortcut desktop
 # cd /usr/share/applications/
 # nano datagrip.desktop
 # copy paste
-  [Desktop Entry]
-  Comment=DataGrip GUI Aplication
-  Name=DataGrip
-  Exec=/opt/datagrip/bin/datagrip.sh
-  Icon=/opt/datagrip/bin/datagrip.png
-  Encoding=UTF-8
-  Terminal=false
-  Categories=Development
-  Type=Application
+[Desktop Entry]
+Version=1.0
+GenericName=DataGrip DB Client
+Comment=DataGrip GUI Aplication
+Name=DataGrip
+Exec=/opt/datagrip/bin/datagrip.sh
+Icon=/opt/datagrip/bin/datagrip.png
+Encoding=UTF-8
+Terminal=false
+Categories=Development
+Type=Application
+MimeType=x-schema-handler/dash;x-scheme-handler/dash-plugin;
+
 
 
 Create by : lani.asep@lawencon.com
