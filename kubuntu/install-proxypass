@@ -1,3 +1,6 @@
+# a2enmod proxy_html
+# service apache2 restart
+
 <VirtualHost *:80>
     ProxyPreserveHost On 
     ProxyPass / http://0.0.0.0:8080/
