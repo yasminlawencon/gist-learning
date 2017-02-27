@@ -1,0 +1,22 @@
+Trimegah Tutorial. 
+1. Menghubungkan system local dengan sistem VM
+- pastikan system local terhubung dengan jaringan kabel
+- setting network adapter pada VM, ubah menjadi Bridge Adapter, ubah name menjadi en01.
+- setelah sistem VM Trimegah sudah menyala, cek IP sistem VM.
+- Jika IP tidak dinamis, ubah IP menjadi dinamis. Kemudian cek kembali IP, pastikan IP VM dan IP system local memiliki gateway yang sama (contoh IP local : 192.168.42.61, IP VM : 192.168.42.71 – hanya berbeda di angka paling belakang)
+- Untuk cek IP local, lakukan sudo ifconfig.
+- Ping IP sistem VM untuk memastikan bahwa sistem local dan VM sudah terhubung.
+3. Instalasi Oracle pada XAMPP
+- Download Oracle Instant Client versi 10 https://goo.gl/20JSeS
+- Unzip file oracle instant client, pindahkan ke folder C.
+- Ubah nama folder menjadi instantclient.
+- Buka Environment Variable, tambahkan C:\instantclient pada bagian akhir.
+- Buka folder instantclient, copy 3 file berikut (jika belum ada) ke dalam folder xampp\apache\bin. File : oci.dll, orannzsbb10.dll, dan oraociei10.dll
+- Copy juga ketiga file tersebut ke dalam folder C:\WINXP\system32.
+- Uncomment extension = php_oci8.dll; dan extension = php_pdo_oci8.dll; pada file php.ini
+- Restart XAMPP, buka phpinfo untuk memastikan bahwa oci8 sudah terpasang.
+
+
+
+By : laras@lawencon.com
+
