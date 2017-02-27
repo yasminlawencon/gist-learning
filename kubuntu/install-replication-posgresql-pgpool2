@@ -2,7 +2,9 @@ Step-by-step untuk menginstall replication database postgres di Ubuntu
 
 # install postgres 9.5.6 -> https://goo.gl/dpf4cp (bagian 5)
 # sudo apt-get install postgresql-9.5-pgpool2
-
+# sudo apt-get install pgpool2
+# nano /etc/pgpool2/pgpool.conf
+# 
 
 
 
