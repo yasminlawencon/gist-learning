@@ -65,10 +65,13 @@ Step by step instalasi software di Kubuntu 16.04
    
    -----------
    mengganti php-version ke php di lampp
-   # cd /etc/
-   # nano bash.bashrc
-   # paste dibagian akhir : PATH=/opt/lampp/bin:$PATH
-   # source bash.bashrc
+   # pico ~/.bashrc
+   # paste dibagian akhir :
+     ----------------------------------
+     #For change php version path
+      export PATH=/opt/lampp/bin:$PATH
+     ----------------------------------
+   # . ~/.profile (saving)
    # php -v
 
 3. Install Node.js
@@ -133,7 +136,7 @@ Step by step instalasi software di Kubuntu 16.04
    # sudo apt-get install tomcat7*
    # systemctl start tomcat7
    # cd /var/lib/tomcat7/
-   # gedit conf/server.xml 
+   # nano conf/server.xml 
    # sebelum
      <Connector port="8080" protocol="HTTP/1.1"
                connectionTimeout="20000"
@@ -156,7 +159,7 @@ Step by step instalasi software di Kubuntu 16.04
     # cp JavaBridge.war /var/lib/tomcat7/webapps/ (maka secara otomatis akan membuat folder JavaBridge di dalam webapps)
     # download additional_lib : http://www.mediafire.com/file/erl7f4226ofu52r/additional_lib.zip
     # unzip additional_lib.zip
-    # cd /lib/
+    # cd lib/
     # cp -rf * /var/lib/tomcat7/webapps/JavaBridge/WEB-INF/lib/
     # cd /var/lib/tomcat7/webapps/JavaBridge/WEB-INF/lib/
     # chmod -R 777 *
@@ -228,16 +231,11 @@ Step by step instalasi software di Kubuntu 16.04
     # sudo apt-get install sublime-text-installer
 
 
- 14. Error php_pdo_pgsql.dll & php_pgsql.dll di Lampp
-    # Warning: PHP Startup: Unable to load dynamic library '/opt/lampp/lib/php/extensions/no-debug-non-zts-20090626/php_pdo_pgsql.dll'
-    # Warning: PHP Startup: Unable to load dynamic library '/opt/lampp/lib/php/extensions/no-debug-non-zts-20090626/php_pgsql.dll'
-      Edit file :
-    # nano /opt/lampp/etc/php.ini
-    # diberi comment
-      ;extension=php_pdo_pgsql.dll
-      ;extension=php_pgsql.dll
+ 14. Install composer
+    # curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+    # composer
     
-    
+  
     
     
     

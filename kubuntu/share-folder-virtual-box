@@ -1,5 +1,0 @@
-Step-by-step share folder virtual-box
-
-# setting: 
-# jalankan di virtual box ubuntu: 
-# sudo mount -t vboxsf FOLDERNAME /PATH/OF/FOLDER (path di local)

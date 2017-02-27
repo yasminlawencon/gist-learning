@@ -1,8 +1,13 @@
 LinovHR Cloud Admin
+Setting Production LinovHR Cloud Admin
+chmod -R 777 *
+git config core.filemode false
 npm install
 npm install -g bower
 bower install
 bower update
+
+npm install gulp
 npm install -g gulp
 gulp --production
 ---------------------------------------

@@ -64,6 +64,16 @@ Step-by-step install oracle 11g in Ubuntu
 Install Oracle 11g
 # sudo dpkg --install oracle-xe_11.2.0-2_amd64.deb
 # /etc/init.d/oracle-xe configure (konfigurasi database)
+  Catatan : 
+  - Specify the HTTP port: 8080
+  - Specify a port that will be used for the database: 1521
+  - Specify a password to be used for database accounts.  Note that the same
+    password will be used for SYS and SYSTEM.  Oracle recommends the use of 
+    different passwords for each database account.  This can be done after 
+    initial configuration: oracle (password boleh beda)
+    Login : SYS atau SYSTEM
+    Pass  : oracle
+  - Do you want Oracle Database 11g Express Edition to be started on boot (y/n) [y] : y
 # sampe muncul tulisan "Installation completed successfully."
 # pico ~/.bashrc
 # copy paste, sisipkan diakhir line :
@@ -77,8 +87,33 @@ Install Oracle 11g
     export PATH=$ORACLE_HOME/bin:$PATH
 -----------------------------------------------------------
 # . ~/.profile (mengeksekusi prubahan)
+# sudo usermod -a -G dba <username laptop> 
+# sudo service oracle-xe start (start oracle)
+# sqlplus sys as sysdba
+
+ERROR : 
+ORA-12705: Cannot access NLS data files or invalid environment
+# unset NLS_LANG
+# sqlplus sys as sysdba
+# masukan password oracle
+
+-------------------------------------------------------------
+Konfigurasi OCI8
+# pecl install oci8-2.0.12 (for php v5.3)
+# Please provide the path to the ORACLE_HOME directory. Use 'instantclient,/path/to/instant/client/lib' if you're compiling with Oracle Instant Client [autodetect] : ENTER
+# chcon -t textrel_shlib_t /opt/oracle/instantclient/*.so
+# apt instal execstack
+# execstack -c /opt/oracle/instantclient/*.so.*
+# apt install policycoreutils
+# setsebool -P httpd_execmem 1
+# echo /opt/oracle/instantclient > /etc/ld.so.conf.d/oracle-instantclient
+# apt install yum
+# apt install gcc
+
 
 Referensi : 
 - http://askubuntu.com/questions/566734/how-to-install-oracle-11gr2-on-ubuntu-14-04
+- http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html
+- https://vufind.org/wiki/installation:php_oci
 
 Created by : lani.asep@lawencon.com
