@@ -2,8 +2,10 @@ Step-by-step install SSH remote di Ubuntu VirtualBox
 
 # sudo apt-get install openssh-client (untuk sisi cleint)
 # sudo apt-get install openssh-server (untuk sisi server)
-# check IP kamu disini : http://www.whatsmyip.org/
-# 
+# sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.factory-defaults
+# sudo chmod a-w /etc/ssh/sshd_config.factory-defaults
+# sudo nano /etc/ssh/sshd_config
+# sudo systemctl restart ssh
 
 
 
