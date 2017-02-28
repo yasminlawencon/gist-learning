@@ -8,6 +8,16 @@ Step-by-step install SSH remote di Ubuntu VirtualBox
 # sudo systemctl restart ssh
 # ssh username@192.304.39.2(ip remote)
 
+-------Membuat Shorcut Terminal SSH------
+Step-by-step konfigurasi shortcut terminal
+# nano ~/.ssh/config
+# copy paste:
+  Host ShortcutName  
+  HostName IPAddress                       
+  User Username
+  Port PortSSH
+# ssh ShortcutName
+
 
 Created by : lani.asep@lawencon.com
 
