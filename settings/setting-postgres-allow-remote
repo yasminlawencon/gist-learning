@@ -4,6 +4,19 @@ Step-by-step Postgres Allow Remote Ubuntu Postgres v9.5
 # ifconfig
   inet addr:10.10.10.164 -> Ip ini yang akan diremote
 # su - postgres
-# nano /etc/postgresql/8.2/main/pg_hba.conf
+# nano /etc/postgresql/9.5/main/pg_hba.conf
 # tambahkan di bawah IPv4 Local connections:
   host    all             all             10.10.10.164/24         trust
+# nano /etc/postgresql/9.5/main/postgresql.conf
+  listen_addresses = '*'
+# systemctl restart postgresql
+
+Silahkan buat koneksi di VirtualBox atau di Komputer yang dalam satu jaringan:
+
+
+
+Create by : lani.asep@lawencon.com
+
+
+
+
