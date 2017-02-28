@@ -6,7 +6,7 @@ Step-by-step install SSH remote di Ubuntu VirtualBox
 # sudo chmod a-w /etc/ssh/sshd_config.factory-defaults
 # sudo nano /etc/ssh/sshd_config
 # sudo systemctl restart ssh
-
+# ssh username@192.304.39.2(ip remote)
 
 
 Created by : lani.asep@lawencon.com
