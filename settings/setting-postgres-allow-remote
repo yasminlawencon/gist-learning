@@ -8,7 +8,7 @@ Step-by-step Postgres Allow Remote Ubuntu Postgres v9.5
 # tambahkan di bawah IPv4 Local connections:
   host    all             all             10.10.10.164/24         trust
 # nano /etc/postgresql/9.5/main/postgresql.conf
-  listen_addresses = '10.10.10.164, localhost'
+  listen_addresses = '*'
 # systemctl restart postgresql
 
 Silahkan buat koneksi postgres di VirtualBox atau di Komputer local dengan IP yang sudah ditentukan tadi.
