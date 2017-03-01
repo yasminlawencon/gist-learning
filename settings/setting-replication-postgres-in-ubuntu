@@ -27,7 +27,41 @@ Pada primary server, buat table sederhana bertujuan untuk melakukan pengetesan. 
 visitor dari sebuah website, dimana visitor didalam website tersebut dapat membuat sebuah komentar. Data field tersebut 
 sebagai berikut alamat email visitor, serial ID, date & time sekarang, dan text message dari visitor.
 
-Jalankan Di SSH terminal pada primary server:
-1. 
+Jalankan Di SSH terminal pada primary server (server utama):
+1. Jalankan root shell:
+   # sudo -s
+
+2. Jalankan PSQL untuk user postgres dan akses database dengan nama postgres:
+   # sudo -u postgres psql postgres
+
+3. Pada PSQL prompt, masukan command dibawah ini untuk membuat sebuah table:
+   # CREATE TABLE guestbook (visitor_email text, vistor_id serial, date timestamp, message text);
+
+4. Masukan sebuah entry data pada table:
+   # INSERT INTO guestbook (visitor_email, date, message) VALUES ( 'jim@gmail.com', current_date, 'This is a test.');
+   Kita akan melihat sebuah pesan konfirmasi yang berkata: INSERT 0 1.
+
+5. Enter \q untuk exit dari PSQL prompt.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
