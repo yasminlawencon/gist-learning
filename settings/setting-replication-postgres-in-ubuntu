@@ -102,7 +102,12 @@ replication.
   4. Save dan close file.
   
 # Restart primary server
-Sekarang kita udah membuat sebuah perubahan didalam file konfigurasi, merestart server 
+Sekarang kita udah membuat sebuah perubahan didalam file konfigurasi, silahkan restart server untuk membuat perubahan 
+efektif berjalan. 
+   - Masukan perintah berikut:
+     # sudo service postgresql restart
+
+# Backup primary server ke standby server
 
 
 
