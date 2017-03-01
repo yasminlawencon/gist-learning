@@ -1,7 +1,7 @@
 
-Step-by-step :
+Step-by-step : Silahkan dibaca sampai akhir tahap demi tahap, agar memahami maksud dan tujuan dari replication Postgres ini
 Bagaimana Me-Setup PostgreSQL untuk High Availability dan Replikasi (Cadangan) menggunakan Hot Standby
-
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Tujuan 
 - Set up sebuah dua mesin komputer (virtual box) yang telah running Postgres.
 - Membuat sebuah tabel guestbook app untuk percobaan
@@ -27,7 +27,7 @@ Pada primary server, buat table sederhana bertujuan untuk melakukan pengetesan. 
 visitor dari sebuah website, dimana visitor didalam website tersebut dapat membuat sebuah komentar. Data field tersebut 
 sebagai berikut alamat email visitor, serial ID, date & time sekarang, dan text message dari visitor.
 
-Jalankan Di SSH terminal pada primary server (server utama):
+Jalankan SSH terminal pada primary server (server utama):
 1. Jalankan root shell:
    # sudo -s
 
@@ -42,7 +42,17 @@ Jalankan Di SSH terminal pada primary server (server utama):
    Kita akan melihat sebuah pesan konfirmasi yang berkata: INSERT 0 1.
 
 5. Enter \q untuk exit dari PSQL prompt.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Jangan keluar dari root shell. Kita akan menggunakan root shell selama tutorial ini berlangsung.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+# Konfigurasi primary server (server utama)
+Untuk mengkonfigurasi primary server, kita akan:
+- Membuat sebuah user Postgres untuk replication aktivitas.
+- Membuat directory to menyimpan berbagai archive file
+- Mengedit dua file konfigurasi: pg_hba.conf & postgresql.conf
+
+# Membuat sebuah user untuk replication
 
 
 
