@@ -11,4 +11,5 @@ Bagaimana Mesetup PostgreSQL untuk High Availability dan Replikasi (Cadangan) me
 - Memulai standby server dan mengetesnya.
 
 # Setting up Komputer Engine instances
-Untuk membuat primary dan standby server, silahkan ikuti step by step disini : https://cloud.google.com/solutions/set-up-postgres
+Untuk membuat primary dan standby server, silahkan ikuti step by step disini : 
+https://cloud.google.com/solutions/set-up-postgres
