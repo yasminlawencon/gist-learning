@@ -22,4 +22,12 @@ https://cloud.google.com/solutions/set-up-postgres
 - Perhatikan alamat IP dari server masing-masing. Kita harus mengetahui ini ketika merubah konfigurasi.
 - Pastikan port SSH sudah terbuka karena SSH server dibutuhkan didalam tutorial ini.
 
+# Membuat tabel guestbook
+Pada primary server, buat table sederhana bertujuan untuk melakukan pengetesan. Tabel ini berfungsi untuk menyimpan data 
+visitor dari sebuah website, dimana visitor didalam website tersebut dapat membuat sebuah komentar. Data field tersebut 
+sebagai berikut alamat email visitor, serial ID, date & time sekarang, dan text message dari visitor.
+
+Jalankan Di SSH terminal pada primary server:
+1. 
+
 
