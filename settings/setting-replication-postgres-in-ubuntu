@@ -1,0 +1,14 @@
+
+Step-by-step :
+Bagaimana Mesetup PostgreSQL untuk High Availability dan Replikasi (Cadangan) menggunakan Hot Standby
+
+# Tujuan 
+- Set up sebuah dua mesin komputer (virtual box) yang telah running Postgres.
+- Membuat sebuah tabel guestbook app untuk percobaan
+- Menkonfigurasi primary server (server utama)
+- Backup primary server ke server standby (server cadangan)
+- Menkonfigurasi standby server to menjalankan Hot Standby mode. Hot Standby sendiri merupakan sebuah layanan dari Postgres.
+- Memulai standby server dan mengetesnya.
+
+# Setting up Komputer Engine instances
+Untuk membuat primary dan standby server, silahkan ikuti step by step disini : https://cloud.google.com/solutions/set-up-postgres
