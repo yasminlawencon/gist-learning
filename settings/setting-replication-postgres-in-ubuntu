@@ -54,7 +54,34 @@ Untuk mengkonfigurasi primary server, kita akan:
 - Mengedit dua file konfigurasi: pg_hba.conf & postgresql.conf
 
 # Membuat sebuah user untuk replication
+Untuk melakukan replication, Postgres membutuhkan sebuah user, juga memiliki role, dengan spesial permissions.
+  - Pada primary server, jalankan printah berikut:
+    # sudo -u postgres createuser -U postgres repuser -P -c 5 --replication
+  
+# Membuat arsip direktori
+Membuat sebuah direktori untuk menyimpan sebuah file arsip. Diretori ini adalah subdirektori dari direktori data cluster, 
+yang diberi nama utama secara default.
+  - Pada SSH terminal primary server, ikuti perintah dibawah ini:
+    # mkdir -p ../../var/lib/postgresql/main/mnt/server/archivedir
 
+# Edit pg_hba.conf
+File konfigurasi ini berisi pengaturan klien. Kita harus menambahkan sebuah entri untuk rapuser sebagai pengguna untuk
+mengaktifkan replikasi.
+  
+  1. Edit file, untuk PostgreSQL versi 9.5, kita bisa menggunakan:
+     # nano ../../etc/postgresql/9.5/main/pg_hba.conf
+     
+  2. Tambhankan dibagian akhir contoh replication berikut. Ganti <standby-IP> dengan IP external standby server:
+     # Allow replication connections
+     host     replication     repuser         <standby-IP>/32        md5
+  
+  3. Simpan dan close file.
+  
+# Edit postgresql.conf
+Konfigurasi ini berisi pengatusan utama untuk Postgres. Disini, kita akan memodifikasi file untuk memungkinkan archiving & 
+replication.
+
+  1. Edit file
 
 
 
