@@ -107,6 +107,7 @@ Step by step instalasi software di Kubuntu 16.04
    # systemctl status postgresql
    # systemctl stop postgresql
    # psql -V
+   # dpkg -l | grep postgres (list aplikasi yang terinstall postgresql)
    
 6. Install pgadmin3
   # sudo apt-get install pgadmin3*
