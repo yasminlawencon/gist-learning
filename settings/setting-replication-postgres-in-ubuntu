@@ -1,6 +1,6 @@
 
 Step-by-step :
-Bagaimana Mesetup PostgreSQL untuk High Availability dan Replikasi (Cadangan) menggunakan Hot Standby
+Bagaimana Me-Setup PostgreSQL untuk High Availability dan Replikasi (Cadangan) menggunakan Hot Standby
 
 # Tujuan 
 - Set up sebuah dua mesin komputer (virtual box) yang telah running Postgres.
@@ -14,9 +14,12 @@ Bagaimana Mesetup PostgreSQL untuk High Availability dan Replikasi (Cadangan) me
 Untuk membuat primary dan standby server, silahkan ikuti step by step disini : 
 https://cloud.google.com/solutions/set-up-postgres
 
-# Catatan untuk menikuti tutorial ini :
+# Catatan untuk mengikuti tutorial ini :
 - Kita tidak membutuhkan penggunaan pgAdmin didalam tutorial ini
 - Iktui step by step installasi server sampai selesai
 - Ikuti step Connecting remotely di dalam tutorial diatas sampai selesai
 - Kita harus membuka port jaringan hanya sekali, setelah itu tidak
-- Perhatikan alamat IP dari server masing-masing. Kita harus mengetahui ini ketika merubah konfigurasi
+- Perhatikan alamat IP dari server masing-masing. Kita harus mengetahui ini ketika merubah konfigurasi.
+- Pastikan port SSH sudah terbuka karena SSH server dibutuhkan didalam tutorial ini.
+
+
