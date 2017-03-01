@@ -10,6 +10,13 @@ Bagaimana Mesetup PostgreSQL untuk High Availability dan Replikasi (Cadangan) me
 - Menkonfigurasi standby server to menjalankan Hot Standby mode. Hot Standby sendiri merupakan sebuah layanan dari Postgres.
 - Memulai standby server dan mengetesnya.
 
-# Setting up Komputer Engine instances
+# Setting up Komputer Engine instances Connecting remotely
 Untuk membuat primary dan standby server, silahkan ikuti step by step disini : 
 https://cloud.google.com/solutions/set-up-postgres
+
+# Catatan untuk menikuti tutorial ini :
+- Kita tidak membutuhkan penggunaan pgAdmin didalam tutorial ini
+- Iktui step by step installasi server sampai selesai
+- Ikuti step Connecting remotely di dalam tutorial diatas sampai selesai
+- Kita harus membuka port jaringan hanya sekali, setelah itu tidak
+- Perhatikan alamat IP dari server masing-masing. Kita harus mengetahui ini ketika merubah konfigurasi
