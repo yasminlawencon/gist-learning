@@ -94,9 +94,15 @@ replication.
      buat pada langkah sebelumnya:
      # archive_command = 'test ! -f /mnt/server/archivedir/%f && cp %p /mnt/server/archivedir/%f'
 
-  5. Pada bagian REPLICATION, di
-
-
+  5. Pada bagian REPLICATION, dibagian server pengirim (Sending Server) ubah value dari maksimum nomer 
+     dari WAL sender processes:
+     # max_wal_senders = 3
+     Untuk tutorial ini nilai 3 mungkin cukup untuk melakuakn backup & replikasi.
+     
+  4. Save dan close file.
+  
+# Restart primary server
+Sekarang kita udah membuat sebuah perubahan didalam file konfigurasi, merestart server 
 
 
 
