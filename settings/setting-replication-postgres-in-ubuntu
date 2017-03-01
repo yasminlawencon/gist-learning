@@ -117,9 +117,18 @@ Catatan: Jangan menjalankan start service lagi sampai semua langkah konfigurasi 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # Menjalankan utilitas backup
-
-
-
+Utilitas backup, memiliki nama pg_basebackup, akan menyalin file dari direktori data pada primary serve ke direktori
+yang sama pada standby server.
+   
+   1. Pastikan kita menjalankan perintah di shell root. Di terminal SSH standby server, masukan perintah berikut:
+      # sudo -s
+      Terus menggunakan shell root pada tutorial ini.
+      
+   2. Utilitas tidak akan menimpa file yang sudah ada, sehingga kita harus mengubah nama direktori data standby server.
+      Jalankan perintah berikut:
+      # mv ../../var/lib/postgresql/9.5/main ../../var/lib/postgresql/9.3/main_old
+   
+   3. 
 
 
 
