@@ -1,6 +1,7 @@
 
-Step-by-step : Silahkan dibaca sampai akhir tahap demi tahap, agar memahami maksud dan tujuan dari replication Postgres ini
-Bagaimana Me-Setup PostgreSQL untuk High Availability dan Replikasi (Cadangan) menggunakan Hot Standby
+Step-by-step :
+Bagaimana Me-Setup PostgreSQL untuk High Availability dan Replikasi (Cadangan) menggunakan Hot Standby.
+Silahkan dibaca sampai akhir tahap demi tahap, agar memahami maksud dan tujuan dari replication Postgres ini.
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Tujuan 
 - Set up sebuah dua mesin komputer (virtual box) yang telah running Postgres.
