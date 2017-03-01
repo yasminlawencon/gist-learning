@@ -130,7 +130,9 @@ yang sama pada standby server.
    
    3. Jalankan utilitas backup. Ganti <primary-IP> dengan IP eksternal dari primary server.
       # sudo -u postgres pg_basebackup -h <primary-IP> -D /var/lib/postgresql/9.5/main -U repuser -v -P --xlog-method=stream
-
+      Utilitas backup akan meminta password kita untuk user rapuser.
+  
+  Proses
 
 
 
