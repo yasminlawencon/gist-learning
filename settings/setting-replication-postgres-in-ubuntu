@@ -81,10 +81,20 @@ mengaktifkan replikasi.
 Konfigurasi ini berisi pengatusan utama untuk Postgres. Disini, kita akan memodifikasi file untuk memungkinkan archiving & 
 replication.
 
-  1. Edit file
+  1. Edit file. Di terminal untuk server utama, masukan perintah berikut:
+     # nano ../../etc/postgresql/9.5/main/postgresql.conf
+  
+  2. Pada bagian WRITE AHEAD LOG dibagian setting, ubah  WAL level:
+     # wal_level = hot_standby
+  
+  3. Pada bagian Archiving, ubah archive mode:
+     # archive_mode = on
+   
+  4. Ubah value dari archive command. Pengaturan ini memberitahu Postgres untuk menulis file arsip ke direktori yang kita
+     buat pada langkah sebelumnya:
+     # archive_command = 'test ! -f /mnt/server/archivedir/%f && cp %p /mnt/server/archivedir/%f'
 
-
-
+  5. Pada bagian REPLICATION, di
 
 
 
