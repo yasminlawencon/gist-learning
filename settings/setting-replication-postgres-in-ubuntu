@@ -113,8 +113,7 @@ ikuti perintah berikut ini.
    - Masukan perintah berikut pada standby server SSH terminal:
      # sudo service postgresql stop
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-Catatan: Jangan menjalankan start service lagi sampai semua langkah konfigurasi & backup lengkap. Kita harus membuat sebuah
-         server siaga dalam keadaan ini dimana dia akan menjadi server backup.
+Catatan: Jangan menjalankan start service lagi sampai semua langkah konfigurasi & backup lengkap.
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # Menjalankan utilitas backup
