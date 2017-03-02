@@ -8,7 +8,7 @@ Silahkan dibaca sampai akhir tahap demi tahap, agar memahami maksud dan tujuan d
 - Membuat sebuah tabel guestbook app untuk percobaan
 - Menkonfigurasi primary server (server utama)
 - Backup primary server ke server standby (server cadangan)
-- Menkonfigurasi standby server to menjalankan Hot Standby mode. Hot Standby sendiri merupakan sebuah layanan dari Postgres.
+- Menkonfigurasi standby server untuk menjalankan Hot Standby mode. Hot Standby sendiri merupakan sebuah layanan dari Postgres.
 - Memulai standby server dan mengetesnya.
 
 # Setting up Komputer Engine instances Connecting remotely
