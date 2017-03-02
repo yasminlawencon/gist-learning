@@ -184,7 +184,30 @@ masukan perintah dibawah ini pada terminal standby server.
 Untuk melihat bahwa replication antara primary server & standby server bekerja, kita dapat menambahkan row baru pada tabel
 guestbook pada primary server dan seharusnya data tersebut muncul juga di standby server secara otomatis.
 
-
+Sebelumnya kita telah menambahkan satu row pada primary server. Seharunya pada standby server juga memiliki hal yang sama.
+   1. Pada standby server, mulai PSQL:
+      # sudo -u postgres psql postgres
+   
+   2. Pada PSQL prompt, masukan query dibawah ini:
+      # select * from guestbook;
+      Seharusnya muncul satu data row pada tabel yang dari awal sudah dimasukan pada primary server.
+      Sekarang, tambahkan row baru pada primary server.
+      
+   3. Pada primary server, mulai PSQL:
+      # sudo -u postgres psql postgres
+   
+   4. Pada PSQL prompt, masukan query dibawah ini:
+      # INSERT INTO guestbook (visitor_email, date, message) VALUES ( 'as@gmail.com', current_date, 'Now we are test rep.');
+   
+   5. Beralih ke terminal standby server dan ulangi query untuk guestbook:
+      # select * from guestbook;
+      Sekarang kita dapat melihat bahwa standby server telah menerima update dari primary server (server utama).
+   
+   6. Untuk exit PSQL, enter: 
+      # \q
+   
+   7. Untuk exit root shell, enter exit pada terminal:
+      # exit
 
 
 
