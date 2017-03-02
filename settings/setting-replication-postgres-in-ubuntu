@@ -150,7 +150,32 @@ yang sama pada standby server.
    
    3. Save dan close file.
    
+# Membuat file konfigurasi recovery
+Ketika kita menerapkan server dalam mode Hot Standby, kita harus menyediakan file konfigurasi yang berisi pengaturan yang
+akan digunakan dalam data recovery. File ini bernama recovery.conf. Untuk menambahkan file ini ke standby server, ikuti
+langkah berikut ini:
    
+   1. Copy sample recovery file lokasi yang tepat. Di terminal standby server, masukan perintah berikut ini:
+      # cp -avr ../../usr/share/postgresql/9.5/recovery.conf.sample /../../var/lib/postgresql/9.5/main/recovery.conf
+   
+   2. Edit recovery file:
+      # nano /../../var/lib/postgresql/9.5/main/recovery.conf
+   
+   3. Di bagian STANDBY SERVER PARAMETERS, ubah standby mode:
+      # standby_mode = on
+   
+   4. Mengatur string koneksi ke Primary Server. Ganti <primary-external-IP> dengan IP address dari Primary Server.
+      Ganti <password> dengan password dari user repuser.
+      # primary_conninfo = 'host=<primary-external-IP> port=5432 user=repuser password=<password>'
+      
+   5. (Opsional) Set trigger lokasi file:
+      # trigger_file = '/tmp/postgresql.trigger.5432'
+      path triger_file adalah lokasi dimana kita dapat menambahkan file ketika sistem gagal ke standby server.
+      
+   6. Save dan tutup file.
+   
+# Start standby server
+
 
 
 
