@@ -175,6 +175,15 @@ langkah berikut ini:
    6. Save dan tutup file.
    
 # Start standby server
+Setelah melakukan konfigurasi diatas dan standby server sekarang sedikit ada perubahan. Untuk menjalankan standby server
+masukan perintah dibawah ini pada terminal standby server.
+   - Langkah untuk starting postgres:
+     # service postgresql start
+     
+# Melihat database replication apakah berkerja dengan baik atau tidak
+Untuk melihat bahwa replication antara primary server & standby server bekerja, kita dapat menambahkan row baru pada tabel
+guestbook pada primary server dan seharusnya data tersebut muncul juga di standby server secara otomatis.
+
 
 
 
