@@ -2,7 +2,7 @@
 Step-by-step :
 Bagaimana Me-Setup PostgreSQL untuk High Availability dan Replikasi (Cadangan) menggunakan Hot Standby.
 Silahkan dibaca sampai akhir tahap demi tahap, agar memahami maksud dan tujuan dari replication Postgres ini.
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Tujuan 
 - Set up sebuah dua mesin komputer (virtual box) yang telah running Postgres.
 - Membuat sebuah tabel guestbook app untuk percobaan
@@ -43,9 +43,9 @@ Jalankan SSH terminal pada primary server (server utama):
    Kita akan melihat sebuah pesan konfirmasi yang berkata: INSERT 0 1.
 
 5. Enter \q untuk exit dari PSQL prompt.
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 Jangan keluar dari root shell. Kita akan menggunakan root shell selama tutorial ini berlangsung.
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # Konfigurasi primary server (server utama)
 Untuk mengkonfigurasi primary server, kita akan:
@@ -112,9 +112,9 @@ Sebelum membuat perubahan pada standby server, stop service dari standby server.
 ikuti perintah berikut ini.
    - Masukan perintah berikut pada standby server SSH terminal:
      # sudo service postgresql stop
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 Catatan: Jangan menjalankan start service lagi sampai semua langkah konfigurasi & backup lengkap.
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # Menjalankan utilitas backup
 Utilitas backup, memiliki nama pg_basebackup, akan menyalin file dari direktori data pada primary serve ke direktori
@@ -210,8 +210,13 @@ Sebelumnya kita telah menambahkan satu row pada primary server. Seharunya pada s
       # exit
 
 
-
-
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Created by   : lani.asep@lawencon.com
+Date created : 1 Maret 2016
+Referensi    : - https://github.com/laniasepsutisna/gist-learning/blob/master/settings/setting-postgres-allow-remote
+               - https://github.com/laniasepsutisna/gist-learning/blob/master/kubuntu/instalasi-in-kubuntu-16.04
+               - https://cloud.google.com/solutions/setup-postgres-hot-standby
+               - https://cloud.google.com/solutions/set-up-postgres
 
 
 
