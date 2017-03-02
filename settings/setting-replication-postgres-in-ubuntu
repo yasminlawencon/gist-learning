@@ -132,8 +132,25 @@ yang sama pada standby server.
       # sudo -u postgres pg_basebackup -h <primary-IP> -D /var/lib/postgresql/9.5/main -U repuser -v -P --xlog-method=stream
       Utilitas backup akan meminta password kita untuk user rapuser.
   
-  Proses
-
+  Proses backup membutuhkan memeberapa menit. Ketika sudah selesia proses backup, kita data beralih ke konfigurasi 
+  standby server.
+  
+  # Konfigurasi standby server
+  Untuk mengkonfigurasi standby server, kita akan mengedit postgresql.conf dan membuat file baru konfigurasi dengan nama
+  recovery.conf.
+  
+  # Edit postgresql.conf
+  Untuk standby server, kita hanya akan merubah satu file settingan. Ikuti step-by-step dibawah ini:
+   
+   1. Edit file didalam terminal standby server, ikuti langkah berikut ini:
+      # nano ../../etc/postgresql/9.5/main/postgresql.conf
+   
+   2. Dibagian REPLICATION, pada bagian Standby Server hidupkan Hot Standby dan uncomment baris:
+      # hot_standby = on
+   
+   3. Save dan close file.
+   
+   
 
 
 
