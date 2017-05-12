@@ -1,0 +1,11 @@
+Step-by-step install KDE Plasama 5.9 in Ubuntu 16.04
+
+# sudo add-apt-repository ppa:kubuntu-ppa/backports
+# sudo apt-get update && sudo apt-get dist-upgrade
+# sudo apt-get install kubuntu-desktop
+# Ok
+# lightdm
+
+
+Create by : lani.asep@lawencon.com
+

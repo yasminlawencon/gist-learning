@@ -1,0 +1,225 @@
+
+Step-by-step :
+Bagaimana Me-Setup PostgreSQL untuk High Availability dan Replikasi (Cadangan) menggunakan Hot Standby.
+Silahkan dibaca sampai akhir tahap demi tahap, agar memahami maksud dan tujuan dari replication Postgres ini.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Tujuan 
+- Set up sebuah dua mesin komputer (virtual box) yang telah running Postgres.
+- Membuat sebuah tabel guestbook app untuk percobaan
+- Menkonfigurasi primary server (server utama)
+- Backup primary server ke server standby (server cadangan)
+- Menkonfigurasi standby server untuk menjalankan Hot Standby mode. Hot Standby sendiri merupakan sebuah layanan dari Postgres.
+- Memulai standby server dan mengetesnya.
+
+# Setting up Komputer Engine instances Connecting remotely
+Untuk membuat primary dan standby server, silahkan ikuti step by step disini : 
+https://cloud.google.com/solutions/set-up-postgres
+
+# Catatan untuk mengikuti tutorial ini :
+- Kita tidak membutuhkan penggunaan pgAdmin didalam tutorial ini
+- Iktui step by step installasi server sampai selesai
+- Ikuti step Connecting remotely di dalam tutorial diatas sampai selesai
+- Kita harus membuka port jaringan hanya sekali, setelah itu tidak
+- Perhatikan alamat IP dari server masing-masing. Kita harus mengetahui ini ketika merubah konfigurasi.
+- Pastikan port SSH sudah terbuka karena SSH server dibutuhkan didalam tutorial ini.
+
+# Membuat tabel guestbook
+Pada primary server, buat table sederhana bertujuan untuk melakukan pengetesan. Tabel ini berfungsi untuk menyimpan data 
+visitor dari sebuah website, dimana visitor didalam website tersebut dapat membuat sebuah komentar. Data field tersebut 
+sebagai berikut alamat email visitor, serial ID, date & time sekarang, dan text message dari visitor.
+
+Jalankan SSH terminal pada primary server (server utama):
+1. Jalankan root shell:
+   # sudo -s
+
+2. Jalankan PSQL untuk user postgres dan akses database dengan nama postgres:
+   # sudo -u postgres psql postgres
+
+3. Pada PSQL prompt, masukan command dibawah ini untuk membuat sebuah table:
+   # CREATE TABLE guestbook (visitor_email text, vistor_id serial, date timestamp, message text);
+
+4. Masukan sebuah entry data pada table:
+   # INSERT INTO guestbook (visitor_email, date, message) VALUES ( 'jim@gmail.com', current_date, 'This is a test.');
+   Kita akan melihat sebuah pesan konfirmasi yang berkata: INSERT 0 1.
+
+5. Enter \q untuk exit dari PSQL prompt.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Jangan keluar dari root shell. Kita akan menggunakan root shell selama tutorial ini berlangsung.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# Konfigurasi primary server (server utama)
+Untuk mengkonfigurasi primary server, kita akan:
+- Membuat sebuah user Postgres untuk replication aktivitas.
+- Membuat directory to menyimpan berbagai archive file
+- Mengedit dua file konfigurasi: pg_hba.conf & postgresql.conf
+
+# Membuat sebuah user untuk replication
+Untuk melakukan replication, Postgres membutuhkan sebuah user, juga memiliki role, dengan spesial permissions.
+  - Pada primary server, jalankan printah berikut:
+    # sudo -u postgres createuser -U postgres repuser -P -c 5 --replication
+  
+# Membuat arsip direktori
+Membuat sebuah direktori untuk menyimpan sebuah file arsip. Diretori ini adalah subdirektori dari direktori data cluster, 
+yang diberi nama utama secara default.
+  - Pada SSH terminal primary server, ikuti perintah dibawah ini:
+    # mkdir -p ../../var/lib/postgresql/main/mnt/server/archivedir
+
+# Edit pg_hba.conf
+File konfigurasi ini berisi pengaturan klien. Kita harus menambahkan sebuah entri untuk rapuser sebagai pengguna untuk
+mengaktifkan replikasi.
+  
+  1. Edit file, untuk PostgreSQL versi 9.5, kita bisa menggunakan:
+     # nano ../../etc/postgresql/9.5/main/pg_hba.conf
+     
+  2. Tambhankan dibagian akhir contoh replication berikut. Ganti <standby-IP> dengan IP external standby server:
+     # Allow replication connections
+     host     replication     repuser         <standby-IP>/32        md5
+  
+  3. Simpan dan close file.
+  
+# Edit postgresql.conf
+Konfigurasi ini berisi pengatusan utama untuk Postgres. Disini, kita akan memodifikasi file untuk memungkinkan archiving & 
+replication.
+
+  1. Edit file. Di terminal untuk server utama, masukan perintah berikut:
+     # nano ../../etc/postgresql/9.5/main/postgresql.conf
+  
+  2. Pada bagian WRITE AHEAD LOG dibagian setting, ubah  WAL level:
+     # wal_level = hot_standby
+  
+  3. Pada bagian Archiving, ubah archive mode:
+     # archive_mode = on
+   
+  4. Ubah value dari archive command. Pengaturan ini memberitahu Postgres untuk menulis file arsip ke direktori yang kita
+     buat pada langkah sebelumnya:
+     # archive_command = 'test ! -f /mnt/server/archivedir/%f && cp %p /mnt/server/archivedir/%f'
+
+  5. Pada bagian REPLICATION, dibagian server pengirim (Sending Server) ubah value dari maksimum nomer 
+     dari WAL sender processes:
+     # max_wal_senders = 3
+     Untuk tutorial ini nilai 3 mungkin cukup untuk melakuakn backup & replikasi.
+     
+  4. Save dan close file.
+  
+# Restart primary server
+Sekarang kita sudah membuat sebuah perubahan didalam file konfigurasi, silahkan restart server untuk membuat perubahan 
+efektif berjalan. 
+   - Masukan perintah berikut:
+     # sudo service postgresql restart
+
+# Backup primary server ke standby server
+Sebelum membuat perubahan pada standby server, stop service dari standby server. Pada SSH terminal untuk standby server,
+ikuti perintah berikut ini.
+   - Masukan perintah berikut pada standby server SSH terminal:
+     # sudo service postgresql stop
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Catatan: Jangan menjalankan start service lagi sampai semua langkah konfigurasi & backup lengkap.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# Menjalankan utilitas backup
+Utilitas backup, memiliki nama pg_basebackup, akan menyalin file dari direktori data pada primary serve ke direktori
+yang sama pada standby server.
+   
+   1. Pastikan kita menjalankan perintah di shell root. Di terminal SSH standby server, masukan perintah berikut:
+      # sudo -s
+      Terus menggunakan shell root pada tutorial ini.
+      
+   2. Utilitas tidak akan menimpa file yang sudah ada, sehingga kita harus mengubah nama direktori data standby server.
+      Jalankan perintah berikut:
+      # mv ../../var/lib/postgresql/9.5/main ../../var/lib/postgresql/9.3/main_old
+   
+   3. Jalankan utilitas backup. Ganti <primary-IP> dengan IP eksternal dari primary server.
+      # sudo -u postgres pg_basebackup -h <primary-IP> -D /var/lib/postgresql/9.5/main -U repuser -v -P --xlog-method=stream
+      Utilitas backup akan meminta password kita untuk user rapuser.
+  
+  Proses backup membutuhkan memeberapa menit. Ketika sudah selesia proses backup, kita data beralih ke konfigurasi 
+  standby server.
+  
+  # Konfigurasi standby server
+  Untuk mengkonfigurasi standby server, kita akan mengedit postgresql.conf dan membuat file baru konfigurasi dengan nama
+  recovery.conf.
+  
+  # Edit postgresql.conf
+  Untuk standby server, kita hanya akan merubah satu file settingan. Ikuti step-by-step dibawah ini:
+   
+   1. Edit file didalam terminal standby server, ikuti langkah berikut ini:
+      # nano ../../etc/postgresql/9.5/main/postgresql.conf
+   
+   2. Dibagian REPLICATION, pada bagian Standby Server hidupkan Hot Standby dan uncomment baris:
+      # hot_standby = on
+   
+   3. Save dan close file.
+   
+# Membuat file konfigurasi recovery
+Ketika kita menerapkan server dalam mode Hot Standby, kita harus menyediakan file konfigurasi yang berisi pengaturan yang
+akan digunakan dalam data recovery. File ini bernama recovery.conf. Untuk menambahkan file ini ke standby server, ikuti
+langkah berikut ini:
+   
+   1. Copy sample recovery file lokasi yang tepat. Di terminal standby server, masukan perintah berikut ini:
+      # cp -avr ../../usr/share/postgresql/9.5/recovery.conf.sample /../../var/lib/postgresql/9.5/main/recovery.conf
+   
+   2. Edit recovery file:
+      # nano /../../var/lib/postgresql/9.5/main/recovery.conf
+   
+   3. Di bagian STANDBY SERVER PARAMETERS, ubah standby mode:
+      # standby_mode = on
+   
+   4. Mengatur string koneksi ke Primary Server. Ganti <primary-external-IP> dengan IP address dari Primary Server.
+      Ganti <password> dengan password dari user repuser.
+      # primary_conninfo = 'host=<primary-external-IP> port=5432 user=repuser password=<password>'
+      
+   5. (Opsional) Set trigger lokasi file:
+      # trigger_file = '/tmp/postgresql.trigger.5432'
+      path triger_file adalah lokasi dimana kita dapat menambahkan file ketika sistem gagal ke standby server.
+      
+   6. Save dan tutup file.
+   
+# Start standby server
+Setelah melakukan konfigurasi diatas dan standby server sekarang sedikit ada perubahan. Untuk menjalankan standby server
+masukan perintah dibawah ini pada terminal standby server.
+   - Langkah untuk starting postgres:
+     # service postgresql start
+     
+# Melihat database replication apakah berkerja dengan baik atau tidak
+Untuk melihat bahwa replication antara primary server & standby server bekerja, kita dapat menambahkan row baru pada tabel
+guestbook pada primary server dan seharusnya data tersebut muncul juga di standby server secara otomatis.
+
+Sebelumnya kita telah menambahkan satu row pada primary server. Seharunya pada standby server juga memiliki hal yang sama.
+   1. Pada standby server, mulai PSQL:
+      # sudo -u postgres psql postgres
+   
+   2. Pada PSQL prompt, masukan query dibawah ini:
+      # select * from guestbook;
+      Seharusnya muncul satu data row pada tabel yang dari awal sudah dimasukan pada primary server.
+      Sekarang, tambahkan row baru pada primary server.
+      
+   3. Pada primary server, mulai PSQL:
+      # sudo -u postgres psql postgres
+   
+   4. Pada PSQL prompt, masukan query dibawah ini:
+      # INSERT INTO guestbook (visitor_email, date, message) VALUES ( 'as@gmail.com', current_date, 'Now we are test rep.');
+   
+   5. Beralih ke terminal standby server dan ulangi query untuk guestbook:
+      # select * from guestbook;
+      Sekarang kita dapat melihat bahwa standby server telah menerima update dari primary server (server utama).
+   
+   6. Untuk exit PSQL, enter: 
+      # \q
+   
+   7. Untuk exit root shell, enter exit pada terminal:
+      # exit
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Created by   : lani.asep@lawencon.com
+Date created : 1 Maret 2016
+Referensi    : - https://github.com/laniasepsutisna/gist-learning/blob/master/settings/setting-postgres-allow-remote
+               - https://github.com/laniasepsutisna/gist-learning/blob/master/kubuntu/instalasi-in-kubuntu-16.04
+               - https://cloud.google.com/solutions/setup-postgres-hot-standby
+               - https://cloud.google.com/solutions/set-up-postgres
+
+
+
+
+
+

@@ -1,8 +1,13 @@
 LinovHR Cloud Admin
+Setting Production LinovHR Cloud Admin
+chmod -R 777 *
+git config core.filemode false
 npm install
 npm install -g bower
 bower install
 bower update
+
+npm install gulp
 npm install -g gulp
 gulp --production
 ---------------------------------------
@@ -23,6 +28,17 @@ php artisan config:cache
 php artisan cache:clear
 
 php artisan serve
+
+ERROR :
+The requested package xethron/migrations-generator could not be found in any version
+# pastikan composer terinstall dengan versi terbaru :
+# sudo apt-get install curl php-cli
+# curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+# composer
+# jika masih error composernya, ganti direktori menjadi '=/usr/bin/'
+# composer require xethron/migrations-generator
+# 
+
 ---------------------------------------
 Recruitment Installation
 chmod -R 777 *
@@ -33,6 +49,17 @@ npm install -g bower
 bower install
 setting database
 composer require guzzlehttp/guzzle:~6.0
+
+---------------------------------------
+API Untuk Indo Lotte
+# chmod -R 777 *
+# composer install
+# composer update
+# setting database di:
+  - .env
+  - config/database.php
+# 
+
 ---------------------------------------
 API Installation
 chmod -R 777 *
@@ -43,10 +70,12 @@ setting database : .env
   APP_URL= | DB_CONNECTION = pgsql | DB_HOST= | DB_PORT=5432 | DB_DATABASE= | DB_USERNAME= | DB_PASSWORD
 composer install
 composer update
+
 ---------------------------------------
 API Payroll Engine
 chmod -R 777 *
 setting database : config/database.php
+
 ---------------------------------------
 Git
 git describe --tags
