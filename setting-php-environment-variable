@@ -1,0 +1,12 @@
+Mengganti Environment variabel pada Ubuntu : 
+*digunakan untuk testing scheduler maupun installasi lain yang berhubungan dengan CakePHP
+- which php (untuk melihat path PHP yang digunakan)
+- cd /etc
+- sudo gedit ~/.bashrc
+- file bashrc akan terbuka, tambahkan PATH=/opt/lampp/bin:$PATH pada bagian paling bawah file, save file tersebut.
+- kembali ke terminal, ketikkan source ~/.bashrc
+- tutup terminal, ketikkan: php -v untuk melihat version php yang berjalan.
+
+By : 
+- laras@lawencon.com
+- yasmin@lawencon.com
