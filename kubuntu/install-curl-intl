@@ -1,0 +1,4 @@
+1. Install CURL
+   sudo apt-get install php7.0-curl
+2. Install INTL
+   sudo apt-get install php7.0-intl

@@ -1,0 +1,7 @@
+Step-by-step share folder VirtualBox
+
+# Setting folder shared: Devices -> Shared Folder -> Shared Folder Setting -> Add New Folder Shared
+# Di dalam ubuntu virtual : 
+  sudo mount -t vboxsf FOLDERNAME /PATH/OF/FOLDER
+
+Created by : lani.asep@lawencon.com

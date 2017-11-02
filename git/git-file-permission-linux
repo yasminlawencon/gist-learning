@@ -1,0 +1,15 @@
+Step-by-step mengubah permision file agar tidak ke commit :
+
+# cd /dir-project
+# nano .git/config
+# ubah menjadi sebagai berikut:
+  [core]
+  filemode = false
+# save
+
+atau melalui cmd
+# git config core.filemode false
+
+
+
+Create by : lani.asep@lawencon.com
